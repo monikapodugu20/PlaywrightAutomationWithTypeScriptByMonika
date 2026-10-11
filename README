@@ -16,6 +16,15 @@ we can achive type safety by creating an interface of our request body values.
 GITHUB:
 How to create GITHUB repo and Push code in GITHUB Repo?
 First we need to create an acount in GITHUB then by clicking on + icon we can create a Repository/we can select Public/private and click on Create Repository.
+Download and install git
+git init
+git add README.md--optional
+git add .
+git commit -m "first commit message"
+git branch -M main
+git remote add origin https://github.com/monikapodugu20/PlaywrightAutomationWithTypeScriptByMonika.git
+git push -u origin main
+
 How to download and setup jenkins?
 
 
