@@ -73,7 +73,8 @@ Got to Build now and Run then build will strat
 
 >>>>>>> 53bca3a (updated new changes)
 
-How to download and setup jenkins?
+Add Reports in Jenkins as Artifacts:
+Open jenkins->our folder->Configure->PostBuildActions->Add Post build Actions->Add Archiceve artifacts->Add path of Reports folder(playwright-report/**)
 
 
 
