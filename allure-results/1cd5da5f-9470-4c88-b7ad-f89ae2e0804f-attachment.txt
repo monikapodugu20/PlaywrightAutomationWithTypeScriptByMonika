@@ -1,0 +1,26 @@
+POST API Response : {
+  "bookingid": 440,
+  "booking": {
+    "firstname": "Alisha",
+    "lastname": "O'Connell",
+    "totalprice": 4701,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 440
+GET API Response : {
+  "firstname": "Alisha",
+  "lastname": "O'Connell",
+  "totalprice": 4701,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}

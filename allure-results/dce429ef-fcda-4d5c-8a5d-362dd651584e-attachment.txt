@@ -1,0 +1,26 @@
+POST API Response : {
+  "bookingid": 3328,
+  "booking": {
+    "firstname": "Sydni",
+    "lastname": "Deckow",
+    "totalprice": 3849,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 3328
+GET API Response : {
+  "firstname": "Sydni",
+  "lastname": "Deckow",
+  "totalprice": 3849,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}

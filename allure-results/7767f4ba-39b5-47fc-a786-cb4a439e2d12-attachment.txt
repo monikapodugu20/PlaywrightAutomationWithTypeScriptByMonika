@@ -1,0 +1,3 @@
+Excel file row data
+Skill 1 : Playwright
+Skill 2 : JavaScript

@@ -1,0 +1,6 @@
+loop2 : PlaywrightTutorialFullCourse
+loop2 : PostmanCollectionsByTestersTalk
+loop2 : PlaywrightAPITestingTutorial
+loop2 : RestAssuredAPITestingFramework
+loop2 : PlaywrightTypeScriptTutorialFullCourse
+loop2 : CypressTutorialFullCourse

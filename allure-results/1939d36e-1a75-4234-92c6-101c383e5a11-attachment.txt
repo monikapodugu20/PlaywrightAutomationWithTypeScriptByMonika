@@ -1,0 +1,38 @@
+POST API Response : {
+  "bookingid": 860,
+  "booking": {
+    "firstname": "Arnoldo",
+    "lastname": "Torp",
+    "totalprice": 1057,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 860
+GET API Response : {
+  "firstname": "Arnoldo",
+  "lastname": "Torp",
+  "totalprice": 1057,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}
+Token : 0d0dd24837d1d42
+PUT API Response : {
+  "firstname": "Testers Talk",
+  "lastname": "Torp",
+  "totalprice": 1057,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}

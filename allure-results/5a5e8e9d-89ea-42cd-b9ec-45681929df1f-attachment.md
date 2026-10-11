@@ -1,0 +1,4737 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Chapter5\03_dataDrivenUsingcsv.spec.ts >> Data Driven Testing Using CSV file in playwright : Java
+- Location: tests\Chapter5\03_dataDrivenUsingcsv.spec.ts:26:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('link', { name: 'Playwright' }).first()
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f1e1]:
+  - link "Jump to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - navigation "Site" [ref=f1e6]:
+        - generic "Main menu" [ref=f1e7]:
+          - button "Main menu" [ref=f1e8] [cursor=pointer]
+          - generic [ref=f1e11]: Main menu
+      - link [ref=f1e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=f1e13]:
+          - img "Wikipedia" [ref=f1e14]
+          - img "The Free Encyclopedia" [ref=f1e15]
+    - generic [ref=f1e16]:
+      - search [ref=f1e17]:
+        - generic [ref=f1e20]:
+          - searchbox "Search Wikipedia" [ref=f1e23]
+          - button "Search" [ref=f1e25]
+      - navigation "Personal tools" [ref=f1e26]:
+        - list [ref=f1e30]:
+          - listitem [ref=f1e31]:
+            - link "Donate" [ref=f1e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+          - listitem [ref=f1e33]:
+            - link "Create account" [ref=f1e34] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:CreateAccount&returnto=Java
+          - listitem [ref=f1e35]:
+            - link "Log in" [ref=f1e36] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:UserLogin&returnto=Java
+  - generic [ref=f1e38]:
+    - navigation "Contents" [ref=f1e42]:
+      - generic [ref=f1e44]:
+        - generic [ref=f1e45]:
+          - heading "Contents" [level=2] [ref=f1e46]
+          - button "Hide Contents" [ref=f1e47] [cursor=pointer]: hide
+        - list [ref=f1e48]:
+          - listitem [ref=f1e49]:
+            - link "(Top)" [ref=f1e50] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f1e52]:
+            - link "Etymology" [ref=f1e53] [cursor=pointer]:
+              - /url: "#Etymology"
+            - list
+          - listitem [ref=f1e55]:
+            - link "Geography" [ref=f1e56] [cursor=pointer]:
+              - /url: "#Geography"
+            - list
+          - listitem [ref=f1e58]:
+            - link "Natural environment" [ref=f1e59] [cursor=pointer]:
+              - /url: "#Natural_environment"
+            - list
+          - listitem [ref=f1e61]:
+            - link "History" [ref=f1e62] [cursor=pointer]:
+              - /url: "#History"
+            - button "Toggle History subsection" [expanded] [ref=f1e64]
+            - list [ref=f1e67]:
+              - listitem [ref=f1e68]:
+                - link "Homo erectus presence" [ref=f1e69] [cursor=pointer]:
+                  - /url: "#Homo_erectus_presence"
+                - list
+              - listitem [ref=f1e72]:
+                - link "After the arrival of modern humans" [ref=f1e73] [cursor=pointer]:
+                  - /url: "#After_the_arrival_of_modern_humans"
+                - list
+              - listitem [ref=f1e75]:
+                - link "Hindu-Buddhist (Classic) period" [ref=f1e76] [cursor=pointer]:
+                  - /url: "#Hindu-Buddhist_(Classic)_period"
+                - list
+              - listitem [ref=f1e78]:
+                - link "Spread of Islam and rise of Islamic sultanates" [ref=f1e79] [cursor=pointer]:
+                  - /url: "#Spread_of_Islam_and_rise_of_Islamic_sultanates"
+                - list
+              - listitem [ref=f1e81]:
+                - link "Colonial periods" [ref=f1e82] [cursor=pointer]:
+                  - /url: "#Colonial_periods"
+                - list
+              - listitem [ref=f1e84]:
+                - link "Independence" [ref=f1e85] [cursor=pointer]:
+                  - /url: "#Independence"
+                - list
+          - listitem [ref=f1e87]:
+            - link "Administration" [ref=f1e88] [cursor=pointer]:
+              - /url: "#Administration"
+            - list
+          - listitem [ref=f1e90]:
+            - link "Demographics" [ref=f1e91] [cursor=pointer]:
+              - /url: "#Demographics"
+            - button "Toggle Demographics subsection" [expanded] [ref=f1e93]
+            - list [ref=f1e96]:
+              - listitem [ref=f1e97]:
+                - link "Demographic profile" [ref=f1e98] [cursor=pointer]:
+                  - /url: "#Demographic_profile"
+                - list
+              - listitem [ref=f1e100]:
+                - link "Population growth" [ref=f1e101] [cursor=pointer]:
+                  - /url: "#Population_growth"
+                - list
+              - listitem [ref=f1e103]:
+                - link "Ethnicity and culture" [ref=f1e104] [cursor=pointer]:
+                  - /url: "#Ethnicity_and_culture"
+                - list
+              - listitem [ref=f1e106]:
+                - link "Languages" [ref=f1e107] [cursor=pointer]:
+                  - /url: "#Languages"
+                - list
+              - listitem [ref=f1e109]:
+                - link "Religion" [ref=f1e110] [cursor=pointer]:
+                  - /url: "#Religion"
+                - list
+          - listitem [ref=f1e112]:
+            - link "Economy" [ref=f1e113] [cursor=pointer]:
+              - /url: "#Economy"
+            - list
+          - listitem [ref=f1e115]:
+            - link "See also" [ref=f1e116] [cursor=pointer]:
+              - /url: "#See_also"
+            - list
+          - listitem [ref=f1e118]:
+            - link "Notes" [ref=f1e119] [cursor=pointer]:
+              - /url: "#Notes"
+            - list
+          - listitem [ref=f1e121]:
+            - link "References" [ref=f1e122] [cursor=pointer]:
+              - /url: "#References"
+            - list
+          - listitem [ref=f1e124]:
+            - link "Bibliography" [ref=f1e125] [cursor=pointer]:
+              - /url: "#Bibliography"
+            - list
+          - listitem [ref=f1e127]:
+            - link "Further reading" [ref=f1e128] [cursor=pointer]:
+              - /url: "#Further_reading"
+            - list
+          - listitem [ref=f1e130]:
+            - link "External links" [ref=f1e131] [cursor=pointer]:
+              - /url: "#External_links"
+            - list
+    - main [ref=f1e134]:
+      - generic [ref=f1e135]:
+        - heading "Java" [level=1] [ref=f1e136]
+        - generic [ref=f1e138]:
+          - button "148 languages" [ref=f1e139] [cursor=pointer]
+          - generic [ref=f1e142]: 148 languages
+      - generic [ref=f1e144]:
+        - navigation "Namespaces" [ref=f1e146]:
+          - list [ref=f1e149]:
+            - listitem [ref=f1e150]:
+              - link "Article" [ref=f1e151] [cursor=pointer]:
+                - /url: /wiki/Java
+            - listitem [ref=f1e153]:
+              - link "Talk" [ref=f1e154] [cursor=pointer]:
+                - /url: /wiki/Talk:Java
+        - generic [ref=f1e156]:
+          - navigation "Views" [ref=f1e157]:
+            - list [ref=f1e160]:
+              - listitem [ref=f1e161]:
+                - link "Read" [ref=f1e162] [cursor=pointer]:
+                  - /url: /wiki/Java
+              - listitem [ref=f1e164]:
+                - link "Edit" [ref=f1e165] [cursor=pointer]:
+                  - /url: /w/index.php?title=Java&action=edit
+              - listitem [ref=f1e167]:
+                - link "View history" [ref=f1e168] [cursor=pointer]:
+                  - /url: /w/index.php?title=Java&action=history
+          - navigation "Page tools" [ref=f1e170]:
+            - generic [ref=f1e171]:
+              - button "Tools" [ref=f1e172] [cursor=pointer]
+              - generic [ref=f1e175]: Tools
+      - navigation "Appearance" [ref=f1e178]:
+        - generic [ref=f1e180]:
+          - generic [ref=f1e181]:
+            - generic [ref=f1e182]: Appearance
+            - button "Hide Appearance" [ref=f1e183] [cursor=pointer]: hide
+          - generic [ref=f1e184]:
+            - generic [ref=f1e185]: Text
+            - list [ref=f1e187]:
+              - listitem [ref=f1e188]:
+                - generic [ref=f1e190]:
+                  - generic [ref=f1e191]:
+                    - radio "Small" [ref=f1e192]
+                    - generic [ref=f1e194]: Small
+                  - generic [ref=f1e196]:
+                    - radio "Standard" [checked] [ref=f1e197]
+                    - generic [ref=f1e199]: Standard
+                  - generic [ref=f1e201]:
+                    - radio "Large" [ref=f1e202]
+                    - generic [ref=f1e204]: Large
+          - generic [ref=f1e206]:
+            - generic [ref=f1e207]: Width
+            - list [ref=f1e209]:
+              - listitem [ref=f1e210]:
+                - generic [ref=f1e212]:
+                  - generic [ref=f1e213]:
+                    - radio "Standard" [checked] [ref=f1e214]
+                    - generic [ref=f1e216]: Standard
+                  - generic [ref=f1e218]:
+                    - radio "Wide" [ref=f1e219]
+                    - generic [ref=f1e221]: Wide
+          - generic [ref=f1e223]:
+            - generic [ref=f1e224]: Color
+            - list [ref=f1e226]:
+              - listitem [ref=f1e227]:
+                - generic [ref=f1e229]:
+                  - generic [ref=f1e230]:
+                    - radio "Automatic" [ref=f1e231]
+                    - generic [ref=f1e233]: Automatic
+                  - generic [ref=f1e235]:
+                    - radio "Light" [checked] [ref=f1e236]
+                    - generic [ref=f1e238]: Light
+                  - generic [ref=f1e240]:
+                    - radio "Dark" [ref=f1e241]
+                    - generic [ref=f1e243]: Dark
+      - generic "Java" [ref=f1e245]:
+        - generic [ref=f1e246]:
+          - generic [ref=f1e250]:
+            - link "Coordinates" [ref=f1e251] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/wiki/Geographic_coordinate_system
+            - text: ":"
+            - generic [ref=f1e253]:
+              - img "Show location on an interactive map" [ref=f1e254] [cursor=pointer]
+              - link "7°29′30″S 110°0′16″E" [ref=f1e255] [cursor=pointer]:
+                - /url: https://geohack.toolforge.org/geohack.php?pagename=Java&params=7_29_30_S_110_0_16_E_type:isle_region:ID_scale:5000000
+                - generic "Maps, aerial photos, and other data for this location" [ref=f1e257]: 7°29′30″S 110°0′16″E
+          - generic [ref=f1e258]: From Wikipedia, the free encyclopedia
+        - generic [ref=f1e260]:
+          - generic [ref=f1e261]:
+            - note [ref=f1e262]:
+              - text: This article is about the Indonesian island. For the programming language, see
+              - link "Java (programming language)" [ref=f1e263] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_(programming_language)
+              - text: . For other uses, see
+              - link "Java (disambiguation)" [ref=f1e264] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_(disambiguation)
+              - text: .
+            - table [ref=f1e265]:
+              - caption [ref=f1e266]: Java
+              - rowgroup [ref=f1e267]:
+                - row [ref=f1e268]:
+                  - 'columnheader "Native name: Jawa (Indonesian) ꦗꦮ (Javanese) ᮏᮝ (Sundanese) ꦗꦧ (Madurese) Jawè (Betawi)" [ref=f1e269]':
+                    - generic [ref=f1e270]:
+                      - text: "Native name:"
+                      - generic [ref=f1e271]:
+                        - generic "Indonesian-language text" [ref=f1e272]: Jawa
+                        - generic [ref=f1e273]:
+                          - text: (
+                          - link "Indonesian" [ref=f1e274] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Indonesian_language
+                          - text: )
+                        - generic "Javanese-language text" [ref=f1e275]: ꦗꦮ
+                        - generic [ref=f1e276]:
+                          - text: (
+                          - link "Javanese" [ref=f1e277] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Javanese_language
+                          - text: )
+                        - generic "Sundanese-language text" [ref=f1e278]: ᮏᮝ
+                        - generic [ref=f1e279]:
+                          - text: (
+                          - link "Sundanese" [ref=f1e280] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Sundanese_language
+                          - text: )
+                        - generic "Madurese-language text" [ref=f1e281]: ꦗꦧ
+                        - generic [ref=f1e282]:
+                          - text: (
+                          - link "Madurese" [ref=f1e283] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Madurese_language
+                          - text: )
+                        - generic "Betawi-language text" [ref=f1e284]: Jawè
+                        - generic [ref=f1e285]:
+                          - text: (
+                          - link "Betawi" [ref=f1e286] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Betawi_language
+                          - text: )
+                - row [ref=f1e287]:
+                  - cell "Topography of Java" [ref=f1e288]:
+                    - link [ref=f1e290] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Java_Topography.png
+                - row [ref=f1e293]:
+                  - cell [ref=f1e294]:
+                    - link [ref=f1e296] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Java_Locator.svg
+                - row [ref=f1e298]:
+                  - columnheader "Geography" [ref=f1e299]
+                - row [ref=f1e300]:
+                  - rowheader "Location" [ref=f1e301]
+                  - cell "Southeast Asia" [ref=f1e302]
+                - row [ref=f1e303]:
+                  - rowheader "Coordinates" [ref=f1e304]
+                  - cell [ref=f1e305]:
+                    - generic [ref=f1e308]:
+                      - img "Show location on an interactive map" [ref=f1e309] [cursor=pointer]
+                      - link "7°29′30″S 110°0′16″E" [ref=f1e310] [cursor=pointer]:
+                        - /url: https://geohack.toolforge.org/geohack.php?pagename=Java&params=7_29_30_S_110_0_16_E_type:isle_region:ID_scale:5000000
+                        - generic "Maps, aerial photos, and other data for this location" [ref=f1e312]: 7°29′30″S 110°0′16″E
+                - row [ref=f1e313]:
+                  - rowheader "Archipelago" [ref=f1e314]
+                  - cell [ref=f1e315]:
+                    - link "Indonesian Archipelago" [ref=f1e316] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Indonesian_Archipelago
+                    - separator [ref=f1e317]
+                    - link "Greater Sunda Islands" [ref=f1e318] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Greater_Sunda_Islands
+                - row [ref=f1e319]:
+                  - rowheader "Area" [ref=f1e320]
+                  - cell [ref=f1e321]:
+                    - text: 132,644.29 km
+                    - superscript [ref=f1e322]: "2"
+                    - text: (51,214.25 sq mi)
+                - row [ref=f1e323]:
+                  - rowheader [ref=f1e324]:
+                    - link "Area rank" [ref=f1e325] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_islands_by_area
+                  - cell "13th" [ref=f1e326]
+                - row [ref=f1e327]:
+                  - rowheader "Highest elevation" [ref=f1e328]
+                  - cell "3,678 m (12067 ft)" [ref=f1e329]
+                - row [ref=f1e330]:
+                  - rowheader "Highest point" [ref=f1e331]
+                  - cell [ref=f1e332]:
+                    - link "Semeru" [ref=f1e333] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Semeru
+                - row [ref=f1e334]:
+                  - columnheader "Administration" [ref=f1e335]
+                - row [ref=f1e336]:
+                  - cell [ref=f1e337]:
+                    - link "Indonesia" [ref=f1e340] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Indonesia
+                - row [ref=f1e341]:
+                  - rowheader "Provinces" [ref=f1e342]
+                  - cell [ref=f1e344]:
+                    - list [ref=f1e346]:
+                      - listitem [ref=f1e347]:
+                        - link "Banten" [ref=f1e348] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Banten
+                      - listitem [ref=f1e349]:
+                        - link "Jakarta" [ref=f1e350] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Jakarta
+                      - listitem [ref=f1e351]:
+                        - link "West Java" [ref=f1e352] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/West_Java
+                      - listitem [ref=f1e353]:
+                        - link "Central Java" [ref=f1e354] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Central_Java
+                      - listitem [ref=f1e355]:
+                        - link "Special Region of Yogyakarta" [ref=f1e356] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+                      - listitem [ref=f1e357]:
+                        - link "East Java" [ref=f1e358] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/East_Java
+                - row [ref=f1e359]:
+                  - rowheader "Largest settlement" [ref=f1e360]
+                  - cell [ref=f1e362]:
+                    - link "Jakarta" [ref=f1e363] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jakarta
+                    - text: (pop.10,678,000)
+                - row [ref=f1e364]:
+                  - columnheader "Demographics" [ref=f1e365]
+                - row [ref=f1e366]:
+                  - rowheader "Population" [ref=f1e367]
+                  - cell "158,079,100 (mid 2025)" [ref=f1e368]
+                - row [ref=f1e369]:
+                  - rowheader "Pop. density" [ref=f1e370]
+                  - cell [ref=f1e371]:
+                    - text: 1,192/km
+                    - superscript [ref=f1e372]: "2"
+                    - text: (3087/sq mi)
+                - row [ref=f1e373]:
+                  - rowheader "Ethnic groups" [ref=f1e374]
+                  - cell [ref=f1e375]:
+                    - link "Betawi" [ref=f1e376] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Betawi_people
+                    - text: ","
+                    - link "Javanese" [ref=f1e377] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Javanese_people
+                    - text: (inc.
+                    - link "Cirebonese" [ref=f1e378] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Cirebonese
+                    - text: ","
+                    - link "Tenggerese" [ref=f1e379] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Tenggerese_people
+                    - text: ","
+                    - link "Osing" [ref=f1e380] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Osing_people
+                    - text: ","
+                    - link "Banyumasan" [ref=f1e381] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Banyumasan_people
+                    - text: ),
+                    - link "Madurese" [ref=f1e382] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Madurese_people
+                    - text: (inc.
+                    - link "Bawean" [ref=f1e383] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bawean_people
+                    - text: ","
+                    - link "Kangeanese" [ref=f1e384] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Kangeanese_people
+                    - text: ),
+                    - link "Sundanese" [ref=f1e385] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                    - text: (inc.
+                    - link "Baduy" [ref=f1e386] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Baduy_people
+                    - text: ","
+                    - link "Bantenese" [ref=f1e387] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bantenese_people
+                    - text: ), etc.
+                - row [ref=f1e388]:
+                  - columnheader "Additional information" [ref=f1e389]
+                - row [ref=f1e390]:
+                  - rowheader [ref=f1e391]:
+                    - link "Time zone" [ref=f1e392] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Time_zone
+                  - cell [ref=f1e393]:
+                    - list [ref=f1e395]:
+                      - listitem [ref=f1e396]:
+                        - text: WIB (
+                        - link "UTC+7" [ref=f1e397] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/UTC+7
+                        - text: )
+            - generic [ref=f1e403]:
+              - text: You may need
+              - link "rendering support" [ref=f1e404] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:Multilingual_support#Javanese
+              - text: to display the letters from the
+              - link "Javanese script" [ref=f1e405] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javanese_script
+              - text: in this article correctly.
+            - generic [ref=f1e411]:
+              - text: You may need
+              - link "rendering support" [ref=f1e412] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:Multilingual_support#Sundanese
+              - text: to display the
+              - link "Sundanese script" [ref=f1e413] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sundanese_alphabet
+              - text: in this article correctly.
+            - paragraph [ref=f1e414]:
+              - text: Java
+              - superscript [ref=f1e415]:
+                - link "[a]" [ref=f1e416] [cursor=pointer]:
+                  - /url: "#cite_note-2"
+              - text: is one of the
+              - link "Greater Sunda Islands" [ref=f1e417] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Greater_Sunda_Islands
+              - text: in the
+              - link "South East Asian" [ref=f1e418] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Southeast_Asia
+              - text: country of
+              - link "Indonesia" [ref=f1e419] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Indonesia
+              - text: . It is bordered by the Indian Ocean to the south and the
+              - link "Java Sea" [ref=f1e420] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_Sea
+              - text: (a part of Pacific Ocean) to the north. Java is the world's
+              - link "most populous island" [ref=f1e421] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_islands_by_population
+              - text: ", home to an estimated 159.2 million people; about 56% of the"
+              - link "Indonesian population" [ref=f1e422] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Demographics_of_Indonesia
+              - text: ", while constituting only 7% of the country's"
+              - link "land area" [ref=f1e423] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Geography_of_Indonesia
+              - text: . Indonesia's capital city,
+              - link "Jakarta" [ref=f1e424] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Jakarta
+              - text: ", is located on Java's northwestern coast."
+            - paragraph [ref=f1e425]:
+              - text: Many of the best known events in Indonesian history took place on Java. It was the centre of powerful
+              - link "Hindu-Buddhist empires" [ref=f1e426] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Hindu-Buddhist_empires
+              - text: ", the Islamic sultanates, and the core of the colonial"
+              - link "Dutch East Indies" [ref=f1e427] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Dutch_East_Indies
+              - text: . Java was also the center of the
+              - link "Indonesian struggle for independence" [ref=f1e428] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/History_of_Indonesia
+              - text: during the 1930s and 1940s. Java dominates Indonesia politically, economically, and culturally. Five of Indonesia's ten
+              - link "UNESCO" [ref=f1e429] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/UNESCO
+              - text: "world heritage sites are located in Java:"
+              - link "Ujung Kulon National Park" [ref=f1e430] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Ujung_Kulon_National_Park
+              - text: ","
+              - link "Borobudur Temple" [ref=f1e431] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Borobudur_Temple
+              - text: ","
+              - link "Prambanan Temple" [ref=f1e432] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Prambanan_Temple
+              - text: ","
+              - link "Yogyakarta" [ref=f1e433] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Yogyakarta
+              - text: ", and"
+              - link "Sangiran Early Man Site" [ref=f1e434] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sangiran_Early_Man_Site
+              - text: .
+            - paragraph [ref=f1e435]:
+              - text: Java was formed by volcanic eruptions due to geologic
+              - link "subduction" [ref=f1e436] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Subduction
+              - text: of the
+              - link "Australian Plate" [ref=f1e437] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Australian_Plate
+              - text: under the
+              - link "Sunda Plate" [ref=f1e438] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sunda_Plate
+              - text: . It is the
+              - link "13th largest island" [ref=f1e439] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_islands_by_area
+              - text: in the world and the
+              - link "fifth largest" [ref=f1e440] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_islands_of_Indonesia
+              - text: in Indonesia by landmass, at about 132,644.29 square kilometres (51,214.25 mi
+              - superscript [ref=f1e441]: "2"
+              - text: ) (including
+              - link "Madura" [ref=f1e442] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Madura
+              - text: "'s 5,408.35 square kilometres (2,088.18 mi"
+              - superscript [ref=f1e443]: "2"
+              - text: ) and smaller offshore islands). A chain of volcanic mountains is the east–west spine of the island.
+            - paragraph [ref=f1e444]:
+              - text: "Four main languages are spoken on the island:"
+              - link "Javanese" [ref=f1e445] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javanese_language
+              - text: ","
+              - link "Sundanese" [ref=f1e446] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sundanese_language
+              - text: ","
+              - link "Madurese" [ref=f1e447] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Madurese_language
+              - text: ", and"
+              - link "Betawi" [ref=f1e448] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Betawi_language
+              - text: .
+              - link "Javanese" [ref=f1e449] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javanese_language
+              - text: and
+              - link "Sundanese" [ref=f1e450] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sundanese_language
+              - text: are the most spoken.
+              - superscript [ref=f1e451]:
+                - link "[2]" [ref=f1e452] [cursor=pointer]:
+                  - /url: "#cite_note-3"
+              - text: The ethnic groups native to the island are the
+              - link "Javanese" [ref=f1e453] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javanese_people
+              - text: in the central and eastern parts and
+              - link "Sundanese" [ref=f1e454] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sundanese_people
+              - text: in the western parts. The
+              - link "Madurese" [ref=f1e455] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Madurese_people
+              - text: in the
+              - link "Eastern salient of Java" [ref=f1e456] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Eastern_salient_of_Java
+              - text: are migrants from
+              - link "Madura Island" [ref=f1e457] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Madura_Island
+              - text: (which is part of
+              - link "East Java" [ref=f1e458] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/East_Java
+              - text: Province in administrative terms), while the
+              - link "Betawi" [ref=f1e459] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Betawi_people
+              - text: in the capital city of
+              - link "Jakarta" [ref=f1e460] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Jakarta
+              - text: are hybrids from various
+              - link "ethnic groups in Indonesia" [ref=f1e461] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Ethnic_groups_in_Indonesia
+              - text: .
+            - paragraph [ref=f1e462]:
+              - text: Most residents are bilingual, speaking
+              - link "Indonesian" [ref=f1e463] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Indonesian_language
+              - text: (the official language of
+              - link "Indonesia" [ref=f1e464] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Indonesia
+              - text: ) as their first or second language. While the majority of the people of Java are
+              - link "Muslim" [ref=f1e465] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Muslims
+              - text: ", Java's population comprises people of diverse religious beliefs, ethnicities, and cultures."
+              - superscript [ref=f1e466]:
+                - link "[3]" [ref=f1e467] [cursor=pointer]:
+                  - /url: "#cite_note-4"
+            - paragraph [ref=f1e468]:
+              - text: "Java is divided into four administrative provinces:"
+              - link "Banten" [ref=f1e469] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Banten
+              - text: ","
+              - link "West Java" [ref=f1e470] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/West_Java
+              - text: ","
+              - link "Central Java" [ref=f1e471] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Central_Java
+              - text: ", and"
+              - link "East Java" [ref=f1e472] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/East_Java
+              - text: ", and two special regions,"
+              - link "Jakarta" [ref=f1e473] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Jakarta
+              - text: and
+              - link "Yogyakarta" [ref=f1e474] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+              - text: .
+          - region [ref=f1e475]:
+            - generic [ref=f1e476]:
+              - heading "Etymology" [level=2] [ref=f1e477]
+              - generic [ref=f1e478]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=1
+            - note [ref=f1e479]:
+              - text: "Main article:"
+              - link "Names of Java" [ref=f1e480] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Names_of_Java
+            - note [ref=f1e481]:
+              - text: "See also:"
+              - link "Zabag (ancient territory)" [ref=f1e482] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Zabag_(ancient_territory)
+              - text: and
+              - link "Al-Wakwak" [ref=f1e483] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Al-Wakwak
+            - paragraph [ref=f1e484]:
+              - text: The origins of the name "Java" are not clear. Java may have been named after the
+              - link "jawa" [ref=f1e485] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Foxtail_millet
+              - text: (foxtail millet) plant, derived from the
+              - link "Proto-Austronesian" [ref=f1e486] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Proto-Austronesian_language
+              - text: root *zawa.
+              - superscript [ref=f1e487]:
+                - link "[4]" [ref=f1e488] [cursor=pointer]:
+                  - /url: "#cite_note-ACD-5"
+              - text: The historian Michael Laffan argued that the vernacular form jawa is more likely to have derived from an older form *yaba, based on the directionality of sound changes.
+              - superscript [ref=f1e489]:
+                - link "[5]" [ref=f1e490] [cursor=pointer]:
+                  - /url: "#cite_note-Laffan-6"
+              - superscript [ref=f1e491]:
+                - 'generic "Page / location: 10–11" [ref=f1e492]': ": 10–11"
+            - paragraph [ref=f1e493]:
+              - text: In the early nineteenth century, the British scholar
+              - link "Stamford Raffles" [ref=f1e494] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Stamford_Raffles
+              - text: suggested that another possible source for Java's name is the word jauh (which he spelled jaú), a Malay word meaning "beyond" or "distant".
+              - superscript [ref=f1e495]:
+                - link "[6]" [ref=f1e496] [cursor=pointer]:
+                  - /url: "#cite_note-Raffles-7"
+              - text: It has been suggested that another possible root is *awa or *yawa, meaning "home", related to the
+              - link "Polynesian" [ref=f1e497] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Polynesia
+              - text: words awaʻi (awaiki) or hawaʻi (hawaiki), but these roots are not universally accepted as Proto-Austronesian.
+              - superscript [ref=f1e498]:
+                - link "[4]" [ref=f1e499] [cursor=pointer]:
+                  - /url: "#cite_note-ACD-5"
+              - superscript [ref=f1e500]:
+                - link "[7]" [ref=f1e501] [cursor=pointer]:
+                  - /url: "#cite_note-hatley-8"
+              - text: None of these alternative hypotheses has found broad support among scholars, so the jawa (millet) theory remains the generally accepted one.
+            - paragraph [ref=f1e502]:
+              - text: The toponym Java first appears in foreign literary works around the turn of the
+              - link "Common Era" [ref=f1e503] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Common_Era
+              - text: . In
+              - link "Sanskrit" [ref=f1e504] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sanskrit
+              - text: texts like the
+              - link "Ramayana" [ref=f1e505] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Ramayana
+              - text: ", Java is referred to as Yavadvīpa, with"
+              - generic "Sanskrit-language romanization" [ref=f1e506]: dvīpa
+              - text: meaning "island" and
+              - generic "Sanskrit-language romanization" [ref=f1e507]: yava
+              - text: meaning "
+              - link "barley" [ref=f1e508] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Barley
+              - text: "\". Java is mentioned in the ancient"
+              - link "Tamil" [ref=f1e509] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Tamil_language
+              - text: epic
+              - link "Maṇimēkalai" [ref=f1e511] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Manimekalai
+              - text: (spelled
+              - generic "Old Tamil-language romanization" [ref=f1e512]: Shavakam
+              - text: ) and also in the
+              - link "Pāli" [ref=f1e513] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Pāli
+              - text: scripture
+              - link "Mahāniddesa" [ref=f1e514] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Niddesa
+              - text: (likely pre-1st century BCE) as a place to be reached by boats.
+              - superscript [ref=f1e515]:
+                - link "[8]" [ref=f1e516] [cursor=pointer]:
+                  - /url: "#cite_note-9"
+              - superscript [ref=f1e517]:
+                - link "[9]" [ref=f1e518] [cursor=pointer]:
+                  - /url: "#cite_note-10"
+            - paragraph [ref=f1e519]:
+              - text: The Greek term
+              - generic "Ancient Greek (to 1453)-language romanization" [ref=f1e520]: Iabadiu
+              - text: mentioned in
+              - link "Claudius Ptolemy" [ref=f1e521] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Ptolemy
+              - text: "'s"
+              - link "Geographia" [ref=f1e522] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Geography_(Ptolemy)
+              - text: (150 CE), composed during the height of the
+              - link "Roman Empire" [ref=f1e523] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Roman_Empire
+              - text: ", possibly derives from a"
+              - link "Middle Indo-Aryan language" [ref=f1e524] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Middle_Indo-Aryan_languages
+              - text: and seems to be a synonym of the Sanskrit
+              - generic "Sanskrit-language romanization" [ref=f1e525]: Yāvadvīpa
+              - text: .
+              - superscript [ref=f1e526]:
+                - link "[10]" [ref=f1e527] [cursor=pointer]:
+                  - /url: "#cite_note-11"
+            - paragraph [ref=f1e528]:
+              - text: Chinese sources render the toponym Java, as
+              - generic "Chinese-language text" [ref=f1e529]: 葉調
+              - generic "Literary Chinese-language romanization" [ref=f1e530]: Yèdiào
+              - text: "( Late Middle Chinese pronunciation:"
+              - link "[jiap dɛwh]" [ref=f1e532] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:IPA
+              - text: ) and
+              - generic "Chinese-language text" [ref=f1e533]: 耶婆提
+              - generic "Literary Chinese-language romanization" [ref=f1e534]: Yépótí
+              - text: "( Late Middle Chinese pronunciation:"
+              - link "[jia ba dɛj]" [ref=f1e536] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:IPA
+              - text: ) in the early first millennium CE.
+              - superscript [ref=f1e537]:
+                - link "[11]" [ref=f1e538] [cursor=pointer]:
+                  - /url: "#cite_note-12"
+              - text: Subsequently, there emerged a new Chinese toponym
+              - generic "Chinese-language text" [ref=f1e539]: 闍婆
+              - generic "Chinese-language romanization" [ref=f1e540]: Shépó
+              - text: "( Late Middle Chinese pronunciation:"
+              - link "[d͡ʑia bwa]" [ref=f1e542] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Help:IPA
+              - text: ), as found in the court chronicles
+              - link "Book of Song" [ref=f1e544] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Book_of_Song
+              - text: (late 5th century) and
+              - link "Book of Liang" [ref=f1e546] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Book_of_Liang
+              - text: (7th century).
+              - superscript [ref=f1e547]:
+                - link "[12]" [ref=f1e548] [cursor=pointer]:
+                  - /url: "#cite_note-13"
+              - text: From the
+              - link "Yuan Dynasty" [ref=f1e549] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Yuan_dynasty
+              - text: (1271–1368) onwards, Java began to be called
+              - generic "Chinese-language text" [ref=f1e550]: 爪哇
+              - text: (
+              - generic "Chinese-language romanization" [ref=f1e551]: Zhǎowā
+              - text: ), the present-day name in
+              - link "Mandarin Chinese" [ref=f1e552] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mandarin_Chinese
+              - text: .
+              - superscript [ref=f1e553]:
+                - link "[13]" [ref=f1e554] [cursor=pointer]:
+                  - /url: "#cite_note-Nusa_Jawa-14"
+            - paragraph [ref=f1e555]:
+              - text: In the later Middle Ages, Muslim writers began to refer to the islands of Indonesia by the term
+              - link "al-Zabaj" [ref=f1e556] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Zabag_(ancient_territory)
+              - text: (
+              - link "Arabic" [ref=f1e557] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Arabic_language
+              - text: ": الزابج ). The Arabic usage of the word Zabaj was very broad, often incorporating either Sumatra or Java or both. It is the Arabic term Zabaj, rather than the ancient Greek term Iabadiu, that had the greater influence on late medieval Europeans."
+              - superscript [ref=f1e558]:
+                - link "[14]" [ref=f1e559] [cursor=pointer]:
+                  - /url: "#cite_note-15"
+              - superscript [ref=f1e560]:
+                - 'generic "Page: xii, 192–194" [ref=f1e561]': ": xii, 192–194"
+              - superscript [ref=f1e562]:
+                - link "[15]" [ref=f1e563] [cursor=pointer]:
+                  - /url: "#cite_note-16"
+              - superscript [ref=f1e564]:
+                - link "[16]" [ref=f1e565] [cursor=pointer]:
+                  - /url: "#cite_note-17"
+          - region [ref=f1e566]:
+            - generic [ref=f1e567]:
+              - heading "Geography" [level=2] [ref=f1e568]
+              - generic [ref=f1e569]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=2
+            - note [ref=f1e570]:
+              - text: "See also:"
+              - link "Volcanism of Java" [ref=f1e571] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Volcanism_of_Java
+            - figure [ref=f1e572]:
+              - link [ref=f1e573] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Bromo_yang_menakjubkan.jpg
+              - generic [ref=f1e575]:
+                - link "Mount Bromo" [ref=f1e576] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mount_Bromo
+                - text: in
+                - link "Malang" [ref=f1e577] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Malang
+                - text: ", East Java"
+            - paragraph [ref=f1e578]:
+              - text: Java lies between
+              - link "Sumatra" [ref=f1e579] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sumatra
+              - text: to the west and
+              - link "Bali" [ref=f1e580] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bali
+              - text: to the east.
+              - link "Borneo" [ref=f1e581] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Borneo
+              - text: lies to the north, and
+              - link "Christmas Island" [ref=f1e582] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Christmas_Island
+              - text: is to the south. It is the world's 13th largest island. Java is surrounded by the
+              - link "Java Sea" [ref=f1e583] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_Sea
+              - text: to the north, the
+              - link "Sunda Strait" [ref=f1e584] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sunda_Strait
+              - text: to the west, the Indian Ocean to the south and
+              - link "Bali Strait" [ref=f1e585] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bali_Strait
+              - superscript [ref=f1e586]:
+                - link "[17]" [ref=f1e587] [cursor=pointer]:
+                  - /url: "#cite_note-18"
+              - text: and
+              - link "Madura Strait" [ref=f1e588] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Madura_Strait
+              - text: in the east.
+              - superscript [ref=f1e589]:
+                - link "[18]" [ref=f1e590] [cursor=pointer]:
+                  - /url: "#cite_note-worldatlas-19"
+            - paragraph [ref=f1e591]:
+              - text: Java is almost entirely of volcanic origin; it contains 38 mountains forming an east–west spine that have at one time or another been active volcanoes. There are 112 volcanoes in all, 35 of which are active. The highest volcano in Java is Mount
+              - link "Semeru" [ref=f1e592] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Semeru
+              - text: ", 3,676 metres (12,060 ft). The most active volcano in Java and also in Indonesia is"
+              - link "Mount Merapi" [ref=f1e593] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mount_Merapi
+              - text: ", 2,930 metres (9,610 ft)."
+              - superscript [ref=f1e594]:
+                - link "[19]" [ref=f1e595] [cursor=pointer]:
+                  - /url: "#cite_note-20"
+              - superscript [ref=f1e596]:
+                - link "[20]" [ref=f1e597] [cursor=pointer]:
+                  - /url: "#cite_note-21"
+            - paragraph [ref=f1e598]:
+              - text: Java's mountains and highlands split the interior into a series of relatively isolated regions suitable for
+              - link "wet-rice" [ref=f1e599] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Paddy_field
+              - text: cultivation; the rice lands of Java are among the richest in the world.
+              - superscript [ref=f1e600]:
+                - link "[21]" [ref=f1e601] [cursor=pointer]:
+                  - /url: "#cite_note-RICKLEFS_p15-22"
+              - text: Java was the first place where
+              - link "Indonesian coffee" [ref=f1e602] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Coffee_production_in_Indonesia
+              - text: was grown, beginning in 1699. Today,
+              - link "coffea arabica" [ref=f1e603] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Coffea_arabica
+              - text: is grown on the Ijen Plateau by small-holders and larger plantations.
+              - superscript [ref=f1e604]:
+                - link "[22]" [ref=f1e605] [cursor=pointer]:
+                  - /url: "#cite_note-23"
+            - figure "Parahyangan highland near Buitenzorg (now Bogor, West Java), c. 1865–1872" [ref=f1e606]:
+              - link [ref=f1e607] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_De_weg_van_Buitenzorg_naar_de_Preanger_Regentschappen_TMnr_3728-429c.jpg
+              - generic [ref=f1e609]:
+                - link "Parahyangan" [ref=f1e610] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Parahyangan
+                - text: highland near
+                - generic "Dutch-language text" [ref=f1e611]: Buitenzorg
+                - text: (now
+                - link "Bogor" [ref=f1e612] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bogor
+                - text: ", West Java), c. 1865–1872"
+            - paragraph [ref=f1e613]:
+              - text: The area of Java is about 132,598.77 square kilometres (51,196.67 mi
+              - superscript [ref=f1e614]: "2"
+              - text: ) (including Madura's 5,408.45 square kilometres (2,088.21 mi
+              - superscript [ref=f1e615]: "2"
+              - text: ) and minor offshore islands).
+              - superscript [ref=f1e616]:
+                - link "[21]" [ref=f1e617] [cursor=pointer]:
+                  - /url: "#cite_note-RICKLEFS_p15-22"
+              - text: It is about 1,000 km (620 mi) long and up to 210 km (130 mi) wide. The island's longest river is the 600 km long
+              - link "Solo River" [ref=f1e618] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Solo_River
+              - text: .
+              - superscript [ref=f1e619]:
+                - link "[23]" [ref=f1e620] [cursor=pointer]:
+                  - /url: "#cite_note-24"
+              - text: The river rises from its source in central Java at the
+              - link "Lawu" [ref=f1e621] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mount_Lawu
+              - text: volcano, then flows north and eastward to its mouth in the Java Sea near the city of
+              - link "Surabaya" [ref=f1e622] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Surabaya
+              - text: . Other major rivers are
+              - link "Brantas" [ref=f1e623] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Brantas_River
+              - text: ","
+              - link "Citarum" [ref=f1e624] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Citarum_River
+              - text: ","
+              - link "Cimanuk" [ref=f1e625] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Manuk_River
+              - text: and
+              - link "Serayu" [ref=f1e626] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Serayu_River
+              - text: .
+              - superscript [ref=f1e627]:
+                - text: "["
+                - link "citation needed" [ref=f1e629] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                - text: "]"
+            - paragraph [ref=f1e630]:
+              - text: The average temperature ranges from 22 °C (72 °F) to 29 °C (84 °F); average humidity is 75%. The northern coastal plains are normally hotter, averaging 34 °C (93 °F) during the day in the
+              - link "dry season" [ref=f1e631] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Dry_season
+              - text: . The south coast is generally cooler than the north, and highland areas inland are even cooler.
+              - superscript [ref=f1e632]:
+                - link "[24]" [ref=f1e633] [cursor=pointer]:
+                  - /url: "#cite_note-25"
+              - text: The
+              - link "wet season" [ref=f1e634] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Wet_season
+              - text: begins in November and ends in April. During that time, rain falls mostly in the afternoons and intermittently during other parts of the year. The wettest months are January and February.
+              - superscript [ref=f1e635]:
+                - link "[25]" [ref=f1e636] [cursor=pointer]:
+                  - /url: "#cite_note-26"
+            - paragraph [ref=f1e637]:
+              - text: West Java is wetter than
+              - link "East Java" [ref=f1e638] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/East_Java
+              - text: ", and mountainous regions receive much higher rainfall. The"
+              - link "Parahyangan" [ref=f1e639] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Parahyangan
+              - text: highlands of West Java receive over 4,000 millimetres (160 in) annually, while the north coast of East Java receives 900 millimetres (35 in) annually.
+              - superscript [ref=f1e640]:
+                - text: "["
+                - link "citation needed" [ref=f1e642] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                - text: "]"
+          - region [ref=f1e643]:
+            - generic [ref=f1e644]:
+              - heading "Natural environment" [level=2] [ref=f1e645]
+              - generic [ref=f1e646]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=3
+            - figure [ref=f1e647]:
+              - link [ref=f1e648] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Cymbidium_dayanum_Orchi_04.jpg
+              - generic [ref=f1e650]:
+                - link "Cymbidium dayanum" [ref=f1e652] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cymbidium_dayanum
+                - text: "- typical orchid in Java"
+            - paragraph [ref=f1e653]:
+              - text: Java is an island with a large amount of biodiversity. The
+              - link "natural environment" [ref=f1e654] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Natural_environment
+              - text: of Java is
+              - link "tropical rainforest" [ref=f1e655] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Tropical_rainforest
+              - text: ", with ecosystems ranging from coastal"
+              - link "mangrove" [ref=f1e656] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mangrove
+              - text: forest on the north coast, rocky coastal cliffs on the southern coast, and low-lying
+              - link "tropical forest" [ref=f1e657] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Tropical_and_subtropical_moist_broadleaf_forests
+              - text: to high altitude rainforest on the slopes of mountainous volcanic regions in the interior. The Javan environment and climate gradually alters from west to east; from wet and humid dense rainforest in western parts, to a dry
+              - link "savanna" [ref=f1e658] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Savanna
+              - text: environment in the east, corresponding to the climate and rainfall in these regions.
+              - superscript [ref=f1e659]:
+                - text: "["
+                - link "citation needed" [ref=f1e661] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                - text: "]"
+            - figure [ref=f1e662]:
+              - link [ref=f1e663] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Java-1934_-2.jpg
+              - generic [ref=f1e665]:
+                - text: Male
+                - link "Javan rhino" [ref=f1e666] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javan_rhinoceros
+                - text: shot in 1934 in West Java. Today only small numbers of Javan rhino survive in
+                - link "Ujung Kulon" [ref=f1e667] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ujung_Kulon_National_Park
+                - text: ; it is the world's rarest rhino.
+            - paragraph [ref=f1e668]:
+              - text: Javan wildlife originally supported a rich biodiversity, where numbers of
+              - link "endemic" [ref=f1e669] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Endemism
+              - text: species of flora and fauna flourished; such as the
+              - link "Javan rhinoceros" [ref=f1e670] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_rhinoceros
+              - text: ","
+              - superscript [ref=f1e671]:
+                - link "[26]" [ref=f1e672] [cursor=pointer]:
+                  - /url: "#cite_note-27"
+              - link "Javan banteng" [ref=f1e673] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Banteng
+              - text: ","
+              - link "Javan warty pig" [ref=f1e674] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_warty_pig
+              - text: ","
+              - link "Javan silvery gibbon" [ref=f1e675] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Silvery_gibbon
+              - text: ","
+              - link "Javan lutung" [ref=f1e676] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/East_Javan_langur
+              - text: ","
+              - link "Java mouse-deer" [ref=f1e677] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_mouse-deer
+              - text: ","
+              - link "Javan rusa" [ref=f1e678] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_rusa
+              - text: ", and"
+              - link "Javan leopard" [ref=f1e679] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_leopard
+              - text: . With over 450 bird species and 37 endemic species including the
+              - link "Javan green magpie" [ref=f1e680] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_green_magpie
+              - text: ","
+              - link "Java sparrow" [ref=f1e681] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Java_sparrow
+              - text: ","
+              - link "Javan hawk-eagle" [ref=f1e682] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_hawk-eagle
+              - text: ","
+              - link "Javan peafowl" [ref=f1e683] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Green_peafowl
+              - text: ", and"
+              - link "Javan blue-banded kingfisher" [ref=f1e684] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_blue-banded_kingfisher
+              - text: ", Java is a birdwatcher's paradise."
+              - superscript [ref=f1e685]:
+                - link "[27]" [ref=f1e686] [cursor=pointer]:
+                  - /url: "#cite_note-28"
+              - text: There are about 130 freshwater fish species in Java.
+              - superscript [ref=f1e687]:
+                - link "[28]" [ref=f1e688] [cursor=pointer]:
+                  - /url: "#cite_note-29"
+              - text: There are also several endemic
+              - link "amphibian species in Java" [ref=f1e689] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_amphibians_of_Java
+              - text: ", including 5 species of"
+              - link "tree frogs" [ref=f1e690] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Rhacophoridae
+              - text: .
+              - superscript [ref=f1e691]:
+                - link "[29]" [ref=f1e692] [cursor=pointer]:
+                  - /url: "#cite_note-Frost-30"
+            - paragraph [ref=f1e693]:
+              - text: Since ancient times, people have opened the rainforest, altered the ecosystem, shaped the landscapes and created
+              - link "rice paddy" [ref=f1e694] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Paddy_field
+              - text: and terraces to support the growing population. Javan rice terraces have existed for more than a millennium and had supported ancient agricultural kingdoms. The growing human population has put severe pressure on Java's wildlife, as rainforests were diminished and confined to highland slopes or isolated peninsulas. Some of Java's endemic species are now critically endangered, with some already extinct; Java used to have
+              - link "Javan tigers" [ref=f1e695] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_tiger
+              - text: and
+              - link "Javan elephants" [ref=f1e696] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Javan_elephant
+              - text: ", but both have been rendered extinct. Today, several national parks exist in Java that protect the remnants of its fragile wildlife, such as"
+              - link "Ujung Kulon" [ref=f1e697] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Ujung_Kulon_National_Park
+              - text: ","
+              - link "Mount Halimun-Salak" [ref=f1e698] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mount_Halimun_Salak_National_Park
+              - text: ","
+              - link "Gede Pangrango" [ref=f1e699] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Gunung_Gede_Pangrango_National_Park
+              - text: ","
+              - link "Baluran" [ref=f1e700] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Baluran_National_Park
+              - text: ","
+              - link "Meru Betiri" [ref=f1e701] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Meru_Betiri_National_Park
+              - text: ","
+              - link "Bromo Tengger Semeru" [ref=f1e702] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bromo_Tengger_Semeru_National_Park
+              - text: and
+              - link "Alas Purwo" [ref=f1e703] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Alas_Purwo_National_Park
+              - text: .
+            - paragraph [ref=f1e704]:
+              - text: Surveys conducted by a team led by EcoVerde Global Consulting
+              - superscript [ref=f1e705]:
+                - link "[30]" [ref=f1e706] [cursor=pointer]:
+                  - /url: "#cite_note-31"
+              - text: on the live bats trade in Java showed an ongoing long-term trade of large fruit bats for traditional medicine in all the major cities including Jakarta, Surabaya, Bekasi, Bandung and Yogyakarta. Hundreds of animals are being offered for sale with higher numbers per capita in economically less affluent areas and more bats in cities with larger Christian populations
+              - superscript [ref=f1e707]:
+                - link "[31]" [ref=f1e708] [cursor=pointer]:
+                  - /url: "#cite_note-32"
+          - region [ref=f1e709]:
+            - generic [ref=f1e710]:
+              - heading "History" [level=2] [ref=f1e711]
+              - generic [ref=f1e712]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=4
+            - region [ref=f1e713]:
+              - generic [ref=f1e714]:
+                - heading "Homo erectus presence" [level=3] [ref=f1e715]
+                - generic [ref=f1e716]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=5
+              - figure [ref=f1e717]:
+                - link [ref=f1e718] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Pithecanthropus_erectus-PeterMaas_Naturalis.jpg
+                - generic [ref=f1e720]:
+                  - text: The
+                  - link "syntype" [ref=f1e721] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Syntype
+                  - text: fossils of Java Man (H. e. erectus), at
+                  - link "Naturalis" [ref=f1e722] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Naturalis
+                  - text: ","
+                  - link "Leiden" [ref=f1e723] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leiden
+              - figure [ref=f1e724]:
+                - link [ref=f1e725] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Ngandong_14._Homo_erectus.jpg
+                - generic [ref=f1e727]:
+                  - text: Cast of Skull XI at the
+                  - link "Hall of Human Origins" [ref=f1e728] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hall_of_Human_Origins
+                  - text: ", Washington, D.C."
+              - paragraph [ref=f1e729]:
+                - text: Fossilised remains of
+                - link "Homo erectus" [ref=f1e731] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Homo_erectus
+                - text: ", popularly known as the \""
+                - link "Java Man" [ref=f1e732] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Java_Man
+                - text: "\", dating back 1.3 million"
+                - superscript [ref=f1e733]:
+                  - link "[32]" [ref=f1e734] [cursor=pointer]:
+                    - /url: "#cite_note-33"
+                - text: years were found along the banks of the
+                - link "Bengawan Solo River" [ref=f1e735] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Solo_River
+                - text: .
+                - superscript [ref=f1e736]:
+                  - link "[33]" [ref=f1e737] [cursor=pointer]:
+                    - /url: "#cite_note-34"
+              - paragraph [ref=f1e738]:
+                - text: H. erectus arrived in Eurasia approximately 1.8 million years ago, in an event considered to be the first African exodus.
+                - superscript [ref=f1e739]:
+                  - link "[34]" [ref=f1e740] [cursor=pointer]:
+                    - /url: "#cite_note-35"
+                - text: There is evidence that the Java population of H. erectus lived in an ever-wet forest habitat. More specifically the environment resembled a
+                - link "savannah" [ref=f1e741] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Savannah
+                - text: ", but was likely regularly inundated (\"hydromorphic savanna\"). The plants found at the Trinil excavation site included grass ("
+                - link "Poaceae" [ref=f1e742] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Poaceae
+                - text: ),
+                - link "ferns" [ref=f1e743] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Fern
+                - text: ","
+                - link "Ficus" [ref=f1e745] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ficus
+                - text: ", and"
+                - link "Indigofera" [ref=f1e747] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Indigofera
+                - text: ", which are typical of lowland rainforest."
+                - superscript [ref=f1e748]:
+                  - link "[35]" [ref=f1e749] [cursor=pointer]:
+                    - /url: "#cite_note-36"
+              - paragraph [ref=f1e750]:
+                - link "H. e. soloensis" [ref=f1e751] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Solo_Man
+                - text: was the last population of a long occupation history of the island of Java by
+                - generic [ref=f1e753]: H. erectus
+                - text: ", beginning 1.51 to 0.93 million years ago at the Sangiran site, continuing 540 to 430 thousand years ago at the Trinil site, and finally 117 to 108 thousand years ago at Ngandong."
+                - superscript [ref=f1e754]:
+                  - link "[36]" [ref=f1e755] [cursor=pointer]:
+                    - /url: "#cite_note-37"
+                - text: If the date is correct for Solo Man, then they would represent a terminal population of
+                - generic [ref=f1e756]: H. erectus
+                - text: which sheltered in the last open-habitat refuges of East Asia before the rainforest takeover. Before the immigration of modern humans, Late Pleistocene Southeast Asia was also home to
+                - link "H. floresiensis" [ref=f1e758] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Homo_floresiensis
+                - text: endemic to the island of
+                - link "Flores" [ref=f1e759] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Flores
+                - text: ", Indonesia, and"
+                - link "H. luzonensis" [ref=f1e761] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Homo_luzonensis
+                - text: endemic to the island of
+                - link "Luzon" [ref=f1e762] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Luzon
+                - text: ", the Philippines. Genetic analysis of present-day Southeast Asian populations indicates the widespread dispersal of the"
+                - link "Denisovans" [ref=f1e763] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Denisovan
+                - text: (a species currently recognisable only by their genetic signature) across Southeast Asia, whereupon they interbred with immigrating modern humans 45.7 and 29.8 thousand years ago.
+                - superscript [ref=f1e764]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e766] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+                - text: A 2021 genomic study indicates that, aside from the Denisovans, modern humans never interbred with any of these endemic human species, unless the offspring were
+                - link "unviable" [ref=f1e767] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hybrid_incompatibility
+                - text: or the hybrid lineages have since died out.
+                - superscript [ref=f1e768]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e770] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - paragraph [ref=f1e771]:
+                - text: Judging by the sheer number of specimens deposited at Ngandong at the same time, there may have been a sizeable population of
+                - generic [ref=f1e772]: H. e soloensis
+                - text: before the volcanic eruption which resulted in their interment, but population is difficult to approximate with certainty. This site is quite far from the north coast of Java Island, and it is not always easy to determine the position of the coastline in prehistoric times because of significant geographical changes.
+                - superscript [ref=f1e773]:
+                  - link "[37]" [ref=f1e774] [cursor=pointer]:
+                    - /url: "#cite_note-38"
+              - paragraph [ref=f1e775]: The southern coastline and estuary of the Bengawan Solo River at that time may have been different from what it is today, due to geological factors such as sedimentation, erosion, and changes in sea level over time. Currently, the estuary of the Bengawan Solo is in the Java Sea, but in prehistoric times, the river flow and estuary location may have changed. Geological and paleogeographic studies are often used to understand these changes.
+            - region [ref=f1e776]:
+              - generic [ref=f1e777]:
+                - heading "After the arrival of modern humans" [level=3] [ref=f1e778]
+                - generic [ref=f1e779]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=6
+              - figure [ref=f1e780]:
+                - link [ref=f1e781] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Sumbing,_Java.jpg
+                - generic [ref=f1e783]:
+                  - link "Mount Sumbing" [ref=f1e784] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mount_Sumbing
+                  - text: surrounded by rice fields. Java's volcanic topography and rich agricultural lands are the fundamental factors in its history.
+              - paragraph [ref=f1e785]:
+                - text: The island's exceptional fertility and rainfall allowed the development of wet-field rice cultivation, which required sophisticated levels of cooperation between villages. Out of these village alliances, small kingdoms developed. The chain of volcanic mountains and associated highlands running the length of Java kept its interior regions and peoples separate and relatively isolated.
+                - superscript [ref=f1e786]:
+                  - link "[38]" [ref=f1e787] [cursor=pointer]:
+                    - /url: "#cite_note-39"
+                - text: Before the advent of Islamic states and European colonialism, the rivers provided the main means of communication, although Java's many rivers are mostly short. Only the
+                - link "Brantas river" [ref=f1e788] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Brantas_River
+                - text: and Solo river could provide long-distance communication and this way their valleys supported the centers of major kingdoms. A system of roads, permanent bridges, and toll gates is thought to have been established in Java by at least the mid-17th century. Local powers could disrupt the routes as could the wet season and road use was highly dependent on constant maintenance. Consequently, communication between Java's population was difficult.
+                - superscript [ref=f1e789]:
+                  - link "[21]" [ref=f1e790] [cursor=pointer]:
+                    - /url: "#cite_note-RICKLEFS_p15-22"
+              - generic [ref=f1e792]:
+                - generic [ref=f1e793]:
+                  - link [ref=f1e797] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:MET_DP158751.jpg
+                  - link [ref=f1e802] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:MET_2001_433_526_O2.jpg
+                - generic [ref=f1e804]: Standing warrior bronze figures, Java, c. 500 BC – 300 AD
+              - paragraph [ref=f1e806]:
+                - text: According to Javanese legends circulating from the 18th century onwards, the emergence of civilization on the island of Java is associated with the arrival of
+                - link "Aji Saka" [ref=f1e807] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Aji_Saka
+                - text: ("the
+                - link "Saka" [ref=f1e808] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Saka
+                - text: king") in 78 CE. Aji Saka, as a "mythic founder of the social and religious order",
+                - superscript [ref=f1e809]:
+                  - link "[39]" [ref=f1e810] [cursor=pointer]:
+                    - /url: "#cite_note-pigeaud-40"
+                - superscript [ref=f1e811]:
+                  - 'generic "Page: 132" [ref=f1e812]': ": 132"
+                - text: is credited with establishing the key elements of Javanese civilization, such as eliminating demons, establishing the first kingdom, and introducing literacy.
+                - superscript [ref=f1e813]:
+                  - link "[39]" [ref=f1e814] [cursor=pointer]:
+                    - /url: "#cite_note-pigeaud-40"
+              - paragraph [ref=f1e815]:
+                - text: Foreign sources around the beginning of the Common Era (see
+                - link "Names of Java" [ref=f1e816] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Names_of_Java
+                - text: ), such as Valmiki's
+                - link "Ramayana" [ref=f1e817] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ramayana
+                - text: ", attest to Java's wealth and political organization at that time:"
+              - blockquote [ref=f1e818]:
+                - paragraph [ref=f1e819]:
+                  - text: "\"Yavadvipa is decorated with seven kingdoms, gold and silver islands, rich in gold mines, and there is Śiśira (cold) Mountain that touches the sky with its peak.\""
+                  - superscript [ref=f1e820]:
+                    - link "[40]" [ref=f1e821] [cursor=pointer]:
+                      - /url: "#cite_note-41"
+                  - superscript [ref=f1e822]:
+                    - 'generic "Page: 6" [ref=f1e823]': ": 6"
+              - paragraph [ref=f1e824]:
+                - text: The Greek geographer
+                - link "Ptolemy" [ref=f1e825] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ptolemy
+                - text: called the island Iabadiu or Sabadibai (
+                - link "Ancient Greek" [ref=f1e826] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ancient_Greek_language
+                - text: ": Ιαβαδίου or Σαβαδίβαι )."
+                - superscript [ref=f1e827]:
+                  - link "[41]" [ref=f1e828] [cursor=pointer]:
+                    - /url: "#cite_note-42"
+                - superscript [ref=f1e829]:
+                  - link "[42]" [ref=f1e830] [cursor=pointer]:
+                    - /url: "#cite_note-43"
+                - text: Ptolemy said that the name meant the "Island of Barley" and produced a lot of grain and gold, adding that its metropolis was called Argyre (Ἀργυρῆ)
+                - superscript [ref=f1e831]:
+                  - link "[43]" [ref=f1e832] [cursor=pointer]:
+                    - /url: "#cite_note-44"
+                - text: meaning silver in Greek.
+                - superscript [ref=f1e833]:
+                  - link "[44]" [ref=f1e834] [cursor=pointer]:
+                    - /url: "#cite_note-45"
+              - paragraph [ref=f1e835]:
+                - text: According to Chinese record
+                - link "Míng Shǐ" [ref=f1e837] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/History_of_Ming
+                - text: ", the Javanese kingdom was founded in 65 BCE."
+                - superscript [ref=f1e838]:
+                  - link "[45]" [ref=f1e839] [cursor=pointer]:
+                    - /url: "#cite_note-46"
+                - superscript [ref=f1e840]:
+                  - 'generic "Page: 39" [ref=f1e841]': ": 39"
+            - region [ref=f1e842]:
+              - generic [ref=f1e843]:
+                - heading "Hindu-Buddhist (Classic) period" [level=3] [ref=f1e844]
+                - generic [ref=f1e845]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=7
+              - note [ref=f1e846]:
+                - text: "See also:"
+                - link "History of Southeast Asia § Early historical era" [ref=f1e847] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/History_of_Southeast_Asia#Early_historical_era
+                - text: ", and"
+                - link "Hinduism in Java" [ref=f1e848] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hinduism_in_Java
+              - figure [ref=f1e849]:
+                - link [ref=f1e850] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg
+                - generic [ref=f1e852]:
+                  - text: The 9th century
+                  - link "Borobudur" [ref=f1e853] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Borobudur
+                  - text: Buddhist
+                  - link "stupa" [ref=f1e854] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Stupa
+                  - text: in Central Java
+              - paragraph [ref=f1e855]:
+                - text: The period between the 5th and 15th century in Java is often referred to as the Hindu-Buddhist period, while in the broader context of Southeast Asia it is also referred to as the Classic period.
+                - superscript [ref=f1e856]:
+                  - link "[46]" [ref=f1e857] [cursor=pointer]:
+                    - /url: "#cite_note-miksic-goh-47"
+                - superscript [ref=f1e858]:
+                  - 'generic "Page / location: 10–11" [ref=f1e859]': ": 10–11"
+                - text: The
+                - link "Taruma" [ref=f1e860] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Tarumanagara
+                - text: kingdom of western Java existed from the 5th to the 7th centuries,
+                - superscript [ref=f1e861]:
+                  - link "[47]" [ref=f1e862] [cursor=pointer]:
+                    - /url: "#cite_note-Coedes-48"
+                - superscript [ref=f1e863]:
+                  - 'generic "Page / location: 83" [ref=f1e864]': ": 83"
+                - superscript [ref=f1e865]:
+                  - link "[48]" [ref=f1e866] [cursor=pointer]:
+                    - /url: "#cite_note-Casparis1975-49"
+                - superscript [ref=f1e867]:
+                  - 'generic "Page / location: 19" [ref=f1e868]': ": 19"
+                - text: while the
+                - link "Heling kingdom" [ref=f1e869] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Heling_kingdom
+                - text: sent embassies to China starting in 640.
+                - superscript [ref=f1e870]:
+                  - link "[47]" [ref=f1e871] [cursor=pointer]:
+                    - /url: "#cite_note-Coedes-48"
+                - superscript [ref=f1e872]:
+                  - 'generic "Page / location: 53, 79" [ref=f1e873]': ": 53, 79"
+              - paragraph [ref=f1e874]:
+                - text: The first state to leave a substantial historical record was the
+                - link "Mataram kingdom" [ref=f1e875] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mataram_kingdom
+                - text: that was founded in central Java at the beginning of the 8th century.
+                - superscript [ref=f1e876]:
+                  - link "[49]" [ref=f1e877] [cursor=pointer]:
+                    - /url: "#cite_note-wisseman-christie-50"
+                - text: The rulers of Mataram patronised both Hindu and Buddhist institutions, including Java's earliest Hindu temples on the
+                - link "Dieng Plateau" [ref=f1e878] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dieng_Plateau
+                - text: . In the second half of the 8th century, these rulers described themselves as members of the
+                - link "Sailendra dynasty" [ref=f1e879] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Shailendra_dynasty
+                - text: ", which strongly supported"
+                - link "Mahayana" [ref=f1e880] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mahayana
+                - link "Buddhism" [ref=f1e881] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Buddhism
+                - text: .
+                - superscript [ref=f1e882]:
+                  - link "[49]" [ref=f1e883] [cursor=pointer]:
+                    - /url: "#cite_note-wisseman-christie-50"
+                - superscript [ref=f1e884]:
+                  - 'generic "Pages: 34–35" [ref=f1e885]': ": 34–35"
+                - text: Monumental temple complexes such as
+                - link "Borobudur" [ref=f1e886] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Borobudur
+                - text: (late 8th century) and
+                - link "Prambanan" [ref=f1e887] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Prambanan
+                - text: (mid-9th century) in central Java were constructed at this time.
+                - superscript [ref=f1e888]:
+                  - link "[46]" [ref=f1e889] [cursor=pointer]:
+                    - /url: "#cite_note-miksic-goh-47"
+                - superscript [ref=f1e890]:
+                  - 'generic "Page: 236" [ref=f1e891]': ": 236"
+              - paragraph [ref=f1e892]:
+                - text: In the late 920s, the center of power shifted from central to eastern Java.
+                - superscript [ref=f1e893]:
+                  - link "[50]" [ref=f1e894] [cursor=pointer]:
+                    - /url: "#cite_note-griffiths-sastrawan-bastiawan-51"
+                - superscript [ref=f1e895]:
+                  - 'generic "Page / location: 172–174" [ref=f1e896]': ": 172–174"
+                - text: The eastern Javanese kingdoms of
+                - link "Kediri" [ref=f1e897] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kediri_Kingdom
+                - text: (c.
+                - generic [ref=f1e898]: "1100"
+                - text: –1222),
+                - link "Singhasari" [ref=f1e899] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Singhasari
+                - text: (1222–1292) and
+                - link "Majapahit" [ref=f1e900] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Majapahit
+                - text: (1293–c.
+                - generic [ref=f1e901]: 1520s
+                - text: ) were mainly dependent on rice agriculture, yet also pursued trade within the Indonesian archipelago, and with China and India. Majapahit was established by King
+                - link "Wijaya" [ref=f1e902] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Raden_Wijaya
+                - text: in 1293,
+                - superscript [ref=f1e903]:
+                  - link "[47]" [ref=f1e904] [cursor=pointer]:
+                    - /url: "#cite_note-Coedes-48"
+                - superscript [ref=f1e905]:
+                  - 'generic "Page / location: 201" [ref=f1e906]': ": 201"
+                - text: and by the end of the reign of
+                - link "Hayam Wuruk" [ref=f1e907] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hayam_Wuruk
+                - text: (c.
+                - generic [ref=f1e908]: 1390s
+                - text: ) it claimed suzerainty over most of the present-day Indonesian archipelago, although its direct control was likely limited to Java, Bali, and Madura. Hayam Wuruk's prime minister,
+                - link "Gajah Mada" [ref=f1e909] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gajah_Mada
+                - text: ", led many of the kingdom's territorial conquests."
+                - superscript [ref=f1e910]:
+                  - link "[47]" [ref=f1e911] [cursor=pointer]:
+                    - /url: "#cite_note-Coedes-48"
+                - superscript [ref=f1e912]:
+                  - 'generic "Page / location: 234" [ref=f1e913]': ": 234"
+                - text: For most of the 15th century, Majapahit continued to be the dominant power in eastern Java.
+                - superscript [ref=f1e914]:
+                  - link "[b]" [ref=f1e915] [cursor=pointer]:
+                    - /url: "#cite_note-53"
+                - text: This last period of Majapahit history coincides with the first emergence of
+                - link "Islamic kingdoms in Java" [ref=f1e916] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Spread_of_Islam_in_Indonesia
+                - text: .
+            - region [ref=f1e917]:
+              - generic [ref=f1e918]:
+                - heading "Spread of Islam and rise of Islamic sultanates" [level=3] [ref=f1e919]
+                - generic [ref=f1e920]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=8
+              - note [ref=f1e921]:
+                - text: "See also:"
+                - link "Spread of Islam in Indonesia § Central and eastern Java" [ref=f1e922] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Spread_of_Islam_in_Indonesia#Central_and_eastern_Java
+              - link [ref=f1e925] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Question_book-new.svg
+                - img "icon" [ref=f1e926]
+              - generic [ref=f1e927]:
+                - text: This section
+                - generic [ref=f1e928]:
+                  - text: does not
+                  - link "cite" [ref=f1e929] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citing_sources
+                  - text: any
+                  - link "sources" [ref=f1e930] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Verifiability
+                - text: .
+                - generic [ref=f1e931]:
+                  - text: Please help
+                  - link "improve this section" [ref=f1e932] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:EditPage/Java
+                  - text: by
+                  - link "adding citations to reliable sources" [ref=f1e933] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:Referencing_for_beginners
+                  - text: . Unsourced material may be challenged and
+                  - link "removed" [ref=f1e934] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence
+                  - text: .
+                - generic [ref=f1e935]: (November 2022)
+                - generic [ref=f1e938]:
+                  - text: (
+                  - link "Learn how and when to remove this message" [ref=f1e940] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:Maintenance_template_removal
+                  - text: )
+              - paragraph [ref=f1e941]:
+                - text: Islam gradually became the dominant religion in Java throughout the 16th century.
+                - superscript [ref=f1e942]:
+                  - link "[52]" [ref=f1e943] [cursor=pointer]:
+                    - /url: "#cite_note-ricklefs-54"
+                - text: The port-cities of the north coast like Surabaya, Gresik, Demak and Cirebon were the first Javanese polities to adopt Islam, thanks to their interactions with foreign Muslim traders and clerics.
+                - superscript [ref=f1e944]:
+                  - link "[53]" [ref=f1e945] [cursor=pointer]:
+                    - /url: "#cite_note-degraaf-pigeaud-55"
+                - link "Demak" [ref=f1e946] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Demak_Sultanate
+                - text: was the first Muslim kingdom to achieve a degree of hegemony in Java during the early 16th century, extending the reach of Muslim kingdoms westward to Cirebon and defeating the remnants of the Majapahit kingdom. After the mid-16th century, Demak gave way to other Muslim coastal kingdoms such as
+                - link "Cirebon" [ref=f1e947] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sultanate_of_Cirebon
+                - text: and
+                - link "Banten" [ref=f1e948] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banten_Sultanate
+                - text: in the west, and Surabaya in the east.
+                - superscript [ref=f1e949]:
+                  - link "[53]" [ref=f1e950] [cursor=pointer]:
+                    - /url: "#cite_note-degraaf-pigeaud-55"
+              - paragraph [ref=f1e951]:
+                - text: At the turn of the 17th century, the inland kingdom of
+                - link "Mataram" [ref=f1e952] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mataram_Sultanate
+                - text: became the dominant power of central and eastern Java. The rule of
+                - link "Sultan Agung of Mataram" [ref=f1e953] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sultan_Agung_of_Mataram
+                - text: (
+                - generic [ref=f1e954]: r. 1613–1646
+                - text: ) was crucial in establishing military hegemony and a "mystic synthesis" that harmonised Islam with pre-existing Javanese cultural attitudes.
+                - superscript [ref=f1e955]:
+                  - link "[52]" [ref=f1e956] [cursor=pointer]:
+                    - /url: "#cite_note-ricklefs-54"
+                - superscript [ref=f1e957]:
+                  - 'generic "Pages: 33–54" [ref=f1e958]': ": 33–54"
+                - text: The coastal principalities of Surabaya and Cirebon were subjugated in the course of the early 17th century, leaving Mataram and Banten to face the emerging Dutch colonial power in Batavia.
+                - superscript [ref=f1e959]:
+                  - link "[53]" [ref=f1e960] [cursor=pointer]:
+                    - /url: "#cite_note-degraaf-pigeaud-55"
+            - region [ref=f1e961]:
+              - generic [ref=f1e962]:
+                - heading "Colonial periods" [level=3] [ref=f1e963]
+                - generic [ref=f1e964]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=9
+              - figure [ref=f1e965]:
+                - link [ref=f1e966] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Soendanese_theepluksters_TMnr_10011963.jpg
+                - generic [ref=f1e968]:
+                  - text: Tea plantation in Java during
+                  - link "Dutch colonial period" [ref=f1e969] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Dutch_East_Indies
+                  - text: ", in or before 1936"
+              - paragraph [ref=f1e970]:
+                - text: Java's contact with the European colonial powers began in 1522 with
+                - link "a treaty" [ref=f1e971] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Luso-Sundanese_padrão
+                - text: between the Sunda kingdom and the
+                - link "Portuguese in Malacca" [ref=f1e972] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Portuguese_Malacca
+                - text: . After its failure, the
+                - link "Portuguese presence" [ref=f1e973] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Portuguese_colonialism_in_the_East_Indies
+                - text: was confined to Malacca and to the eastern islands. In 1596, a four-ship expedition led by
+                - link "Cornelis de Houtman" [ref=f1e974] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cornelis_de_Houtman
+                - text: was the first Dutch contact with Indonesia.
+                - superscript [ref=f1e975]:
+                  - link "[54]" [ref=f1e976] [cursor=pointer]:
+                    - /url: "#cite_note-56"
+                - text: By the end of the 18th century the Dutch had extended their influence over the sultanates of the interior through the
+                - link "Dutch East India Company in Indonesia" [ref=f1e977] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dutch_East_India_Company_in_the_Malay_Archipelago
+                - text: . The Dutch repeatedly intervened in wars between rival Mataram claimants to the Javanese throne. When the side they supported inevitably won due to their industrialised weapons, the Dutch forced land concessions from the side they supported. The Dutch whittled down the Mataram kingdoms until most of the island was conquered. Internal conflict prevented the Javanese from forming effective alliances against the Dutch. In the 1750s, the Javanese Sultan Mangkubumi tried to restore Mataram's control, but the Dutch divided the kingdom. Remnants of the Mataram survived as the Surakarta (Solo) and Yogyakarta principalities. Javanese kings claimed to rule with divine authority and the Dutch helped them to preserve remnants of a Javanese aristocracy by confirming them as regents or district officials within the colonial administration.
+              - paragraph [ref=f1e978]:
+                - text: Java's major role during the early part of the colonial period was as a producer of rice. In spice-producing islands like
+                - link "Banda" [ref=f1e979] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banda_Islands
+                - text: ", rice was regularly imported from Java, to supply the deficiency in means of subsistence."
+                - superscript [ref=f1e980]:
+                  - link "[55]" [ref=f1e981] [cursor=pointer]:
+                    - /url: "#cite_note-57"
+              - paragraph [ref=f1e982]:
+                - text: During the
+                - link "Napoleonic Wars" [ref=f1e983] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Napoleonic_Wars
+                - text: in Europe, the Netherlands fell to France, as did its colony in the
+                - link "East Indies" [ref=f1e984] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/East_Indies
+                - text: . During the short-lived
+                - link "Daendels" [ref=f1e985] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Herman_Willem_Daendels
+                - text: administration, as French proxy rule on Java, the construction of the
+                - link "Great Post Road" [ref=f1e986] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Great_Post_Road
+                - text: was commenced in 1808. The road, spanning from
+                - link "Anyer" [ref=f1e987] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Anyer
+                - text: in Western Java to Panarukan in East Java, served as a military supply route and was used in defending Java from British invasion.
+                - superscript [ref=f1e988]:
+                  - link "[56]" [ref=f1e989] [cursor=pointer]:
+                    - /url: "#cite_note-58"
+                - text: In 1811, Java was
+                - link "captured by the British" [ref=f1e990] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Invasion_of_Java_(1811)
+                - text: ", becoming a possession of the"
+                - link "British Empire" [ref=f1e991] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/British_Empire
+                - text: ", and Sir"
+                - link "Stamford Raffles" [ref=f1e992] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Stamford_Raffles
+                - text: was appointed as the island's governor. In 1816, under the governorship of
+                - link "John Fendall" [ref=f1e993] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/John_Fendall_Jr.
+                - text: ", Java was returned to the Dutch by the"
+                - link "Treaty of Paris" [ref=f1e994] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1814)
+                - text: .
+                - superscript [ref=f1e995]:
+                  - link "[57]" [ref=f1e996] [cursor=pointer]:
+                    - /url: "#cite_note-59"
+                - superscript [ref=f1e997]:
+                  - link "[58]" [ref=f1e998] [cursor=pointer]:
+                    - /url: "#cite_note-60"
+              - paragraph [ref=f1e999]:
+                - text: In 1815, there may have been five million people in Java.
+                - superscript [ref=f1e1000]:
+                  - link "[59]" [ref=f1e1001] [cursor=pointer]:
+                    - /url: "#cite_note-61"
+                - text: In the second half of the 18th century, population spurts began in districts along the north-central coast of Java, and in the 19th century population grew rapidly across the island. Factors for the great population growth include the impact of Dutch colonial rule including the imposed end to civil war in Java, the increase in the area under rice cultivation, and the introduction of food plants such as
+                - link "cassava" [ref=f1e1002] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cassava
+                - text: and maize that could sustain populations that could not afford rice.
+                - superscript [ref=f1e1003]:
+                  - link "[60]" [ref=f1e1004] [cursor=pointer]:
+                    - /url: "#cite_note-62"
+                - text: Others attribute the growth to the taxation burdens and increased expansion of employment under the
+                - link "Cultivation System" [ref=f1e1005] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cultivation_System
+                - text: to which couples responded by having more children in the hope of increasing their families’ ability to pay tax and buy goods.
+                - superscript [ref=f1e1006]:
+                  - link "[61]" [ref=f1e1007] [cursor=pointer]:
+                    - /url: "#cite_note-63"
+                - link "Cholera" [ref=f1e1008] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cholera
+                - text: claimed 100,000 lives in Java in 1820.
+                - superscript [ref=f1e1009]:
+                  - link "[62]" [ref=f1e1010] [cursor=pointer]:
+                    - /url: "#cite_note-64"
+              - figure "Japanese prepare to discuss surrender terms with British-allied forces in Java, 1945." [ref=f1e1011]:
+                - link [ref=f1e1012] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:The_Allied_Occupation_of_Java,_1945_SE4857.jpg
+              - paragraph [ref=f1e1015]:
+                - text: The advent of trucks and railways where there had previously only been buffalo and carts, telegraph systems, and more coordinated distribution systems under the colonial government all contributed to famine elimination in Java, and in turn, population growth. There were no significant famines in Java from the 1840s through to the
+                - link "Japanese occupation" [ref=f1e1016] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Japanese_occupation_of_the_Dutch_East_Indies
+                - text: in the 1940s.
+                - superscript [ref=f1e1017]:
+                  - link "[63]" [ref=f1e1018] [cursor=pointer]:
+                    - /url: "#cite_note-Taylor_2003,_p._254-65"
+                - text: However, other sources claimed the Dutch cultivation system was linked to famines and epidemics in the 1840s, first in
+                - link "Cirebon" [ref=f1e1019] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cirebon
+                - text: and then in
+                - link "Central Java" [ref=f1e1020] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Central_Java
+                - text: ", as cash crops (indigo, sugar, etc.) were grown instead of rice."
+            - region [ref=f1e1021]:
+              - generic [ref=f1e1022]:
+                - heading "Independence" [level=3] [ref=f1e1023]
+                - generic [ref=f1e1024]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=10
+              - note [ref=f1e1025]:
+                - text: "Main article:"
+                - link "Indonesian National Awakening" [ref=f1e1026] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Indonesian_National_Awakening
+              - paragraph [ref=f1e1027]:
+                - text: Indonesian nationalism first took hold in Java in the early 20th century, and
+                - link "the struggle to secure the country's independence" [ref=f1e1028] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Indonesian_National_Revolution
+                - text: following
+                - link "World War II" [ref=f1e1029] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/World_War_II
+                - text: was centered in Java. In 1949, Indonesian independence was recognized.
+          - region [ref=f1e1030]:
+            - generic [ref=f1e1031]:
+              - heading "Administration" [level=2] [ref=f1e1032]
+              - generic [ref=f1e1033]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=11
+            - note [ref=f1e1034]:
+              - text: "See also:"
+              - link "Public administration of Java" [ref=f1e1035] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Public_administration_of_Java
+            - table [ref=f1e1036]:
+              - rowgroup [ref=f1e1037]:
+                - row [ref=f1e1038]:
+                  - cell "Banten West Java Central Java East Java 1 2 1 Jakarta 2 Yogyakarta" [ref=f1e1039]:
+                    - generic [ref=f1e1040]:
+                      - link [ref=f1e1042] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Java_blank_map.svg
+                      - generic [ref=f1e1044]: Banten
+                      - generic [ref=f1e1045]: West Java
+                      - generic [ref=f1e1046]: Central Java
+                      - generic [ref=f1e1047]: East Java
+                      - generic [ref=f1e1048]: "1"
+                      - generic [ref=f1e1049]: "2"
+                      - generic [ref=f1e1050]: 1 Jakarta
+                      - generic [ref=f1e1051]: 2 Yogyakarta
+            - paragraph [ref=f1e1052]:
+              - text: Java is divided into four
+              - link "provinces" [ref=f1e1053] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Provinces_of_Indonesia
+              - text: "and two special regions:"
+              - superscript [ref=f1e1054]:
+                - link "[18]" [ref=f1e1055] [cursor=pointer]:
+                  - /url: "#cite_note-worldatlas-19"
+            - list [ref=f1e1056]:
+              - listitem [ref=f1e1057]:
+                - link "Banten" [ref=f1e1058] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banten
+                - text: ", capital:"
+                - link "Serang" [ref=f1e1059] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Serang
+              - listitem [ref=f1e1060]:
+                - link [ref=f1e1061] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jakarta
+                  - text: Special Region of Jakarta
+                  - superscript [ref=f1e1062]: (a)
+                - text: ", capital:"
+                - link "Central Jakarta" [ref=f1e1063] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Central_Jakarta
+                - text: (de facto)
+              - listitem [ref=f1e1064]:
+                - link "West Java" [ref=f1e1065] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/West_Java
+                - text: ", capital:"
+                - link "Bandung" [ref=f1e1066] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bandung
+              - listitem [ref=f1e1067]:
+                - link "Central Java" [ref=f1e1068] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Central_Java
+                - text: ", capital:"
+                - link "Semarang" [ref=f1e1069] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Semarang
+              - listitem [ref=f1e1070]:
+                - link "Special Region of Yogyakarta" [ref=f1e1071] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+                - text: ", capital:"
+                - link "Yogyakarta" [ref=f1e1072] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Yogyakarta
+              - listitem [ref=f1e1073]:
+                - link "East Java" [ref=f1e1074] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/East_Java
+                - text: ", capital:"
+                - link "Surabaya" [ref=f1e1075] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Surabaya
+                - text: (which province also includes
+                - link "Madura Island" [ref=f1e1076] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Madura_Island
+                - text: ) and smaller islands).
+            - table [ref=f1e1077]:
+              - rowgroup [ref=f1e1078]:
+                - row [ref=f1e1079]:
+                  - columnheader "Province or Special Region" [ref=f1e1080] [cursor=pointer]
+                  - columnheader "Map" [ref=f1e1081] [cursor=pointer]
+                  - columnheader "Capital" [ref=f1e1082] [cursor=pointer]
+                  - columnheader [ref=f1e1083] [cursor=pointer]:
+                    - text: Areakm
+                    - superscript [ref=f1e1084]: "2"
+                    - superscript [ref=f1e1085]: (b)
+                  - columnheader "Area %" [ref=f1e1086] [cursor=pointer]: Area%
+                  - columnheader [ref=f1e1087] [cursor=pointer]:
+                    - text: Populationcensus2000
+                    - superscript [ref=f1e1088]:
+                      - link "[64]" [ref=f1e1089]:
+                        - /url: "#cite_note-citypop-66"
+                  - columnheader [ref=f1e1090] [cursor=pointer]:
+                    - text: Populationcensus2010
+                    - superscript [ref=f1e1091]:
+                      - link "[65]" [ref=f1e1092]:
+                        - /url: "#cite_note-67"
+                  - columnheader [ref=f1e1093] [cursor=pointer]:
+                    - text: Populationcensus2020
+                    - superscript [ref=f1e1094]:
+                      - link "[66]" [ref=f1e1095]:
+                        - /url: "#cite_note-68"
+                  - columnheader [ref=f1e1096] [cursor=pointer]:
+                    - text: Populationestimatemid 2025
+                    - superscript [ref=f1e1097]:
+                      - link "[67]" [ref=f1e1098]:
+                        - /url: "#cite_note-69"
+                  - columnheader "Population density mid 2025" [ref=f1e1099] [cursor=pointer]: Populationdensitymid 2025
+              - rowgroup [ref=f1e1100]:
+                - row [ref=f1e1101]:
+                  - cell [ref=f1e1102]:
+                    - figure [ref=f1e1103]:
+                      - link [ref=f1e1104] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_Banten.svg
+                    - link "Banten" [ref=f1e1106] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Banten
+                  - cell [ref=f1e1107]:
+                    - link [ref=f1e1109] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_Banten_location.svg
+                  - cell [ref=f1e1111]:
+                    - link "Serang" [ref=f1e1112] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Serang
+                  - cell "9,355.76" [ref=f1e1113]
+                  - cell "6.88" [ref=f1e1114]
+                  - cell "8,098,277" [ref=f1e1115]
+                  - cell "10,632,166" [ref=f1e1116]
+                  - cell "11,904,562" [ref=f1e1117]
+                  - cell "12,537,400" [ref=f1e1118]
+                  - cell "1,340" [ref=f1e1119]
+                - row [ref=f1e1120]:
+                  - cell [ref=f1e1121]:
+                    - figure [ref=f1e1122]:
+                      - link [ref=f1e1123] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_Jakarta.svg
+                    - link "Special Region of Jakarta" [ref=f1e1125] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special_Region_of_Jakarta
+                  - cell [ref=f1e1126]:
+                    - link [ref=f1e1128] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_Jakarta_location.svg
+                  - cell [ref=f1e1130]:
+                    - link "Central Jakarta" [ref=f1e1131] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Central_Jakarta
+                    - text: (de facto)
+                  - cell "661.53" [ref=f1e1132]
+                  - cell "0.50" [ref=f1e1133]
+                  - cell "8,361,079" [ref=f1e1134]
+                  - cell "9,607,787" [ref=f1e1135]
+                  - cell "10,562,088" [ref=f1e1136]
+                  - cell "10,678,000" [ref=f1e1137]
+                  - cell "16,141" [ref=f1e1138]
+                - row [ref=f1e1139]:
+                  - cell [ref=f1e1140]:
+                    - figure [ref=f1e1141]:
+                      - link [ref=f1e1142] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_West_Java.svg
+                    - link "West Java" [ref=f1e1144] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/West_Java
+                  - cell [ref=f1e1145]:
+                    - link [ref=f1e1147] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_West_Java_location.svg
+                  - cell [ref=f1e1149]:
+                    - link "Bandung" [ref=f1e1150] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bandung
+                  - cell "37,053.33" [ref=f1e1151]
+                  - cell "27.93" [ref=f1e1152]
+                  - cell "35,724,093" [ref=f1e1153]
+                  - cell "43,053,732" [ref=f1e1154]
+                  - cell "48,274,160" [ref=f1e1155]
+                  - cell "50,759,000" [ref=f1e1156]
+                  - cell "1,370" [ref=f1e1157]
+                - row [ref=f1e1158]:
+                  - cell "Western Java (3 areas above)" [ref=f1e1159]
+                  - cell [ref=f1e1161]
+                  - cell [ref=f1e1162]
+                  - cell "47,070.62" [ref=f1e1163]
+                  - cell "35.49" [ref=f1e1164]
+                  - cell "52,183,449" [ref=f1e1165]
+                  - cell "63,293,685" [ref=f1e1166]
+                  - cell "70,740,810" [ref=f1e1167]
+                  - cell "73,974,400" [ref=f1e1168]
+                  - cell "1,572" [ref=f1e1169]
+                - row [ref=f1e1170]:
+                  - cell [ref=f1e1171]:
+                    - figure [ref=f1e1172]:
+                      - link [ref=f1e1173] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_Central_Java.svg
+                    - link "Central Java" [ref=f1e1175] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Central_Java
+                  - cell [ref=f1e1176]:
+                    - link [ref=f1e1178] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_Central_Java_location.svg
+                  - cell [ref=f1e1180]:
+                    - link "Semarang" [ref=f1e1181] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Semarang
+                  - cell "34,347.43" [ref=f1e1182]
+                  - cell "25.90" [ref=f1e1183]
+                  - cell "31,223,258" [ref=f1e1184]
+                  - cell "32,382,657" [ref=f1e1185]
+                  - cell "36,516,035" [ref=f1e1186]
+                  - cell "38,233,900" [ref=f1e1187]
+                  - cell "1,113" [ref=f1e1188]
+                - row [ref=f1e1189]:
+                  - cell [ref=f1e1190]:
+                    - figure [ref=f1e1191]:
+                      - link [ref=f1e1192] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_Yogyakarta.svg
+                    - link "Yogyakarta Special Region" [ref=f1e1194] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Yogyakarta_Special_Region
+                  - cell [ref=f1e1195]:
+                    - link [ref=f1e1197] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_Yogyakarta_location.svg
+                  - cell [ref=f1e1199]:
+                    - link "Yogyakarta" [ref=f1e1200] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Yogyakarta
+                  - cell "3,170.36" [ref=f1e1201]
+                  - cell "2.39" [ref=f1e1202]
+                  - cell "3,121,045" [ref=f1e1203]
+                  - cell "3,457,491" [ref=f1e1204]
+                  - cell "3,668,719" [ref=f1e1205]
+                  - cell "3,781,500" [ref=f1e1206]
+                  - cell "1,193" [ref=f1e1207]
+                - row [ref=f1e1208]:
+                  - cell [ref=f1e1209]:
+                    - generic [ref=f1e1210]: Central Java Region(2 areas above)
+                  - cell [ref=f1e1211]
+                  - cell [ref=f1e1212]
+                  - cell "37,517.79" [ref=f1e1213]
+                  - cell "28.29" [ref=f1e1214]
+                  - cell "34,344,303" [ref=f1e1215]
+                  - cell "35,840,148" [ref=f1e1216]
+                  - cell "40,184,754" [ref=f1e1217]
+                  - cell "42,015,400" [ref=f1e1218]
+                  - cell "1,120" [ref=f1e1219]
+                - row [ref=f1e1220]:
+                  - cell [ref=f1e1221]:
+                    - figure [ref=f1e1222]:
+                      - link [ref=f1e1223] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:Coat_of_arms_of_East_Java.svg
+                    - link "East Java" [ref=f1e1225] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/East_Java
+                    - text: (Include Madura Islands)
+                  - cell [ref=f1e1226]:
+                    - link [ref=f1e1228] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Indonesia_East_Java_location.svg
+                  - cell [ref=f1e1230]:
+                    - link "Surabaya" [ref=f1e1231] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Surabaya
+                  - cell "48,055.88" [ref=f1e1232]
+                  - cell "36.23" [ref=f1e1233]
+                  - cell "34,765,993" [ref=f1e1234]
+                  - cell "37,476,757" [ref=f1e1235]
+                  - cell "40,665,696" [ref=f1e1236]
+                  - cell "42,089,300" [ref=f1e1237]
+                  - cell "876" [ref=f1e1238]
+                - row [ref=f1e1239]:
+                  - cell [ref=f1e1240]:
+                    - definition [ref=f1e1242]:
+                      - text: Total Java Island
+                      - superscript [ref=f1e1243]: (c)
+                  - cell [ref=f1e1244]
+                  - cell "–" [ref=f1e1245]
+                  - cell "127,235.94" [ref=f1e1246]
+                  - cell "95.92" [ref=f1e1247]
+                  - cell "118,063,445" [ref=f1e1248]
+                  - cell "132,987,827" [ref=f1e1249]
+                  - cell "147,586,696" [ref=f1e1250]
+                  - cell "153,922,439" [ref=f1e1251]
+                  - cell "1,210" [ref=f1e1252]
+                - row [ref=f1e1253]:
+                  - cell [ref=f1e1254]:
+                    - definition [ref=f1e1256]:
+                      - link "Madura" [ref=f1e1257] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Madura
+                      - text: Island
+                      - superscript [ref=f1e1258]: (d)
+                  - cell [ref=f1e1259]
+                  - cell "–" [ref=f1e1260]
+                  - cell "5,408.35" [ref=f1e1261]
+                  - cell "4.08" [ref=f1e1262]
+                  - cell "3,230,300" [ref=f1e1263]
+                  - cell "3,622,763" [ref=f1e1264]
+                  - cell "4,004,564" [ref=f1e1265]
+                  - cell "4,156,661" [ref=f1e1266]
+                  - cell "769" [ref=f1e1267]
+                - row [ref=f1e1268]:
+                  - cell "Region Administered as Java" [ref=f1e1269]
+                  - cell [ref=f1e1270]
+                  - cell [ref=f1e1271]:
+                    - link "Jakarta" [ref=f1e1272] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jakarta
+                  - cell "132,644.29" [ref=f1e1273]
+                  - cell "100%" [ref=f1e1274]
+                  - cell "121,293,745" [ref=f1e1275]
+                  - cell "136,610,590" [ref=f1e1276]
+                  - cell "151,591,260" [ref=f1e1277]
+                  - cell "158,079,100" [ref=f1e1278]
+                  - cell "1,192" [ref=f1e1279]
+              - rowgroup
+            - paragraph [ref=f1e1280]:
+              - text: "Notes: (a) called Special Capital Region until 30 November 2024, when the word \"capital\" was dropped from the title,"
+              - superscript [ref=f1e1281]:
+                - link "[68]" [ref=f1e1282] [cursor=pointer]:
+                  - /url: "#cite_note-70"
+              - text: although de facto Jakarta still retains capital functions. (b) Land area of provinces updated in mid 2025 regency/city annual statistics. (c) Other offshore islands are included in this figure, but are comparatively very small in population and area; they include
+              - link "Nusa Barong" [ref=f1e1283] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Nusa_Barong
+              - text: (84.73 km
+              - superscript [ref=f1e1284]: "2"
+              - text: ),
+              - link "Bawean" [ref=f1e1285] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bawean
+              - text: (197.42 km
+              - superscript [ref=f1e1286]: "2"
+              - text: ),
+              - link "Karimunjawa" [ref=f1e1287] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Karimunjawa
+              - text: (78 km
+              - superscript [ref=f1e1288]: "2"
+              - text: ),
+              - link "Nusa Kambangan" [ref=f1e1289] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Nusa_Kambangan
+              - text: (121 km
+              - superscript [ref=f1e1290]: "2"
+              - text: ),
+              - link "Panaitan" [ref=f1e1291] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Panaitan
+              - text: (170 km
+              - superscript [ref=f1e1292]: "2"
+              - text: ), and the
+              - link "Thousand Islands" [ref=f1e1293] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Thousand_Islands_Regency
+              - text: (8.7 km
+              - superscript [ref=f1e1294]: "2"
+              - text: ) – with a combined population of roughly 150,000 (of whom 85,320 are on Bawean, 28,809 are on the Thousand Islands, 16,200 on Nusa Barong and 10,800 on Karimunjawa). (d) including the neighbouring small archipelagos of the
+              - link "Kangean Islands" [ref=f1e1295] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Kangean_Islands
+              - text: (648.55 km
+              - superscript [ref=f1e1296]: "2"
+              - text: ), the
+              - link "Sapudi Islands" [ref=f1e1297] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sapudi_Islands
+              - text: (167.41 km
+              - superscript [ref=f1e1298]: "2"
+              - text: ),
+              - link "Talango Island" [ref=f1e1299] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Talango_Island
+              - text: (50.278 km
+              - superscript [ref=f1e1300]: "2"
+              - text: ),
+              - link "Masalembu" [ref=f1e1301] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Masalembu
+              - text: (40.85 km
+              - superscript [ref=f1e1302]: "2"
+              - text: ), the
+              - link "Giligenteng Islands" [ref=f1e1303] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Gili_Genteng
+              - text: (30.32 km
+              - superscript [ref=f1e1304]: "2"
+              - text: ) - all the foregoing within
+              - link "Sumenep Regency" [ref=f1e1305] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sumenep_Regency
+              - text: .
+          - region [ref=f1e1306]:
+            - generic [ref=f1e1307]:
+              - heading "Demographics" [level=2] [ref=f1e1308]
+              - generic [ref=f1e1309]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=12
+            - region [ref=f1e1310]:
+              - generic [ref=f1e1311]:
+                - heading "Demographic profile" [level=3] [ref=f1e1312]
+                - generic [ref=f1e1313]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=13
+              - figure [ref=f1e1314]:
+                - link [ref=f1e1315] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Jakarta.jpg
+                - generic [ref=f1e1317]:
+                  - link "Jakarta" [ref=f1e1318] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Jakarta
+                  - text: ", the capital of Indonesia"
+              - table [ref=f1e1319]:
+                - caption [ref=f1e1320]: Historical population
+                - rowgroup [ref=f1e1321]:
+                  - row [ref=f1e1322]:
+                    - columnheader "Year" [ref=f1e1323]
+                    - columnheader "Pop." [ref=f1e1324]
+                    - columnheader "±%" [ref=f1e1325]
+                  - row [ref=f1e1326]:
+                    - rowheader "1961" [ref=f1e1327]
+                    - cell "63,059,575" [ref=f1e1328]
+                    - cell "—" [ref=f1e1329]
+                  - row [ref=f1e1330]:
+                    - rowheader "1971" [ref=f1e1331]
+                    - cell "76,086,320" [ref=f1e1332]
+                    - cell "+20.7%" [ref=f1e1333]
+                  - row [ref=f1e1334]:
+                    - rowheader "1980" [ref=f1e1335]
+                    - cell "91,269,528" [ref=f1e1336]
+                    - cell "+20.0%" [ref=f1e1337]
+                  - row [ref=f1e1338]:
+                    - rowheader "1990" [ref=f1e1339]
+                    - cell "107,581,306" [ref=f1e1340]
+                    - cell "+17.9%" [ref=f1e1341]
+                  - row [ref=f1e1342]:
+                    - rowheader "2000" [ref=f1e1343]
+                    - cell "121,352,608" [ref=f1e1344]
+                    - cell "+12.8%" [ref=f1e1345]
+                  - row [ref=f1e1346]:
+                    - rowheader "2010" [ref=f1e1347]
+                    - cell "136,610,590" [ref=f1e1348]
+                    - cell "+12.6%" [ref=f1e1349]
+                  - row [ref=f1e1350]:
+                    - rowheader "2015" [ref=f1e1351]
+                    - cell "145,013,583" [ref=f1e1352]
+                    - cell "+6.2%" [ref=f1e1353]
+                  - row [ref=f1e1354]:
+                    - rowheader "2020" [ref=f1e1355]
+                    - cell "151,591,262" [ref=f1e1356]
+                    - cell "+4.5%" [ref=f1e1357]
+                  - row [ref=f1e1358]:
+                    - rowheader "2025" [ref=f1e1359]
+                    - cell "158,079,100" [ref=f1e1360]
+                    - cell "+4.3%" [ref=f1e1361]
+                  - row [ref=f1e1362]:
+                    - cell [ref=f1e1363]:
+                      - text: "Refers to the administrative region (including Madura).Source:"
+                      - superscript [ref=f1e1364]:
+                        - link "[69]" [ref=f1e1365] [cursor=pointer]:
+                          - /url: "#cite_note-71"
+              - paragraph [ref=f1e1366]:
+                - text: Java has been traditionally dominated by an elite class, while the people in the lower classes were often involved in agriculture and fishing. The elite class in Java has evolved over the course of history, as cultural wave after cultural wave immigrated to the island. There is evidence that South Asian emigres were among this elite, as well as Arabian and Persian immigrants during the Islamic eras. More recently, Chinese immigrants have also become part of the economic elite of Java. Although politically the Chinese generally remain sidelined, there are notable exceptions, such as the former governor of Jakarta,
+                - link "Basuki Tjahaja Purnama" [ref=f1e1367] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Basuki_Tjahaja_Purnama
+                - text: . Java houses the majority of Indonesia's urban population. Currently, 65% of the island is urbanized. Unlike the rest of Java, the population growth in Central Java remains low. Central Java however has a younger population than the national average.
+                - superscript [ref=f1e1368]:
+                  - link "[70]" [ref=f1e1369] [cursor=pointer]:
+                    - /url: "#cite_note-72"
+                - text: The slow population growth can in part be attributed to the choice by many people to leave the more rural Central Java for better opportunities and higher incomes in the bigger cities.
+                - superscript [ref=f1e1370]:
+                  - link "[71]" [ref=f1e1371] [cursor=pointer]:
+                    - /url: "#cite_note-73"
+                - text: Java's population continues to rapidly increase despite many Javanese leaving the island. This is somewhat due to the fact that Java is the business, academic, and cultural hub of Indonesia, which attracts millions of non-Javanese people to its cities. The population growth is most intense in the regions surrounding
+                - link "Jakarta" [ref=f1e1372] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jakarta
+                - text: and
+                - link "Bandung" [ref=f1e1373] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bandung
+                - text: ", which is reflected through the demographic diversity in those areas."
+                - superscript [ref=f1e1374]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1376] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+            - region [ref=f1e1377]:
+              - generic [ref=f1e1378]:
+                - heading "Population growth" [level=3] [ref=f1e1379]
+                - generic [ref=f1e1380]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=14
+              - figure "Population density of Java and Madura by subdistrict as of 2022, with major urban areas shown" [ref=f1e1381]:
+                - link [ref=f1e1382] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Population_density_map_of_Java_and_Madura_by_subdistrict_(kelurahan)_(2022).svg
+              - paragraph [ref=f1e1385]:
+                - text: Java is the
+                - link "most populous island in the world" [ref=f1e1386] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_islands_by_population
+                - text: and is home to an estimated 159.2 million people; about 56% of Indonesia's total population.
+                - superscript [ref=f1e1387]:
+                  - link "[72]" [ref=f1e1388] [cursor=pointer]:
+                    - /url: "#cite_note-bpsgoid-74"
+                - text: At about 1,192 people per km
+                - superscript [ref=f1e1389]: "2"
+                - text: in 2025, it is also one of the most densely populated parts of the world, on a par with Bangladesh. Every region of the island has numerous volcanoes, with the people left to share the remaining flatter land. Because of this, many coasts are heavily populated and cities ring around the valleys surrounding volcanic peaks.
+                - superscript [ref=f1e1390]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1392] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - paragraph [ref=f1e1393]:
+                - text: The population growth rate more than doubled in economically depressed Central Java in the latest 2010–2020 period vs 2000–2010, indicative of migration or other issues; there were significant
+                - link "volcanic eruptions" [ref=f1e1394] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mount_Merapi#2006_eruption
+                - text: during the earlier period. Approximately 45% of the population of Indonesia is ethnically Javanese,
+                - superscript [ref=f1e1395]:
+                  - link "[73]" [ref=f1e1396] [cursor=pointer]:
+                    - /url: "#cite_note-75"
+                - text: while Sundanese make a large portion of Java's population as well.
+              - paragraph [ref=f1e1397]:
+                - text: The western third of the island (West Java, Banten, and DKI Jakarta) has an even higher population density, of roughly 1,572 per square kilometre and accounts for most of the population growth of Java.
+                - superscript [ref=f1e1398]:
+                  - link "[74]" [ref=f1e1399] [cursor=pointer]:
+                    - /url: "#cite_note-JKTPOS-76"
+                - text: It is home to three metropolitan areas,
+                - link "Greater Jakarta" [ref=f1e1400] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Greater_Jakarta
+                - text: (with outlying areas of Greater
+                - link "Serang" [ref=f1e1401] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Serang
+                - text: and Greater
+                - link "Sukabumi" [ref=f1e1402] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sukabumi
+                - text: ),
+                - link "Greater Bandung" [ref=f1e1403] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bandung_Metropolitan_Area
+                - text: ", and Greater"
+                - link "Cirebon" [ref=f1e1404] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cirebon
+                - text: .
+                - superscript [ref=f1e1405]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1407] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - paragraph [ref=f1e1408]:
+                - text: From the 1970s to the fall of the
+                - link "Suharto" [ref=f1e1409] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Suharto
+                - text: regime in 1998, the Indonesian government ran
+                - link "transmigration programs" [ref=f1e1410] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Transmigration_program
+                - text: aimed at resettling the population of Java on other less populated islands of Indonesia. This program has met with mixed results, sometimes causing conflicts between the locals and the recently arrived
+                - link "settlers" [ref=f1e1411] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Settler
+                - text: . Nevertheless, it has caused Java's share of the nation's population to progressively decline.
+              - paragraph [ref=f1e1412]: Jakarta and its outskirts, being the dominant metropolis, is also home to people from all over the nation. East Java is also home to ethnic Balinese, as well as large numbers of Madurans due to their historic poverty.
+            - region [ref=f1e1413]:
+              - generic [ref=f1e1414]:
+                - heading "Ethnicity and culture" [level=3] [ref=f1e1415]
+                - generic [ref=f1e1416]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=15
+              - note [ref=f1e1417]:
+                - text: "See also:"
+                - link "Culture of Indonesia" [ref=f1e1418] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Culture_of_Indonesia
+                - text: ","
+                - link "Music of Java" [ref=f1e1419] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Music_of_Java
+                - text: ", and"
+                - link "Music of Sunda" [ref=f1e1420] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Music_of_Sunda
+              - figure [ref=f1e1421]:
+                - link [ref=f1e1422] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Ramayana_Java.jpg
+                - generic [ref=f1e1424]:
+                  - link "Lakshmana" [ref=f1e1425] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lakshmana
+                  - text: ","
+                  - link "Rama" [ref=f1e1426] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Rama
+                  - text: and
+                  - link "Shinta" [ref=f1e1427] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sita
+                  - text: in
+                  - link "Ramayana" [ref=f1e1428] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ramayana
+                  - text: ballet at
+                  - link "Prambanan" [ref=f1e1429] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Prambanan
+                  - text: ", Java"
+              - figure [ref=f1e1430]:
+                - link [ref=f1e1431] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:DSC_0002-01.jpg
+                - generic [ref=f1e1433]:
+                  - link "Sisingaan" [ref=f1e1434] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sisingaan
+                  - text: attractions, featuring traditional
+                  - link "Sundanese" [ref=f1e1435] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                  - text: lion dance
+              - figure [ref=f1e1436]:
+                - link [ref=f1e1437] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Sapi_Brujul_Probolinggo.jpg
+                - generic [ref=f1e1438]:
+                  - link "Karapan sapi" [ref=f1e1439] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Karapan_sapi
+                  - text: is a
+                  - link "Madurese" [ref=f1e1440] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Madurese_people
+                  - text: traditional bull racing festival.
+              - figure [ref=f1e1441]:
+                - link [ref=f1e1442] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Three_Betawi_Dancers_20240622_115231.jpg
+                - generic [ref=f1e1444]:
+                  - link "Betawi" [ref=f1e1445] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Betawi_people
+                  - text: girl dancers
+              - paragraph [ref=f1e1446]:
+                - text: Despite its large population and in contrast to the other larger islands of Indonesia, Java is comparatively homogeneous in ethnic composition. Only two ethnic groups are native to the island—the
+                - link "Javanese" [ref=f1e1447] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_people
+                - text: and
+                - link "Sundanese" [ref=f1e1448] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                - text: . A third group is the
+                - link "Madurese" [ref=f1e1449] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Madurese_people
+                - text: ", who inhabit the island of"
+                - link "Madura" [ref=f1e1450] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Madura_Island
+                - text: off the northeast coast of Java and have immigrated to
+                - link "East Java" [ref=f1e1451] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/East_Java
+                - text: in large numbers since the 18th century.
+                - superscript [ref=f1e1452]:
+                  - link "[75]" [ref=f1e1453] [cursor=pointer]:
+                    - /url: "#cite_note-Periplus58-77"
+                - text: The Javanese comprise about two-thirds of the island's population while the Sundanese and Madurese account for 38% and 10% respectively.
+                - superscript [ref=f1e1454]:
+                  - link "[75]" [ref=f1e1455] [cursor=pointer]:
+                    - /url: "#cite_note-Periplus58-77"
+                - text: The fourth group is the
+                - link "Betawi people" [ref=f1e1456] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Betawi_people
+                - text: who speak a dialect of
+                - link "Malay" [ref=f1e1457] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Malay_language
+                - text: . They are the descendants of the people living around
+                - link "Batavia" [ref=f1e1458] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jakarta
+                - text: from around the 17th century. Betawis are
+                - link "creole people" [ref=f1e1459] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Creole_people
+                - text: ", mostly descended from various Indonesian archipelago ethnic groups such as"
+                - link "Malay" [ref=f1e1460] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ethnic_Malay
+                - text: ","
+                - link "Sundanese" [ref=f1e1461] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                - text: ","
+                - link "Javanese" [ref=f1e1462] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_people
+                - text: ","
+                - link "Balinese" [ref=f1e1463] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Balinese_people
+                - text: ","
+                - link "Minang" [ref=f1e1464] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Minangkabau_people
+                - text: ","
+                - link "Bugis" [ref=f1e1465] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bugis_people
+                - text: ","
+                - link "Makassar" [ref=f1e1466] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Makassar_people
+                - text: ","
+                - link "Ambonese" [ref=f1e1467] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ambonese_people
+                - text: ", mixed with foreign ethnic groups such as"
+                - link "Portuguese" [ref=f1e1468] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Portuguese_people
+                - text: ","
+                - link "Dutch" [ref=f1e1469] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dutch_people
+                - text: ","
+                - link "Arab" [ref=f1e1470] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Arab
+                - text: ", Chinese and Indian brought to or attracted to Batavia to meet labour needs. They have a culture and language distinct from the surrounding"
+                - link "Sundanese" [ref=f1e1471] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                - text: and
+                - link "Javanese" [ref=f1e1472] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_people
+                - text: .
+                - superscript [ref=f1e1473]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1475] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - paragraph [ref=f1e1476]:
+                - text: The Javanese prose text
+                - link "Tantu Pagelaran" [ref=f1e1477] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Tantu_Pagelaran
+                - text: (c.
+                - generic [ref=f1e1478]: 15th century
+                - text: ) explained the mythical origin of the island and its volcanic nature.
+                - superscript [ref=f1e1479]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1481] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - paragraph [ref=f1e1482]: "Four major cultural areas exist on the island:"
+              - list [ref=f1e1483]:
+                - listitem [ref=f1e1484]:
+                  - text: The heartland of the Javanese people in the central part of Java with
+                  - link "Yogyakarta" [ref=f1e1485] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Yogyakarta
+                  - text: as its cultural center;
+                - listitem [ref=f1e1486]:
+                  - text: the
+                  - link "Pasisir" [ref=f1e1487] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Pasisir
+                  - text: region (from
+                  - link "Javanese" [ref=f1e1488] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Javanese_language
+                  - text: ": ꦥꦱꦶꦱꦶꦂ,"
+                  - link "lit." [ref=f1e1490] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Literal_translation
+                  - text: "'shore, coast' ) on the northern coast, home to the first Muslim sultanate in Indonesia;"
+                - listitem [ref=f1e1491]:
+                  - text: the
+                  - link "Sunda" [ref=f1e1492] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                  - text: lands (
+                  - link "Sundanese" [ref=f1e1493] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sundanese_language
+                  - text: ": ᮒᮒᮁ ᮞᮥᮔ᮪ᮓ, Tatar Sunda) in the western part of Java with"
+                  - link "Parahyangan" [ref=f1e1494] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Parahyangan
+                  - text: as their heartland;
+                - listitem [ref=f1e1495]:
+                  - text: the
+                  - link "eastern salient of Java" [ref=f1e1496] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Eastern_salient_of_Java
+                  - text: ", also known as"
+                  - link "Blambangan" [ref=f1e1497] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Banyuwangi
+                  - text: ", consisting of the"
+                  - link "Blambangan Peninsula" [ref=f1e1498] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Blambangan_Peninsula
+                  - text: east of the Tengger Massif.
+              - paragraph [ref=f1e1499]:
+                - text: Madura makes up a fifth area having close cultural ties with coastal eastern Java.
+                - superscript [ref=f1e1500]:
+                  - link "[75]" [ref=f1e1501] [cursor=pointer]:
+                    - /url: "#cite_note-Periplus58-77"
+              - paragraph [ref=f1e1502]:
+                - text: The kejawen of Javanese culture is the island's most dominant. Java's remaining aristocracy is based here, and it is the region from where the majority of Indonesia's army, business, and political elite originate. Its language, arts, and etiquette are regarded as the island's most refined and exemplary.
+                - superscript [ref=f1e1503]:
+                  - link "[75]" [ref=f1e1504] [cursor=pointer]:
+                    - /url: "#cite_note-Periplus58-77"
+                - text: The territory from
+                - link "Banyumas" [ref=f1e1505] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banyumas_Regency
+                - text: in the west through to
+                - link "Blitar" [ref=f1e1506] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Blitar
+                - text: in the east encompasses Indonesia's most fertile and densely populated agricultural land.
+                - superscript [ref=f1e1508]:
+                  - link "[75]" [ref=f1e1509] [cursor=pointer]:
+                    - /url: "#cite_note-Periplus58-77"
+              - paragraph [ref=f1e1510]:
+                - text: In the southwestern part of Central Java, which is usually named the
+                - link "Banyumasan" [ref=f1e1511] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banyumas_Regency
+                - text: region, a cultural mingling occurred, bringing together Javanese culture and Sundanese culture to create the
+                - link "Banyumasan" [ref=f1e1512] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banyumasan_language
+                - text: culture.
+                - superscript [ref=f1e1513]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1515] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+                - text: In the central Javanese court cities of
+                - link "Yogyakarta" [ref=f1e1516] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Yogyakarta_(city)
+                - text: and
+                - link "Surakarta" [ref=f1e1517] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Surakarta
+                - text: ", contemporary kings trace their lineages back to the pre-colonial Islamic kingdoms that ruled the region, making those places especially strong repositories of classical Javanese culture. Classic arts of Java include"
+                - link "gamelan" [ref=f1e1518] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gamelan
+                - text: music and
+                - link "wayang" [ref=f1e1519] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wayang
+                - text: puppet shows.
+                - superscript [ref=f1e1520]:
+                  - link "[76]" [ref=f1e1521] [cursor=pointer]:
+                    - /url: "#cite_note-78"
+              - paragraph [ref=f1e1522]:
+                - text: Java was the site of many influential kingdoms in the Southeast Asian region,
+                - superscript [ref=f1e1523]:
+                  - link "[77]" [ref=f1e1524] [cursor=pointer]:
+                    - /url: "#cite_note-79"
+                - text: and as a result, many literary works have been written by Javanese authors. These include
+                - generic [ref=f1e1525]:
+                  - link "Ken Arok" [ref=f1e1526] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ken_Arok
+                  - text: and
+                  - link "Ken Dedes" [ref=f1e1527] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ken_Dedes
+                - text: ", the story of the orphan who usurped his king, and married the queen of the ancient Javanese kingdom; and translations of"
+                - link "Ramayana" [ref=f1e1529] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ramayana
+                - text: and
+                - link "Mahabharata" [ref=f1e1531] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mahabharata
+                - text: .
+                - link "Pramoedya Ananta Toer" [ref=f1e1532] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pramoedya_Ananta_Toer
+                - text: is a famous contemporary Indonesian author who has written many stories based on his own experiences of having grown up in Java and takes many elements from Javanese folklore and historical legends.
+            - region [ref=f1e1533]:
+              - generic [ref=f1e1534]:
+                - heading "Languages" [level=3] [ref=f1e1535]
+                - generic [ref=f1e1536]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=16
+              - figure [ref=f1e1537]:
+                - link [ref=f1e1538] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Java_languages.JPG
+                - generic [ref=f1e1540]:
+                  - text: Languages spoken in Java (Javanese is shown in white). "Malay" refers to
+                  - link "Betawi" [ref=f1e1541] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Betawi_language
+                  - text: ", the local dialect as one of Malay creole dialect."
+              - paragraph [ref=f1e1542]:
+                - text: The three major languages spoken on Java are
+                - link "Javanese" [ref=f1e1543] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_language
+                - text: ","
+                - link "Sundanese" [ref=f1e1544] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sundanese_language
+                - text: and
+                - link "Madurese" [ref=f1e1545] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Madurese_language
+                - text: . Other languages spoken include
+                - link "Betawi" [ref=f1e1546] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Betawi_language
+                - text: (a
+                - link "Malay" [ref=f1e1547] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Malay_language
+                - text: dialect local to the Jakarta region),
+                - link "Osing" [ref=f1e1548] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Osing_language
+                - text: ","
+                - link "Banyumasan" [ref=f1e1549] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banyumasan_language
+                - text: ", and"
+                - link "Tenggerese" [ref=f1e1550] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Tenggerese_people
+                - text: (closely related to Javanese),
+                - link "Baduy" [ref=f1e1551] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Baduy_language
+                - text: and
+                - link "Bantenese" [ref=f1e1552] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bantenese_language
+                - text: (closely related to Sundanese),
+                - link "Kangeanese" [ref=f1e1553] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kangean_language
+                - text: (closely related to Madurese), and
+                - link "Balinese" [ref=f1e1554] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Balinese_language
+                - text: .
+                - superscript [ref=f1e1555]:
+                  - link "[78]" [ref=f1e1556] [cursor=pointer]:
+                    - /url: "#cite_note-80"
+                - text: The vast majority of the population also speaks
+                - link "Indonesian" [ref=f1e1557] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Indonesian_language
+                - text: ", often as a second language."
+                - superscript [ref=f1e1558]:
+                  - link "[79]" [ref=f1e1559] [cursor=pointer]:
+                    - /url: "#cite_note-81"
+            - region [ref=f1e1560]:
+              - generic [ref=f1e1561]:
+                - heading "Religion" [level=3] [ref=f1e1562]
+                - generic [ref=f1e1563]:
+                  - link "edit":
+                    - /url: /w/index.php?title=Java&action=edit&section=17
+              - generic [ref=f1e1567]:
+                - generic [ref=f1e1568]:
+                  - text: Religion in Java (2023)
+                  - superscript [ref=f1e1569]:
+                    - link "[80]" [ref=f1e1570] [cursor=pointer]:
+                      - /url: "#cite_note-RELIGION-82"
+                - list [ref=f1e1571]:
+                  - listitem [ref=f1e1572]:
+                    - generic [ref=f1e1574]:
+                      - link "Islam" [ref=f1e1575] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Islam
+                      - text: (96.1%)
+                  - listitem [ref=f1e1576]:
+                    - generic [ref=f1e1578]:
+                      - link "Protestantism" [ref=f1e1579] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Protestantism
+                      - text: (2.26%)
+                  - listitem [ref=f1e1580]:
+                    - generic [ref=f1e1582]:
+                      - link "Roman Catholicism" [ref=f1e1583] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Roman_Catholicism
+                      - text: (1.07%)
+                  - listitem [ref=f1e1584]:
+                    - generic [ref=f1e1586]:
+                      - link "Buddhism" [ref=f1e1587] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Buddhism
+                      - text: (0.48%)
+                  - listitem [ref=f1e1588]:
+                    - generic [ref=f1e1590]:
+                      - link "Hinduism" [ref=f1e1591] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Hinduism
+                      - text: (0.11%)
+                  - listitem [ref=f1e1592]:
+                    - generic [ref=f1e1594]:
+                      - link "Aliran Kepercayaan" [ref=f1e1595] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Aliran_Kepercayaan
+                      - text: (0.01%)
+                  - listitem [ref=f1e1596]:
+                    - generic [ref=f1e1598]:
+                      - link "Confucianism" [ref=f1e1599] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Confucianism
+                      - text: (0.01%)
+              - paragraph [ref=f1e1607]:
+                - text: Hinduism was the main religion in Java before the arrival of Islam.
+                - superscript [ref=f1e1608]:
+                  - link "[81]" [ref=f1e1609] [cursor=pointer]:
+                    - /url: "#cite_note-83"
+                - link "Indian" [ref=f1e1610] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/South_Asia
+                - text: influences came first with
+                - link "Shaivism" [ref=f1e1611] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Shaivism
+                - text: and
+                - link "Buddhism" [ref=f1e1612] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Buddhism
+                - text: penetrating deeply into society, blending with indigenous tradition and culture.
+                - superscript [ref=f1e1613]:
+                  - link "[82]" [ref=f1e1614] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+                - text: One
+                - link "conduit" [ref=f1e1615] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Conduit_(spiritualism)
+                - text: for this were the
+                - link "ascetics" [ref=f1e1616] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Asceticism
+                - text: ", called resi, who taught mystical practices. A resi lived surrounded by students, who took care of their master's daily needs. Resi's authorities were merely ceremonial. At the courts,"
+                - link "Brahmin" [ref=f1e1617] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Brahmin
+                - text: clerics and pudjangga (sacred literati) legitimised rulers and linked
+                - link "Hindu" [ref=f1e1618] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hinduism
+                - text: cosmology to their political needs.
+                - superscript [ref=f1e1619]:
+                  - link "[82]" [ref=f1e1620] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+                - text: Small
+                - link "Hindu" [ref=f1e1621] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hindu
+                - text: enclaves are scattered throughout Java, but there is a large
+                - link "Hindu" [ref=f1e1622] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hindu
+                - text: population along the eastern coast nearest
+                - link "Bali" [ref=f1e1623] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bali
+                - text: ", especially around the town of"
+                - link "Banyuwangi" [ref=f1e1624] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Banyuwangi
+                - text: .
+                - superscript [ref=f1e1625]:
+                  - text: "["
+                  - link "citation needed" [ref=f1e1627] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wikipedia:Citation_needed
+                  - text: "]"
+              - table [ref=f1e1628]:
+                - rowgroup [ref=f1e1629]:
+                  - row [ref=f1e1630]:
+                    - columnheader "Religions" [ref=f1e1631]
+                    - columnheader "Total" [ref=f1e1632]
+                  - row [ref=f1e1633]:
+                    - cell [ref=f1e1634]:
+                      - link "Islam" [ref=f1e1635] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Islam
+                    - cell "151,001,350" [ref=f1e1636]
+                  - row [ref=f1e1637]:
+                    - cell [ref=f1e1638]:
+                      - link "Protestantism" [ref=f1e1639] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Protestantism
+                    - cell "3,551,176" [ref=f1e1640]
+                  - row [ref=f1e1641]:
+                    - cell [ref=f1e1642]:
+                      - link "Roman Catholicism" [ref=f1e1643] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Roman_Catholicism
+                    - cell "1,677,824" [ref=f1e1644]
+                  - row [ref=f1e1645]:
+                    - cell [ref=f1e1646]:
+                      - link "Buddhism" [ref=f1e1647] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Buddhism
+                    - cell "755,560" [ref=f1e1648]
+                  - row [ref=f1e1649]:
+                    - cell [ref=f1e1650]:
+                      - link "Hinduism" [ref=f1e1651] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Hinduism
+                    - cell "168,055" [ref=f1e1652]
+                  - row [ref=f1e1653]:
+                    - cell [ref=f1e1654]:
+                      - link "Aliran Kepercayaan" [ref=f1e1655] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Aliran_Kepercayaan
+                    - cell "21,855" [ref=f1e1656]
+                  - row [ref=f1e1657]:
+                    - cell [ref=f1e1658]:
+                      - link "Confucianism" [ref=f1e1659] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Confucianism
+                    - cell "20,303" [ref=f1e1660]
+                  - row [ref=f1e1661]:
+                    - cell "Overall" [ref=f1e1662]
+                    - cell "157,196,123" [ref=f1e1663]
+              - paragraph [ref=f1e1664]:
+                - superscript [ref=f1e1665]:
+                  - link "[80]" [ref=f1e1666] [cursor=pointer]:
+                    - /url: "#cite_note-RELIGION-82"
+              - paragraph [ref=f1e1667]:
+                - link "Islam" [ref=f1e1668] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Islam
+                - text: strengthened the role of religion in structuring society. More than 98 percent of the
+                - link "Muslims" [ref=f1e1669] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Muslims
+                - text: in Java are
+                - link "Sunni" [ref=f1e1670] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sunni
+                - text: with a tiny minority being
+                - link "Shia" [ref=f1e1671] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Shia
+                - text: and
+                - link "Ahmadi" [ref=f1e1672] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ahmadi
+                - text: (respectively 1% and 0.2%), on a broad continuum between
+                - link "abangan" [ref=f1e1674] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Abangan
+                - text: (more syncretic) and
+                - link "santri" [ref=f1e1676] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Santri
+                - text: (more orthodox). Muslim scholars (
+                - link "Kyai" [ref=f1e1678] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kyai
+                - text: ) became the new religious elite as Hindu influences receded. Islam recognises no hierarchy of religious leaders nor a formal
+                - link "priesthood" [ref=f1e1679] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Clergy
+                - text: ", but the"
+                - link "Dutch colonial government" [ref=f1e1680] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dutch_East_India_Company
+                - text: established an elaborate rank order for mosque and other Islamic preaching schools. In Javanese
+                - link "pesantren" [ref=f1e1682] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pesantren
+                - text: (Islamic schools), the Kyai perpetuated the tradition of the resi. Students around him provided his needs, even
+                - link "peasants" [ref=f1e1683] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Peasant
+                - text: around the school.
+                - superscript [ref=f1e1684]:
+                  - link "[82]" [ref=f1e1685] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+              - list [ref=f1e1686]:
+                - listitem [ref=f1e1687]:
+                  - link [ref=f1e1690] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Masjid_Menara_Kudus.jpg
+                    - img "The Menara Kudus Mosque in Kudus, built in a mix of traditional Islamic and old Javanese styles" [ref=f1e1691]
+                  - generic [ref=f1e1692]:
+                    - text: The
+                    - link "Menara Kudus Mosque" [ref=f1e1693] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Menara_Kudus_Mosque
+                    - text: in
+                    - link "Kudus" [ref=f1e1694] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Kudus_Regency
+                    - text: ", built in a mix of traditional Islamic and old Javanese styles"
+                - listitem [ref=f1e1695]:
+                  - link [ref=f1e1698] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Gereja_Immanuel,_Gambir,_Jakarta.jpg
+                    - img "Immanuel Church a Protestant church in Jakarta" [ref=f1e1699]
+                  - generic [ref=f1e1700]:
+                    - link "Immanuel Church" [ref=f1e1701] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Immanuel_Church,_Jakarta
+                    - text: a
+                    - link "Protestant church" [ref=f1e1702] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Protestant_church
+                    - text: in
+                    - link "Jakarta" [ref=f1e1703] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jakarta
+                - listitem [ref=f1e1704]:
+                  - link [ref=f1e1707] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Ganjuran_Church,_exterior_01.jpg
+                    - img "Ganjuran Roman Catholic church in Bantul Regency, built in the traditional Javanese style" [ref=f1e1708]
+                  - generic [ref=f1e1709]:
+                    - link "Ganjuran Roman Catholic church" [ref=f1e1710] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ganjuran_Church
+                    - text: in
+                    - link "Bantul Regency" [ref=f1e1711] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bantul_Regency
+                    - text: ", built in the traditional"
+                    - link "Javanese style" [ref=f1e1712] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Javanese_traditional_house
+                - listitem [ref=f1e1713]:
+                  - link [ref=f1e1716] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Pura_Parahyangan_Agung_Jagatkartta,_Candi_Siliwangi_Shrine.jpg
+                    - img "Pura Parahyangan Agung Jagatkarta, a Hindu shrine dedicated to Prabu Siliwangi, Bogor" [ref=f1e1717]
+                  - generic [ref=f1e1718]:
+                    - link "Pura Parahyangan Agung Jagatkarta" [ref=f1e1719] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Pura_Parahyangan_Agung_Jagatkarta
+                    - text: ", a Hindu shrine dedicated to"
+                    - link "Prabu Siliwangi" [ref=f1e1720] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Prabu_Siliwangi
+                    - text: ","
+                    - link "Bogor" [ref=f1e1721] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bogor
+                - listitem [ref=f1e1722]:
+                  - link [ref=f1e1725] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:001_Main_Temple_(25595087247).jpg
+                    - img "Maha Vihara Mojopahit, a Buddhist monastery near Trowulan Majapahit temple, Mojokerto" [ref=f1e1726]
+                  - generic [ref=f1e1727]:
+                    - text: Maha Vihara Mojopahit, a Buddhist monastery near
+                    - link "Trowulan" [ref=f1e1728] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Trowulan
+                    - text: Majapahit temple,
+                    - link "Mojokerto" [ref=f1e1729] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Mojokerto
+                - listitem [ref=f1e1730]:
+                  - link [ref=f1e1733] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Boen_Tek_Bio.jpg
+                    - img "Boen Tek Bio, the oldest Chinese temple in Tangerang" [ref=f1e1734]
+                  - generic [ref=f1e1735]:
+                    - link "Boen Tek Bio" [ref=f1e1736] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Boen_Tek_Bio
+                    - text: ", the oldest"
+                    - link "Chinese temple" [ref=f1e1737] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Chinese_temple
+                    - text: in
+                    - link "Tangerang" [ref=f1e1738] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Tangerang
+              - paragraph [ref=f1e1739]:
+                - text: Pre-Islamic Javanese traditions have encouraged Islam in a mystical direction. There emerged in Java a loosely structured society of religious leadership, revolving around kyais, possessing various degrees of proficiency in pre-Islamic and Islamic
+                - link "lore" [ref=f1e1740] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Folklore
+                - text: ","
+                - link "belief" [ref=f1e1741] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Belief
+                - text: and practice.
+                - superscript [ref=f1e1742]:
+                  - link "[82]" [ref=f1e1743] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+                - text: The kyais are the principal intermediaries between the villages masses and the realm of the
+                - link "supernatural" [ref=f1e1744] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Supernatural
+                - text: . However, this very looseneess of kyai leadership structure has promoted
+                - link "schism" [ref=f1e1745] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Schism_(religion)
+                - text: . There were often sharp divisions between orthodox kyais, who merely instructed in Islamic law, with those who taught
+                - link "mysticism" [ref=f1e1746] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mysticism
+                - text: and those who sought to reform Islam with modern scientific concepts. As a result, there is a division between santri, who believe that they are more orthodox in their Islamic belief and practice, with
+                - link "abangan" [ref=f1e1748] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Abangan
+                - text: ", who have mixed pre-Islamic"
+                - link "animistic" [ref=f1e1749] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Animism
+                - text: and Hindu-Indian concepts with a superficial acceptance of Islamic belief.
+                - superscript [ref=f1e1750]:
+                  - link "[82]" [ref=f1e1751] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+              - paragraph [ref=f1e1752]:
+                - text: There are also
+                - link "Christian" [ref=f1e1753] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Christians
+                - text: communities, mostly in the larger cities, primarily among
+                - link "Chinese Indonesian" [ref=f1e1754] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Chinese_Indonesian
+                - text: and minority
+                - link "Javanese" [ref=f1e1755] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_people
+                - text: even some rural areas of south-central Java are strongly
+                - link "Roman Catholic" [ref=f1e1756] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Catholic_Church
+                - text: .
+                - link "Buddhist" [ref=f1e1757] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Buddhism
+                - text: communities also exist in the major cities, primarily among the
+                - link "Chinese Indonesian" [ref=f1e1758] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Chinese_Indonesian
+                - text: . The Indonesian constitution recognises six official religions.
+              - paragraph [ref=f1e1759]:
+                - text: A wider effect of this division is the number of sects. In the middle of 1956, the Department of Religious Affairs in
+                - link "Yogyakarta" [ref=f1e1760] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Yogyakarta
+                - text: reported 63 religious sects in Java other than the official Indonesian religions. Of these, 35 were in
+                - link "Central Java" [ref=f1e1761] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Central_Java
+                - text: ", 22 in"
+                - link "West Java" [ref=f1e1762] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/West_Java
+                - text: and six in
+                - link "East Java" [ref=f1e1763] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/East_Java
+                - text: .
+                - superscript [ref=f1e1764]:
+                  - link "[82]" [ref=f1e1765] [cursor=pointer]:
+                    - /url: "#cite_note-kroef1961-84"
+                - text: These include
+                - link "Kejawen" [ref=f1e1766] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_beliefs
+                - text: ","
+                - link "Sumarah" [ref=f1e1767] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Javanese_beliefs
+                - text: ","
+                - link "Subud" [ref=f1e1768] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Subud
+                - text: ", etc. Their total membership is difficult to estimate as many of their adherents identify themselves with one of the official religions."
+                - superscript [ref=f1e1769]:
+                  - link "[83]" [ref=f1e1770] [cursor=pointer]:
+                    - /url: "#cite_note-Beatty-85"
+                - link "Sunda Wiwitan" [ref=f1e1771] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sunda_Wiwitan
+                - text: is a traditional
+                - link "Sundanese" [ref=f1e1772] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sundanese_people
+                - text: religion, its adherents still exist in several villages.
+                - superscript [ref=f1e1773]:
+                  - link "[84]" [ref=f1e1774] [cursor=pointer]:
+                    - /url: "#cite_note-86"
+          - region [ref=f1e1775]:
+            - generic [ref=f1e1776]:
+              - heading "Economy" [level=2] [ref=f1e1777]
+              - generic [ref=f1e1778]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=18
+            - figure [ref=f1e1779]:
+              - link [ref=f1e1780] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:KerbauJawa.jpg
+              - generic [ref=f1e1782]:
+                - link "Water buffalo" [ref=f1e1783] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Water_buffalo
+                - text: ploughing
+                - link "rice fields" [ref=f1e1784] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Paddy_field
+                - text: near
+                - link "Salatiga" [ref=f1e1785] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Salatiga
+                - text: ", in"
+                - link "Central Java" [ref=f1e1786] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Central_Java
+            - paragraph [ref=f1e1787]:
+              - text: Initially the economy of Java relied heavily on rice agriculture. Ancient kingdoms such as the
+              - link "Kingdoms of Sunda" [ref=f1e1788] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Kingdoms_of_Sunda
+              - text: ","
+              - link "Mataram" [ref=f1e1789] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mataram_Kingdom
+              - text: ", and"
+              - link "Majapahit" [ref=f1e1790] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Majapahit
+              - text: were dependent on rice yields and tax. Java was famous for rice surpluses and rice export since ancient times, and rice agriculture contributed to the population growth of the island. Trade with other parts of Asia such as ancient India and China flourished as early as the 4th century, as evidenced by Chinese ceramics found on the island dated to that period. Java also took part in the global trade of
+              - link "Maluku" [ref=f1e1791] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Maluku_Islands
+              - text: spice from ancient times in the Majapahit era, until well into the
+              - link "Dutch East India Company" [ref=f1e1792] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Dutch_East_India_Company
+              - text: (VOC) era.
+              - superscript [ref=f1e1793]:
+                - link "[85]" [ref=f1e1794] [cursor=pointer]:
+                  - /url: "#cite_note-87"
+            - paragraph [ref=f1e1795]:
+              - text: The VOC set their foothold on
+              - link "Batavia" [ref=f1e1796] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Batavia,_Dutch_East_Indies
+              - text: in the 17th century and was succeeded by the
+              - link "Dutch East Indies" [ref=f1e1797] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Dutch_East_Indies
+              - text: in the 19th century. During these colonial times, the Dutch introduced the cultivation of commercial plants in Java, such as
+              - link "sugarcane" [ref=f1e1798] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sugarcane
+              - text: ", rubber, coffee, tea, and"
+              - link "quinine" [ref=f1e1799] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Quinine
+              - text: . In the 19th and early 20th century, Javanese coffee gained global popularity. Thus, the name "Java" today has become a synonym for coffee.
+              - superscript [ref=f1e1800]:
+                - link "[86]" [ref=f1e1801] [cursor=pointer]:
+                  - /url: "#cite_note-88"
+              - superscript [ref=f1e1802]:
+                - link "[87]" [ref=f1e1803] [cursor=pointer]:
+                  - /url: "#cite_note-89"
+              - superscript [ref=f1e1804]:
+                - link "[88]" [ref=f1e1805] [cursor=pointer]:
+                  - /url: "#cite_note-90"
+              - superscript [ref=f1e1806]:
+                - link "[89]" [ref=f1e1807] [cursor=pointer]:
+                  - /url: "#cite_note-91"
+            - figure [ref=f1e1808]:
+              - link [ref=f1e1809] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:KCIC_CIT400AF.jpg
+              - generic [ref=f1e1811]:
+                - link "Whoosh" [ref=f1e1812] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/High-speed_rail_in_Indonesia
+                - text: high-speed train passing through
+                - link "Bekasi" [ref=f1e1813] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bekasi
+                - text: city
+            - paragraph [ref=f1e1814]:
+              - text: Java has been Indonesia's most developed island since the Dutch East Indies era and continues to be so today in the modern Republic of Indonesia. The road transportation networks that have existed since ancient times were connected and perfected with the construction of
+              - link "Java Great Post Road" [ref=f1e1815] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Great_Post_Road
+              - text: by
+              - link "Daendels" [ref=f1e1816] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Daendels
+              - text: in the early 19th century. It became the backbone of Java's road infrastructure and laid the base of
+              - link "Java North Coast Road" [ref=f1e1817] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/North_Coast_Road_(Java)
+              - text: (
+              - link "Indonesian" [ref=f1e1818] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Indonesian_language
+              - text: ": Jalan Pantura, abbreviation from \"Pantai Utara\" ). The need to transport commercial produces such as coffee from plantations in the interior of the island to the harbour on the coast spurred the construction of railway networks in Java. Today, industry, business, trade and services flourished in major cities of Java, such as"
+              - link "Jakarta" [ref=f1e1819] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Jakarta
+              - text: ","
+              - link "Surabaya" [ref=f1e1820] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Surabaya
+              - text: ","
+              - link "Semarang" [ref=f1e1821] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Semarang
+              - text: ", and"
+              - link "Bandung" [ref=f1e1822] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bandung
+              - text: ; while some traditional Sultanate cities such as
+              - link "Yogyakarta" [ref=f1e1823] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Yogyakarta
+              - text: ","
+              - link "Surakarta" [ref=f1e1824] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Surakarta
+              - text: ", and"
+              - link "Cirebon" [ref=f1e1825] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Cirebon
+              - text: preserved its royal legacy and has become the centre of art, culture and tourism. Industrial estates are also growing in towns on northern coast of Java, especially around
+              - link "Cilegon" [ref=f1e1826] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Cilegon
+              - text: ","
+              - link "Tangerang" [ref=f1e1827] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Tangerang
+              - text: ","
+              - link "Bekasi" [ref=f1e1828] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bekasi
+              - text: ","
+              - link "Karawang" [ref=f1e1829] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Karawang
+              - text: ","
+              - link "Gresik" [ref=f1e1830] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Gresik
+              - text: and
+              - link "Sidoarjo" [ref=f1e1831] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sidoarjo
+              - text: . The
+              - link "toll road" [ref=f1e1832] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Toll_road
+              - text: highway networks was built and expanded since the New Order until the present day, connecting major urban centres and surrounding areas, such as in and around
+              - link "Jakarta" [ref=f1e1833] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Jakarta
+              - text: and
+              - link "Bandung" [ref=f1e1834] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bandung
+              - text: ; also the ones in
+              - link "Cirebon" [ref=f1e1835] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Cirebon
+              - text: ","
+              - link "Semarang" [ref=f1e1836] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Semarang
+              - text: and
+              - link "Surabaya" [ref=f1e1837] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Surabaya
+              - text: . In addition to these motorways, Java has 16 national highways.
+            - figure "Java transport network" [ref=f1e1838]:
+              - link [ref=f1e1839] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Java_Transportation_Network.svg
+            - paragraph [ref=f1e1842]:
+              - text: Based on the statistical data by the year of 2021 released by
+              - link "Statistics Indonesia" [ref=f1e1843] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Statistics_Indonesia
+              - text: (Badan Pusat Statistik), Java alone contributes around 60% of Indonesia's GDP or equivalent to US$686 billion (int$2.0 trillion, PPP).
+              - superscript [ref=f1e1844]:
+                - link "[90]" [ref=f1e1845] [cursor=pointer]:
+                  - /url: "#cite_note-bps-92"
+          - region [ref=f1e1846]:
+            - generic [ref=f1e1847]:
+              - heading "See also" [level=2] [ref=f1e1848]
+              - generic [ref=f1e1849]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=19
+            - navigation "Portals" [ref=f1e1850]:
+              - listitem [ref=f1e1851]:
+                - img "flag" [ref=f1e1855]
+                - link "Indonesia portal" [ref=f1e1857] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Portal:Indonesia
+              - listitem [ref=f1e1858]:
+                - link [ref=f1e1861] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Icône_Ile.svg
+                  - img "icon" [ref=f1e1862]
+                - link "Islands portal" [ref=f1e1864] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Portal:Islands
+            - list [ref=f1e1865]:
+              - listitem [ref=f1e1866]:
+                - link "History of Indonesia" [ref=f1e1867] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/History_of_Indonesia
+              - listitem [ref=f1e1868]:
+                - link "List of monarchs of Java" [ref=f1e1869] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_monarchs_of_Java
+          - region [ref=f1e1870]:
+            - generic [ref=f1e1871]:
+              - heading "Notes" [level=2] [ref=f1e1872]
+              - generic [ref=f1e1873]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=20
+            - list [ref=f1e1876]:
+              - listitem [ref=f1e1877]:
+                - link "Jump up" [ref=f1e1879] [cursor=pointer]:
+                  - /url: "#cite_ref-2"
+                  - text: ^
+                - generic [ref=f1e1880]:
+                  - link /ˈdʒɑːvə, ˈdʒævə/ [ref=f1e1883] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:IPA/English
+                    - text: /
+                    - generic [ref=f1e1884]: ˈdʒɑːvə
+                    - text: ","
+                    - generic [ref=f1e1885]: ˈdʒævə
+                    - text: /
+                  - text: ;
+                  - superscript [ref=f1e1886]:
+                    - link "[1]" [ref=f1e1887] [cursor=pointer]:
+                      - /url: "#cite_note-1"
+                  - link "Indonesian" [ref=f1e1888] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Indonesian_language
+                  - text: ": Jawa , pronounced"
+                  - link "[ˈdʒawa]" [ref=f1e1890] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:IPA/Malay
+                  - text: ;
+                  - link "Javanese" [ref=f1e1891] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Javanese_language
+                  - text: ": ꦗꦮ ;"
+                  - link "Sundanese" [ref=f1e1892] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sundanese_language
+                  - text: ":"
+                  - generic [ref=f1e1893]: ᮏᮝ
+                  - text: ;
+                  - link "Betawi" [ref=f1e1894] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Betawi_language
+                  - text: ": Jawè"
+              - listitem [ref=f1e1895]:
+                - link "Jump up" [ref=f1e1897] [cursor=pointer]:
+                  - /url: "#cite_ref-53"
+                  - text: ^
+                - generic [ref=f1e1898]:
+                  - text: While early scholars like Krom and Coedes depicted the 15th century as a period of decline for Majapahit,
+                  - superscript [ref=f1e1899]:
+                    - link "[47]" [ref=f1e1900] [cursor=pointer]:
+                      - /url: "#cite_note-Coedes-48"
+                  - superscript [ref=f1e1901]:
+                    - 'generic "Page / location: 241" [ref=f1e1902]': ": 241"
+                  - text: more recent research has shown that the kingdom remained strong until the end of the 15th century.
+                  - superscript [ref=f1e1903]:
+                    - link "[51]" [ref=f1e1904] [cursor=pointer]:
+                      - /url: "#cite_note-nooduyn-52"
+          - region [ref=f1e1905]:
+            - generic [ref=f1e1906]:
+              - heading "References" [level=2] [ref=f1e1907]
+              - generic [ref=f1e1908]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=21
+            - list [ref=f1e1911]:
+              - listitem [ref=f1e1912]:
+                - link "Jump up" [ref=f1e1914] [cursor=pointer]:
+                  - /url: "#cite_ref-1"
+                  - text: ^
+                - generic [ref=f1e1915]:
+                  - generic [ref=f1e1916]:
+                    - link "\"Java\"" [ref=f1e1917] [cursor=pointer]:
+                      - /url: https://www.dictionary.com/browse/Java
+                    - text: .
+                    - link "Dictionary.com Unabridged" [ref=f1e1919] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Dictionary.com
+                    - text: (Online). n.d
+                    - generic [ref=f1e1920]: . Retrieved 26 September 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Java&rft.btitle=Dictionary.com+Unabridged&rft_id=https%3A%2F%2Fwww.dictionary.com%2Fbrowse%2FJava&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1921]:
+                - link "Jump up" [ref=f1e1923] [cursor=pointer]:
+                  - /url: "#cite_ref-3"
+                  - text: ^
+                - generic [ref=f1e1924]:
+                  - generic [ref=f1e1925]:
+                    - text: Naim, Akhsan; Syaputra, Hendry (2011).
+                    - 'link "Kewarganegaraan, Suku Bangsa, Agama, dan Bahasa Sehari-Hari Penduduk Indonesia: Hasil Sensus Penduduk 2010" [ref=f1e1926] [cursor=pointer]':
+                      - /url: https://www.bps.go.id/publication/2012/05/23/55eca38b7fe0830834605b35/kewarganegaraan-suku-bangsa-agama-dan-bahasa-sehari-hari-penduduk-indonesia.html
+                    - text: "(in Indonesian). Jakarta: Badan Pusat Statistik. p. 47."
+                    - link "ISBN" [ref=f1e1927] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9789790644175" [ref=f1e1928] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9789790644175
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Kewarganegaraan%2C+Suku+Bangsa%2C+Agama%2C+dan+Bahasa+Sehari-Hari+Penduduk+Indonesia%3A+Hasil+Sensus+Penduduk+2010&rft.place=Jakarta&rft.pages=47&rft.pub=Badan+Pusat+Statistik&rft.date=2011&rft.isbn=9789790644175&rft.aulast=Naim&rft.aufirst=Akhsan&rft.au=Syaputra%2C+Hendry&rft_id=https%3A%2F%2Fwww.bps.go.id%2Fpublication%2F2012%2F05%2F23%2F55eca38b7fe0830834605b35%2Fkewarganegaraan-suku-bangsa-agama-dan-bahasa-sehari-hari-penduduk-indonesia.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1929]:
+                - link "Jump up" [ref=f1e1931] [cursor=pointer]:
+                  - /url: "#cite_ref-4"
+                  - text: ^
+                - generic [ref=f1e1932]:
+                  - generic [ref=f1e1933]:
+                    - text: Stockdale, John Joseph; Bastin, John (15 March 2004).
+                    - link "Island of Java" [ref=f1e1934] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=YJxt2i2HbjEC&q=java+island
+                    - text: . Periplus Editions (HK) Limited.
+                    - link "ISBN" [ref=f1e1935] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-962-8734-23-8" [ref=f1e1936] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-962-8734-23-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Island+of+Java&rft.pub=Periplus+Editions+%28HK%29+Limited&rft.date=2004-03-15&rft.isbn=978-962-8734-23-8&rft.aulast=Stockdale&rft.aufirst=John+Joseph&rft.au=Bastin%2C+John&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DYJxt2i2HbjEC%26q%3Djava%2Bisland&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1937]:
+                - generic [ref=f1e1938]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e1939] [cursor=pointer]:
+                    - /url: "#cite_ref-ACD_5-0"
+                  - link [ref=f1e1941] [cursor=pointer]:
+                    - /url: "#cite_ref-ACD_5-1"
+                - generic [ref=f1e1942]:
+                  - generic [ref=f1e1943]:
+                    - text: Blust, Robert; Trussel, Stephen; Smith, Alexander D. (2023).
+                    - link "\"Austronesian Comparative Dictionary Online\"" [ref=f1e1944] [cursor=pointer]:
+                      - /url: https://acd.clld.org
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Austronesian+Comparative+Dictionary+Online&rft.date=2023&rft.aulast=Blust&rft.aufirst=Robert&rft.au=Trussel%2C+Stephen&rft.au=Smith%2C+Alexander+D.&rft_id=https%3A%2F%2Facd.clld.org&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1945]:
+                - link "Jump up" [ref=f1e1947] [cursor=pointer]:
+                  - /url: "#cite_ref-Laffan_6-0"
+                  - text: ^
+                - generic [ref=f1e1948]:
+                  - generic [ref=f1e1949]:
+                    - text: Laffan, Michael (2005).
+                    - 'link "\"Finding Java: Muslim nomenclature of insular Southeast Asia from Śrîvijaya to Snouck Hurgronje\"" [ref=f1e1950] [cursor=pointer]':
+                      - /url: https://ari.nus.edu.sg/wp-content/uploads/2018/10/wps05_052.pdf
+                    - text: (PDF). Asia Research Institute Working Paper Series. 52. Princeton University.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Asia+Research+Institute+Working+Paper+Series&rft.atitle=Finding+Java%3A+Muslim+nomenclature+of+insular+Southeast+Asia+from+%C5%9Ar%C3%AEvijaya+to+Snouck+Hurgronje&rft.volume=52&rft.date=2005&rft.aulast=Laffan&rft.aufirst=Michael&rft_id=https%3A%2F%2Fari.nus.edu.sg%2Fwp-content%2Fuploads%2F2018%2F10%2Fwps05_052.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1951]:
+                - link "Jump up" [ref=f1e1953] [cursor=pointer]:
+                  - /url: "#cite_ref-Raffles_7-0"
+                  - text: ^
+                - generic [ref=f1e1954]:
+                  - generic [ref=f1e1955]:
+                    - text: Raffles, Sir Thomas Stamford (1817).
+                    - link "The History of Java" [ref=f1e1957] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_History_of_Java
+                    - text: (1965 ed.). Oxford University Press. p. 3.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+History+of+Java&rft.pages=3&rft.edition=1965&rft.pub=Oxford+University+Press&rft.date=1817&rft.aulast=Raffles&rft.aufirst=Sir+Thomas+Stamford&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1958]:
+                - link "Jump up" [ref=f1e1960] [cursor=pointer]:
+                  - /url: "#cite_ref-hatley_8-0"
+                  - text: ^
+                - generic [ref=f1e1961]: "Hatley, R., Schiller, J., Lucas, A., Martin-Schiller, B., (1984). \"Mapping cultural regions of Java\" in: Other Javas away from the kraton. pp. 1–32."
+              - listitem [ref=f1e1962]:
+                - link "Jump up" [ref=f1e1964] [cursor=pointer]:
+                  - /url: "#cite_ref-9"
+                  - text: ^
+                - generic [ref=f1e1965]:
+                  - generic [ref=f1e1966]:
+                    - text: Danielou, Alain (1989).
+                    - link "Manimekhalaï (The Dancer with the Magic Bowl) by Merchant-Prince Shattan)" [ref=f1e1967] [cursor=pointer]:
+                      - /url: https://books.googleusercontent.com/books/content?req=AKW5QafmwlRPRJDfO3TJps6TFhcrJ87IjIkCZQi-CdhKY_Spkj4dHoL8FU4316arMIWdukOwBHQhAeKFKQcEqquL7BXtBgs1um4IKANXECjHGid8N3XyJ68Fkf_ouq4vsvKusksADVfGkxMxNUGZ-lPah5uLQyOkbfeKIWPS1aBPF94qg8ji4tJ-eearVA_7P0pDSX2qr2fHGGzmPyX9uX-CTP0_OTcZ7CnKDYjc_fId4wugclCXgrTllYQKpJFVSb5rQ6f86Api
+                    - text: . New Directions.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Manimekhala%C3%AF+%28The+Dancer+with+the+Magic+Bowl%29+by+Merchant-Prince+Shattan%29&rft.pub=New+Directions&rft.date=1989&rft.aulast=Danielou&rft.aufirst=Alain&rft_id=https%3A%2F%2Fbooks.googleusercontent.com%2Fbooks%2Fcontent%3Freq%3DAKW5QafmwlRPRJDfO3TJps6TFhcrJ87IjIkCZQi-CdhKY_Spkj4dHoL8FU4316arMIWdukOwBHQhAeKFKQcEqquL7BXtBgs1um4IKANXECjHGid8N3XyJ68Fkf_ouq4vsvKusksADVfGkxMxNUGZ-lPah5uLQyOkbfeKIWPS1aBPF94qg8ji4tJ-eearVA_7P0pDSX2qr2fHGGzmPyX9uX-CTP0_OTcZ7CnKDYjc_fId4wugclCXgrTllYQKpJFVSb5rQ6f86Api&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1968]:
+                - link "Jump up" [ref=f1e1970] [cursor=pointer]:
+                  - /url: "#cite_ref-10"
+                  - text: ^
+                - generic [ref=f1e1971]:
+                  - text: De la Vallee Poussin, L., Thomas, E.J., ed. (1916),
+                  - link "\"Niddesa I, Mahaniddesa\", Vol. 1" [ref=f1e1972] [cursor=pointer]:
+                    - /url: https://archive.org/stream/niddesa01pali#page/n7/mode/2up
+                  - text: ", The Pali Text Society, London, Oxford University Press. (Pali edition)"
+              - listitem [ref=f1e1973]:
+                - link "Jump up" [ref=f1e1975] [cursor=pointer]:
+                  - /url: "#cite_ref-11"
+                  - text: ^
+                - generic [ref=f1e1976]:
+                  - generic [ref=f1e1977]: "Ptolemiaos, Klaudios (2017). Stückelberger, Alfred; Grasshoff, Gerd (eds.). Handbuch der Geographie [Handbook of Geography]. Basel: Schwabe AG Verlag."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Handbuch+der+Geographie&rft.place=Basel&rft.pub=Schwabe+AG+Verlag&rft.date=2017&rft.aulast=Ptolemiaos&rft.aufirst=Klaudios&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1978]:
+                - link "Jump up" [ref=f1e1980] [cursor=pointer]:
+                  - /url: "#cite_ref-12"
+                  - text: ^
+                - generic [ref=f1e1981]:
+                  - generic [ref=f1e1982]: "Legge, James (1886). A Record of Buddhistic Kingdoms. Oxford: Clarendon Press."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=A+Record+of+Buddhistic+Kingdoms&rft.place=Oxford&rft.pub=Clarendon+Press&rft.date=1886&rft.aulast=Legge&rft.aufirst=James&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1983]:
+                - link "Jump up" [ref=f1e1985] [cursor=pointer]:
+                  - /url: "#cite_ref-13"
+                  - text: ^
+                - generic [ref=f1e1986]:
+                  - generic [ref=f1e1987]: "Groeneveldt, W.P. (1876). Notes of the Malay Archipelago and Malacca Compiled from Chinese Sources. Batavia: W. Bruining."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Notes+of+the+Malay+Archipelago+and+Malacca+Compiled+from+Chinese+Sources&rft.place=Batavia&rft.pub=W.+Bruining&rft.date=1876&rft.aulast=Groeneveldt&rft.aufirst=W.P.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e1988]:
+                - link "Jump up" [ref=f1e1990] [cursor=pointer]:
+                  - /url: "#cite_ref-Nusa_Jawa_14-0"
+                  - text: ^
+                - generic [ref=f1e1991]:
+                  - text: Lombard, Denys (2005)
+                  - generic [ref=f1e1992]:
+                    - text: .
+                    - 'link "Nusa Jawa: Silang Budaya, Bagian 2: Jaringan Asia" [ref=f1e1993] [cursor=pointer]':
+                      - /url: https://archive.org/details/NJ2JA/mode/2up?q=
+                  - text: ". Jakarta: Gramedia Pustaka Utama. An Indonesian translation of Lombard, Denys (1990). Le carrefour javanais. Essai d'histoire globale (The Javanese Crossroads: Towards a Global History) vol. 2. Paris: Éditions de l'École des Hautes Études en Sciences Sociales. p. 12."
+              - listitem [ref=f1e1994]:
+                - link "Jump up" [ref=f1e1996] [cursor=pointer]:
+                  - /url: "#cite_ref-15"
+                  - text: ^
+                - generic [ref=f1e1997]:
+                  - text: Yule, Sir Henry (1913).
+                  - 'link "Cathay and the way thither: being a collection of medieval notices of China vol. III" [ref=f1e1999] [cursor=pointer]':
+                    - /url: https://archive.org/details/cathaywaythither03yule/page/n15/mode/2up?q=saba
+                  - text: ". London: The Hakluyt Society."
+              - listitem [ref=f1e2000]:
+                - link "Jump up" [ref=f1e2002] [cursor=pointer]:
+                  - /url: "#cite_ref-16"
+                  - text: ^
+                - generic [ref=f1e2003]:
+                  - text: Braginsky, Vladimir. 1998.
+                  - link "Two Eastern Christian sources on medieval Nusantara" [ref=f1e2004] [cursor=pointer]:
+                    - /url: https://www.academia.edu/21785432/Two_Eastern_Christian_Sources_on_Medieval_Nusantara
+                  - link "Archived" [ref=f1e2005] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20210520115142/https://www.academia.edu/21785432/Two_Eastern_Christian_Sources_on_Medieval_Nusantara
+                  - text: 20 May 2021 at the
+                  - link "Wayback Machine" [ref=f1e2006] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wayback_Machine
+                  - text: ". Bijdragen tot de Taal-, Land- en Volkenkunde. 154(3): 367–396."
+              - listitem [ref=f1e2007]:
+                - link "Jump up" [ref=f1e2009] [cursor=pointer]:
+                  - /url: "#cite_ref-17"
+                  - text: ^
+                - generic [ref=f1e2010]:
+                  - generic [ref=f1e2011]:
+                    - text: Zenkovsky, Serge A. (1974).
+                    - link "Medieval Russia's epics, chronicles, and tales" [ref=f1e2012] [cursor=pointer]:
+                      - /url: https://archive.org/details/medievalrussiase00zenk/page/346/mode/2up?q=shabait
+                    - text: ". New York: Dutton. pp. 345–347."
+                    - link "ISBN" [ref=f1e2013] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "0525473637" [ref=f1e2014] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/0525473637
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Medieval+Russia%27s+epics%2C+chronicles%2C+and+tales&rft.place=New+York&rft.pages=345-347&rft.pub=Dutton&rft.date=1974&rft.isbn=0525473637&rft.aulast=Zenkovsky&rft.aufirst=Serge+A.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fmedievalrussiase00zenk%2Fpage%2F346%2Fmode%2F2up%3Fq%3Dshabait&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2015]:
+                - link "Jump up" [ref=f1e2017] [cursor=pointer]:
+                  - /url: "#cite_ref-18"
+                  - text: ^
+                - generic [ref=f1e2018]:
+                  - generic [ref=f1e2019]:
+                    - link "\"Java\"" [ref=f1e2020] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20240627082947/https://geography.name/java/
+                    - text: . geography.name. Archived from
+                    - link "the original" [ref=f1e2021] [cursor=pointer]:
+                      - /url: https://geography.name/java/
+                    - text: on 27 June 2024
+                    - generic [ref=f1e2022]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Java&rft.pub=geography.name&rft_id=https%3A%2F%2Fgeography.name%2Fjava%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2023]:
+                - generic [ref=f1e2024]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2025] [cursor=pointer]:
+                    - /url: "#cite_ref-worldatlas_19-0"
+                  - link [ref=f1e2027] [cursor=pointer]:
+                    - /url: "#cite_ref-worldatlas_19-1"
+                - generic [ref=f1e2028]:
+                  - generic [ref=f1e2029]:
+                    - link "\"Java Island\"" [ref=f1e2030] [cursor=pointer]:
+                      - /url: https://www.worldatlas.com/islands/java-island.html
+                    - text: . WorldAtlas.com. 24 August 2021
+                    - generic [ref=f1e2031]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Java+Island&rft.pub=WorldAtlas.com&rft.date=2021-08-24&rft_id=https%3A%2F%2Fwww.worldatlas.com%2Fislands%2Fjava-island.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2032]:
+                - link "Jump up" [ref=f1e2034] [cursor=pointer]:
+                  - /url: "#cite_ref-20"
+                  - text: ^
+                - generic [ref=f1e2035]:
+                  - generic [ref=f1e2036]:
+                    - text: "Pravitasari, Andrea Emma (24 September 2015). \"Study on Impact of Urbanization and Rapid Urban Expansion in Java and Jabodetabek Megacity, Indonesia\". Geography, Environmental Science: 18."
+                    - link "doi" [ref=f1e2037] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.14989/doctor.k19347" [ref=f1e2038] [cursor=pointer]:
+                      - /url: https://doi.org/10.14989%2Fdoctor.k19347
+                    - text: .
+                    - link "S2CID" [ref=f1e2039] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "131526829" [ref=f1e2040] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:131526829
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Geography%2C+Environmental+Science&rft.atitle=Study+on+Impact+of+Urbanization+and+Rapid+Urban+Expansion+in+Java+and+Jabodetabek+Megacity%2C+Indonesia&rft.pages=18&rft.date=2015-09-24&rft_id=info%3Adoi%2F10.14989%2Fdoctor.k19347&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A131526829%23id-name%3DS2CID&rft.aulast=Pravitasari&rft.aufirst=Andrea+Emma&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2041]:
+                - link "Jump up" [ref=f1e2043] [cursor=pointer]:
+                  - /url: "#cite_ref-21"
+                  - text: ^
+                - generic [ref=f1e2044]:
+                  - generic [ref=f1e2045]:
+                    - link "\"Java\"" [ref=f1e2046] [cursor=pointer]:
+                      - /url: https://www.britannica.com/place/Java-island-Indonesia
+                    - text: .
+                    - link "Britannica" [ref=f1e2047] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Britannica
+                    - text: . 23 June 2024
+                    - generic [ref=f1e2048]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Java&rft.pub=Britannica&rft.date=2024-06-23&rft_id=https%3A%2F%2Fwww.britannica.com%2Fplace%2FJava-island-Indonesia&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2049]:
+                - generic [ref=f1e2050]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2051] [cursor=pointer]:
+                    - /url: "#cite_ref-RICKLEFS_p15_22-0"
+                  - link [ref=f1e2053] [cursor=pointer]:
+                    - /url: "#cite_ref-RICKLEFS_p15_22-1"
+                  - link [ref=f1e2054] [cursor=pointer]:
+                    - /url: "#cite_ref-RICKLEFS_p15_22-2"
+                - generic [ref=f1e2055]:
+                  - generic [ref=f1e2056]:
+                    - text: "Ricklefs, M. C. (1990). A History of Modern Indonesia since c.1300 (2 ed.). London: MacMillan. p. 15."
+                    - link "ISBN" [ref=f1e2057] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-333-57690-8" [ref=f1e2058] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-333-57690-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=A+History+of+Modern+Indonesia+since+c.1300&rft.place=London&rft.pages=15&rft.edition=2&rft.pub=MacMillan&rft.date=1990&rft.isbn=978-0-333-57690-8&rft.aulast=Ricklefs&rft.aufirst=M.+C.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2059]:
+                - link "Jump up" [ref=f1e2061] [cursor=pointer]:
+                  - /url: "#cite_ref-23"
+                  - text: ^
+                - generic [ref=f1e2062]:
+                  - generic [ref=f1e2063]:
+                    - link "\"About Indonesia\"" [ref=f1e2064] [cursor=pointer]:
+                      - /url: https://sucafina.com/na/news/about-indonesia
+                    - text: . Sucafina
+                    - generic [ref=f1e2065]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=About+Indonesia&rft.pub=Sucafina&rft_id=https%3A%2F%2Fsucafina.com%2Fna%2Fnews%2Fabout-indonesia&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2066]:
+                - link "Jump up" [ref=f1e2068] [cursor=pointer]:
+                  - /url: "#cite_ref-24"
+                  - text: ^
+                - generic [ref=f1e2069]:
+                  - generic [ref=f1e2070]:
+                    - link "\"Management of Bengawan Solo River Area\"" [ref=f1e2071] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20071011113418/http://jasatirta1.go.id/english/3WorkArea/20BengawanSolo.htm
+                    - text: . Jasa Tirta I Corporation. 2006. Archived from
+                    - link "the original" [ref=f1e2072] [cursor=pointer]:
+                      - /url: http://www.jasatirta1.go.id/english/3WorkArea/20BengawanSolo.htm
+                    - text: on 11 October 2007.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Management+of+Bengawan+Solo+River+Area&rft.pub=Jasa+Tirta+I+Corporation&rft.date=2006&rft_id=http%3A%2F%2Fwww.jasatirta1.go.id%2Fenglish%2F3WorkArea%2F20BengawanSolo.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2073]:
+                - link "Jump up" [ref=f1e2075] [cursor=pointer]:
+                  - /url: "#cite_ref-25"
+                  - text: ^
+                - generic [ref=f1e2076]:
+                  - generic [ref=f1e2077]:
+                    - link "\"Climate, Weather, and Temperature of Java Indonesia\"" [ref=f1e2078] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190903193044/http://www.javaindonesia.org/general/climate-weather-temperature-java-indonesia/
+                    - text: . Archived from
+                    - link "the original" [ref=f1e2079] [cursor=pointer]:
+                      - /url: http://www.javaindonesia.org/general/climate-weather-temperature-java-indonesia/
+                    - text: on 3 September 2019
+                    - generic [ref=f1e2080]: . Retrieved 1 April 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Climate%2C+Weather%2C+and+Temperature+of+Java+Indonesia&rft_id=http%3A%2F%2Fwww.javaindonesia.org%2Fgeneral%2Fclimate-weather-temperature-java-indonesia%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2081]:
+                - link "Jump up" [ref=f1e2083] [cursor=pointer]:
+                  - /url: "#cite_ref-26"
+                  - text: ^
+                - generic [ref=f1e2084]:
+                  - generic [ref=f1e2085]:
+                    - text: Aqil, Ibnu (6 January 2023).
+                    - link "\"Central Java rainy season to peak in January, February\"" [ref=f1e2086] [cursor=pointer]:
+                      - /url: https://www.thejakartapost.com/indonesia/2023/01/05/central-java-rainy-season-to-peak-in-january-february.html
+                    - text: .
+                    - link "The Jakarta Post" [ref=f1e2087] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Jakarta_Post
+                    - generic [ref=f1e2088]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Central+Java+rainy+season+to+peak+in+January%2C+February&rft.pub=The+Jakarta+Post&rft.date=2023-01-06&rft.aulast=Aqil&rft.aufirst=Ibnu&rft_id=https%3A%2F%2Fwww.thejakartapost.com%2Findonesia%2F2023%2F01%2F05%2Fcentral-java-rainy-season-to-peak-in-january-february.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2089]:
+                - link "Jump up" [ref=f1e2091] [cursor=pointer]:
+                  - /url: "#cite_ref-27"
+                  - text: ^
+                - generic [ref=f1e2092]:
+                  - generic [ref=f1e2093]:
+                    - link "\"Javan Rhinoceros (Rhinoceros sondaicus)\"" [ref=f1e2094] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20171108202706/http://www.edgeofexistence.org/mammals/species_info.php?id=11
+                    - text: . EDGE Evolutionarily Distinct and Globally Endangered. Archived from
+                    - link "the original" [ref=f1e2095] [cursor=pointer]:
+                      - /url: http://www.edgeofexistence.org/mammals/species_info.php?id=11
+                    - text: on 8 November 2017
+                    - generic [ref=f1e2096]: . Retrieved 26 June 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Javan+Rhinoceros+%28Rhinoceros+sondaicus%29&rft.pub=EDGE+Evolutionarily+Distinct+and+Globally+Endangered&rft_id=http%3A%2F%2Fwww.edgeofexistence.org%2Fmammals%2Fspecies_info.php%3Fid%3D11&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2097]:
+                - link "Jump up" [ref=f1e2099] [cursor=pointer]:
+                  - /url: "#cite_ref-28"
+                  - text: ^
+                - generic [ref=f1e2100]:
+                  - generic [ref=f1e2101]:
+                    - link "\"Indonesia bird watching tour\"" [ref=f1e2102] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120209021238/http://wildlifenews.co.uk/2011/indonesia-bird-watching-tour-with-wildlife-news-travel/
+                    - text: . wildlifenews.co.uk. Archived from
+                    - link "the original" [ref=f1e2103] [cursor=pointer]:
+                      - /url: http://wildlifenews.co.uk/2011/indonesia-bird-watching-tour-with-wildlife-news-travel/
+                    - text: on 9 February 2012
+                    - generic [ref=f1e2104]: . Retrieved 26 June 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Indonesia+bird+watching+tour&rft.pub=wildlifenews.co.uk&rft_id=http%3A%2F%2Fwildlifenews.co.uk%2F2011%2Findonesia-bird-watching-tour-with-wildlife-news-travel%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2105]:
+                - link "Jump up" [ref=f1e2107] [cursor=pointer]:
+                  - /url: "#cite_ref-29"
+                  - text: ^
+                - generic [ref=f1e2108]: "Nguyen, T. T. T., and S. S. De Silva (2006). Freshwater finfish biodiversity and conservation: an Asian perspective. Biodiversity & Conservation 15(11): 3543–3568."
+              - listitem [ref=f1e2109]:
+                - link "Jump up" [ref=f1e2111] [cursor=pointer]:
+                  - /url: "#cite_ref-Frost_30-0"
+                  - text: ^
+                - generic [ref=f1e2112]:
+                  - generic [ref=f1e2113]:
+                    - text: Frost, Darrel R. (2021).
+                    - link "\"Rhacophorus margaritifer (Schlegel, 1837)\"" [ref=f1e2114] [cursor=pointer]:
+                      - /url: https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Rhacophoridae/Rhacophorinae/Rhacophorus/Rhacophorus-margaritifer
+                    - text: ". Amphibian Species of the World: An Online Reference. Version 6.1. American Museum of Natural History."
+                    - link "doi" [ref=f1e2115] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.5531/db.vz.0001" [ref=f1e2116] [cursor=pointer]:
+                      - /url: https://doi.org/10.5531%2Fdb.vz.0001
+                    - generic [ref=f1e2117]: . Retrieved 6 February 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Amphibian+Species+of+the+World%3A+An+Online+Reference.+Version+6.1&rft.atitle=Rhacophorus+margaritifer+%28Schlegel%2C+1837%29&rft.date=2021&rft_id=info%3Adoi%2F10.5531%2Fdb.vz.0001&rft.au=Frost%2C+Darrel+R.&rft_id=https%3A%2F%2Famphibiansoftheworld.amnh.org%2FAmphibia%2FAnura%2FRhacophoridae%2FRhacophorinae%2FRhacophorus%2FRhacophorus-margaritifer&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2118]:
+                - link "Jump up" [ref=f1e2120] [cursor=pointer]:
+                  - /url: "#cite_ref-31"
+                  - text: ^
+                - generic [ref=f1e2121]:
+                  - generic [ref=f1e2122]:
+                    - link "\"Home\"" [ref=f1e2123] [cursor=pointer]:
+                      - /url: https://www.ecoverdeconsulting.com/
+                    - text: . EcoVerde
+                    - generic [ref=f1e2124]: . Retrieved 16 August 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=EcoVerde&rft.atitle=Home&rft_id=https%3A%2F%2Fwww.ecoverdeconsulting.com%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2125]:
+                - link "Jump up" [ref=f1e2127] [cursor=pointer]:
+                  - /url: "#cite_ref-32"
+                  - text: ^
+                - generic [ref=f1e2128]:
+                  - generic [ref=f1e2129]:
+                    - text: Nijman, Vincent; Sintya, Erly; Sukmadewi, Desak Ketut Tristiana; Kuntayuni; Putri, Sukmasari Triana Gita; Chavez, Jessica; Abdullah, Abdullah; Halbrook, Megan; Harringan, Ryan J.; Merritt, Sydney; Hoff, Nicole A.; Rimoin, Anne W.; Hensley, Lisa (15 September 2026).
+                    - link "\"Long-term market surveys for live bats in trade in southwestern Indonesia\"" [ref=f1e2130] [cursor=pointer]:
+                      - /url: https://www.sciencedirect.com/science/article/pii/S0048969726006595
+                    - text: . Science of the Total Environment. 1048 181995.
+                    - link "doi" [ref=f1e2131] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1016/j.scitotenv.2026.181995" [ref=f1e2132] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016%2Fj.scitotenv.2026.181995
+                    - text: .
+                    - link "ISSN" [ref=f1e2133] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0048-9697" [ref=f1e2134] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0048-9697
+                    - text: .
+                    - link "PMID" [ref=f1e2135] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "42468122" [ref=f1e2136] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/42468122
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Science+of+the+Total+Environment&rft.atitle=Long-term+market+surveys+for+live+bats+in+trade+in+southwestern+Indonesia&rft.volume=1048&rft.artnum=181995&rft.date=2026-09-15&rft.issn=0048-9697&rft_id=info%3Apmid%2F42468122&rft_id=info%3Adoi%2F10.1016%2Fj.scitotenv.2026.181995&rft.aulast=Nijman&rft.aufirst=Vincent&rft.au=Sintya%2C+Erly&rft.au=Sukmadewi%2C+Desak+Ketut+Tristiana&rft.au=Kuntayuni&rft.au=Putri%2C+Sukmasari+Triana+Gita&rft.au=Chavez%2C+Jessica&rft.au=Abdullah%2C+Abdullah&rft.au=Halbrook%2C+Megan&rft.au=Harringan%2C+Ryan+J.&rft.au=Merritt%2C+Sydney&rft.au=Hoff%2C+Nicole+A.&rft.au=Rimoin%2C+Anne+W.&rft.au=Hensley%2C+Lisa&rft_id=https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0048969726006595&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2137]:
+                - link "Jump up" [ref=f1e2139] [cursor=pointer]:
+                  - /url: "#cite_ref-33"
+                  - text: ^
+                - generic [ref=f1e2140]:
+                  - generic [ref=f1e2141]:
+                    - text: Matsu’ura, Shuji; Kondo, Megumi; Danhara, Toru; Sakata, Sheik; Iwano, Hideki; Hirata, Takafumi; Kurniawan, Iwan; Setiyabudi, Erik; Takeshita, Yoshihiro; Hyodo, Masayuki; Kitaba, Ikuko; Sudo Masafumi; Danhara, Yugo; Aziz, Fachroel (2020).
+                    - link "\"Age control of the first appearance datum for Javanese Homo erectus in the Sangiran area\"" [ref=f1e2142] [cursor=pointer]:
+                      - /url: https://doi.org/10.1126%2Fscience.aau8556
+                    - text: ". Science. 367 (6474): 210–214."
+                    - link "Bibcode" [ref=f1e2143] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2020Sci...367..210M" [ref=f1e2144] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2020Sci...367..210M
+                    - text: .
+                    - link "doi" [ref=f1e2145] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2146]:
+                      - link "10.1126/science.aau8556" [ref=f1e2147] [cursor=pointer]:
+                        - /url: https://doi.org/10.1126%2Fscience.aau8556
+                    - text: .
+                    - link "PMID" [ref=f1e2148] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "31919224" [ref=f1e2149] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/31919224
+                    - text: .
+                    - link "S2CID" [ref=f1e2150] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "210131393" [ref=f1e2151] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:210131393
+                    - text: .
+                  - generic
+              - listitem [ref=f1e2152]:
+                - link "Jump up" [ref=f1e2154] [cursor=pointer]:
+                  - /url: "#cite_ref-34"
+                  - text: ^
+                - generic [ref=f1e2155]:
+                  - generic [ref=f1e2156]:
+                    - text: "Pope, G. G. (1988). \"Recent advances in far eastern paleoanthropology\". Annual Review of Anthropology. 17 (1): 43–77."
+                    - link "Bibcode" [ref=f1e2157] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1988ARAnt..17...43P" [ref=f1e2158] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1988ARAnt..17...43P
+                    - text: .
+                    - link "doi" [ref=f1e2159] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1146/annurev.an.17.100188.000355" [ref=f1e2160] [cursor=pointer]:
+                      - /url: https://doi.org/10.1146%2Fannurev.an.17.100188.000355
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annual+Review+of+Anthropology&rft.atitle=Recent+advances+in+far+eastern+paleoanthropology&rft.volume=17&rft.issue=1&rft.pages=43-77&rft.date=1988&rft_id=info%3Adoi%2F10.1146%2Fannurev.an.17.100188.000355&rft_id=info%3Abibcode%2F1988ARAnt..17...43P&rft.aulast=Pope&rft.aufirst=G.+G.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - text: cited in
+                  - generic [ref=f1e2161]: "Whitten, T.; Soeriaatmadja, R. E.; Suraya A. A. (1996). The Ecology of Java and Bali. Hong Kong: Periplus Editions Ltd. pp. 309–312."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Ecology+of+Java+and+Bali&rft.place=Hong+Kong&rft.pages=309-312&rft.pub=Periplus+Editions+Ltd&rft.date=1996&rft.aulast=Whitten&rft.aufirst=T.&rft.au=Soeriaatmadja%2C+R.+E.&rft.au=Suraya+A.+A.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - text: ;
+                  - generic [ref=f1e2162]:
+                    - text: Pope, G. (15 August 1983).
+                    - link "\"Evidence on the Age of the Asian Hominidae\"" [ref=f1e2163] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC384173
+                    - text: ". Proceedings of the National Academy of Sciences of the United States of America. 80 (16): 4, 988–4992."
+                    - link "Bibcode" [ref=f1e2164] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1983PNAS...80.4988P" [ref=f1e2165] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1983PNAS...80.4988P
+                    - text: .
+                    - link "doi" [ref=f1e2166] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2167]:
+                      - link "10.1073/pnas.80.16.4988" [ref=f1e2168] [cursor=pointer]:
+                        - /url: https://doi.org/10.1073%2Fpnas.80.16.4988
+                    - text: .
+                    - link "PMC" [ref=f1e2169] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e2170]:
+                      - link "384173" [ref=f1e2171] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC384173
+                    - text: .
+                    - link "PMID" [ref=f1e2172] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "6410399" [ref=f1e2173] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/6410399
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Proceedings+of+the+National+Academy+of+Sciences+of+the+United+States+of+America&rft.atitle=Evidence+on+the+Age+of+the+Asian+Hominidae&rft.volume=80&rft.issue=16&rft.pages=4%2C+988-4992&rft.date=1983-08-15&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC384173%23id-name%3DPMC&rft_id=info%3Apmid%2F6410399&rft_id=info%3Adoi%2F10.1073%2Fpnas.80.16.4988&rft_id=info%3Abibcode%2F1983PNAS...80.4988P&rft.aulast=Pope&rft.aufirst=G.&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC384173&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - text: cited in
+                  - generic [ref=f1e2174]: "Whitten, T.; Soeriaatmadja, R. E.; Suraya A. A. (1996). The Ecology of Java and Bali. Hong Kong: Periplus Editions Ltd. p. 309."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Ecology+of+Java+and+Bali&rft.place=Hong+Kong&rft.pages=309&rft.pub=Periplus+Editions+Ltd&rft.date=1996&rft.aulast=Whitten&rft.aufirst=T.&rft.au=Soeriaatmadja%2C+R.+E.&rft.au=Suraya+A.+A.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - text: ;
+                  - generic [ref=f1e2175]:
+                    - text: de Vos, J. P.; P. Y. Sondaar (9 December 1994).
+                    - link "\"Dating hominid sites in Indonesia\"" [ref=f1e2176] [cursor=pointer]:
+                      - /url: http://www.sciencemag.org/cgi/reprint/266/5191/1726.pdf
+                    - text: "(PDF). Science Magazine. 266 (16): 4, 988–4992."
+                    - link "Bibcode" [ref=f1e2177] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1994Sci...266.1726D" [ref=f1e2178] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1994Sci...266.1726D
+                    - text: .
+                    - link "doi" [ref=f1e2179] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2180]:
+                      - link "10.1126/science.7992059" [ref=f1e2181] [cursor=pointer]:
+                        - /url: https://doi.org/10.1126%2Fscience.7992059
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Science+Magazine&rft.atitle=Dating+hominid+sites+in+Indonesia&rft.volume=266&rft.issue=16&rft.pages=4%2C+988-4992&rft.date=1994-12-09&rft_id=info%3Adoi%2F10.1126%2Fscience.7992059&rft_id=info%3Abibcode%2F1994Sci...266.1726D&rft.aulast=de+Vos&rft.aufirst=J.+P.&rft.au=P.+Y.+Sondaar&rft_id=http%3A%2F%2Fwww.sciencemag.org%2Fcgi%2Freprint%2F266%2F5191%2F1726.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - text: cited in
+                  - generic [ref=f1e2182]: "Whitten, T; Soeriaatmadja, R. E.; Suraya A. A. (1996). The Ecology of Java and Bali. Hong Kong: Periplus Editions Ltd. p. 309."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Ecology+of+Java+and+Bali&rft.place=Hong+Kong&rft.pages=309&rft.pub=Periplus+Editions+Ltd&rft.date=1996&rft.aulast=Whitten&rft.aufirst=T&rft.au=Soeriaatmadja%2C+R.+E.&rft.au=Suraya+A.+A.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2183]:
+                - link "Jump up" [ref=f1e2185] [cursor=pointer]:
+                  - /url: "#cite_ref-35"
+                  - text: ^
+                - generic [ref=f1e2186]:
+                  - generic [ref=f1e2187]:
+                    - text: Matsubayashi, Kozo (2014).
+                    - link "\"Geriatric issues from the standpoint of human evolution\"" [ref=f1e2188] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4285791
+                    - text: ". Geriatrics & Gerontology International. 14 (4): 731–34."
+                    - link "doi" [ref=f1e2189] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1111/ggi.12224" [ref=f1e2190] [cursor=pointer]:
+                      - /url: https://doi.org/10.1111%2Fggi.12224
+                    - text: .
+                    - link "PMC" [ref=f1e2191] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e2192]:
+                      - link "4285791" [ref=f1e2193] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4285791
+                    - text: .
+                    - link "PMID" [ref=f1e2194] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "25327904" [ref=f1e2195] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/25327904
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Geriatrics+%26+Gerontology+International&rft.atitle=Geriatric+issues+from+the+standpoint+of+human+evolution&rft.volume=14&rft.issue=4&rft.pages=731-34&rft.date=2014&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC4285791%23id-name%3DPMC&rft_id=info%3Apmid%2F25327904&rft_id=info%3Adoi%2F10.1111%2Fggi.12224&rft.aulast=Matsubayashi&rft.aufirst=Kozo&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC4285791&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2196]:
+                - link "Jump up" [ref=f1e2198] [cursor=pointer]:
+                  - /url: "#cite_ref-36"
+                  - text: ^
+                - generic [ref=f1e2199]:
+                  - generic [ref=f1e2200]:
+                    - text: Ingicco, Thomas; de Vos, John; Huffman, O. Frank (2014).
+                    - 'link "\"The Oldest Gibbon Fossil (Hylobatidae) from Insular Southeast Asia: Evidence from Trinil, (East Java, Indonesia), Lower/Middle Pleistocene\"" [ref=f1e2201] [cursor=pointer]':
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4051846
+                    - text: .
+                    - link "PLoS ONE" [ref=f1e2203] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PLOS_ONE
+                    - text: . 9 (6). e99531.
+                    - link "Bibcode" [ref=f1e2204] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014PLoSO...999531I" [ref=f1e2205] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014PLoSO...999531I
+                    - text: .
+                    - link "doi" [ref=f1e2206] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2207]:
+                      - link "10.1371/journal.pone.0099531" [ref=f1e2208] [cursor=pointer]:
+                        - /url: https://doi.org/10.1371%2Fjournal.pone.0099531
+                    - text: .
+                    - link "PMC" [ref=f1e2209] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e2210]:
+                      - link "4051846" [ref=f1e2211] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4051846
+                    - text: .
+                    - link "PMID" [ref=f1e2212] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "24914951" [ref=f1e2213] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/24914951
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=PLoS+ONE&rft.atitle=The+Oldest+Gibbon+Fossil+%28Hylobatidae%29+from+Insular+Southeast+Asia%3A+Evidence+from+Trinil%2C+%28East+Java%2C+Indonesia%29%2C+Lower%2FMiddle+Pleistocene&rft.volume=9&rft.issue=6&rft.pages=e99531&rft.date=2014&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC4051846%23id-name%3DPMC&rft_id=info%3Apmid%2F24914951&rft_id=info%3Adoi%2F10.1371%2Fjournal.pone.0099531&rft_id=info%3Abibcode%2F2014PLoSO...999531I&rft.aulast=Ingicco&rft.aufirst=Thomas&rft.au=de+Vos%2C+John&rft.au=Huffman%2C+O.+Frank&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC4051846&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2214]:
+                - link "Jump up" [ref=f1e2216] [cursor=pointer]:
+                  - /url: "#cite_ref-37"
+                  - text: ^
+                - generic [ref=f1e2217]:
+                  - generic [ref=f1e2218]:
+                    - text: "Zaim, Yahdi; Ciochon, Russell L.; Polanski, Joshua M.; Grine, Frederick E.; Bettis, E. Arthur; Rizal, Yan; Franciscus, Robert G.; Larick, Roy R.; Heizler, Matthew; Aswan, null; Eaves, K. Lindsay; Marsh, Hannah E. (2011). \"New 1.5 million-year-old Homo erectus maxilla from Sangiran (Central Java, Indonesia)\". Journal of Human Evolution. 61 (4): 363–376."
+                    - link "Bibcode" [ref=f1e2219] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2011JHumE..61..363Z" [ref=f1e2220] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2011JHumE..61..363Z
+                    - text: .
+                    - link "doi" [ref=f1e2221] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1016/j.jhevol.2011.04.009" [ref=f1e2222] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016%2Fj.jhevol.2011.04.009
+                    - text: .
+                    - link "ISSN" [ref=f1e2223] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1095-8606" [ref=f1e2224] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1095-8606
+                    - text: .
+                    - link "PMID" [ref=f1e2225] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "21783226" [ref=f1e2226] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/21783226
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Journal+of+Human+Evolution&rft.atitle=New+1.5+million-year-old+Homo+erectus+maxilla+from+Sangiran+%28Central+Java%2C+Indonesia%29&rft.volume=61&rft.issue=4&rft.pages=363-376&rft.date=2011&rft_id=info%3Adoi%2F10.1016%2Fj.jhevol.2011.04.009&rft.issn=1095-8606&rft_id=info%3Apmid%2F21783226&rft_id=info%3Abibcode%2F2011JHumE..61..363Z&rft.aulast=Zaim&rft.aufirst=Yahdi&rft.au=Ciochon%2C+Russell+L.&rft.au=Polanski%2C+Joshua+M.&rft.au=Grine%2C+Frederick+E.&rft.au=Bettis%2C+E.+Arthur&rft.au=Rizal%2C+Yan&rft.au=Franciscus%2C+Robert+G.&rft.au=Larick%2C+Roy+R.&rft.au=Heizler%2C+Matthew&rft.au=Aswan%2C+null&rft.au=Eaves%2C+K.+Lindsay&rft.au=Marsh%2C+Hannah+E.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2227]:
+                - link "Jump up" [ref=f1e2229] [cursor=pointer]:
+                  - /url: "#cite_ref-38"
+                  - text: ^
+                - generic [ref=f1e2230]:
+                  - generic [ref=f1e2231]:
+                    - text: Rizal, Yan; Westaway, Kira E.; Zaim, Yahdi; van den Bergh, Gerrit D.; Bettis, E. Arthur; Morwood, Michael J.; Huffman, O. Frank; Grün, Rainer; Joannes-Boyau, Renaud; Bailey, Richard M.; Sidarto; Westaway, Michael C.; Kurniawan, Iwan; Moore, Mark W.; Storey, Michael (18 December 2019).
+                    - generic "Paid subscription required" [ref=f1e2232]:
+                      - link "\"Last appearance of Homo erectus at Ngandong, Java, 117,000–108,000 years ago\"" [ref=f1e2233] [cursor=pointer]:
+                        - /url: https://www.nature.com/articles/s41586-019-1863-2
+                    - text: ". Nature. 577 (7790): 381–385."
+                    - link "doi" [ref=f1e2234] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1038/s41586-019-1863-2" [ref=f1e2235] [cursor=pointer]:
+                      - /url: https://doi.org/10.1038%2Fs41586-019-1863-2
+                    - text: .
+                    - link "hdl" [ref=f1e2236] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hdl_(identifier)
+                    - text: ":"
+                    - link "10072/397335" [ref=f1e2237] [cursor=pointer]:
+                      - /url: https://hdl.handle.net/10072%2F397335
+                    - text: .
+                    - link "ISSN" [ref=f1e2238] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1476-4687" [ref=f1e2239] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1476-4687
+                    - text: .
+                    - link "PMID" [ref=f1e2240] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "31853068" [ref=f1e2241] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/31853068
+                    - text: .
+                  - generic
+              - listitem [ref=f1e2242]:
+                - link "Jump up" [ref=f1e2244] [cursor=pointer]:
+                  - /url: "#cite_ref-39"
+                  - text: ^
+                - text: Ricklefs (1991), pp. 16–17.
+              - listitem [ref=f1e2245]:
+                - generic [ref=f1e2246]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2247] [cursor=pointer]:
+                    - /url: "#cite_ref-pigeaud_40-0"
+                  - link [ref=f1e2249] [cursor=pointer]:
+                    - /url: "#cite_ref-pigeaud_40-1"
+                - generic [ref=f1e2250]:
+                  - generic [ref=f1e2251]:
+                    - text: Pigeaud, Th. (1967).
+                    - link "Literature of Java, vol. I" [ref=f1e2252] [cursor=pointer]:
+                      - /url: http://hdl.handle.net/1887.1/item:114875
+                    - text: ". Leiden: M. Nijhoff. p. 142."
+                    - link "hdl" [ref=f1e2253] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hdl_(identifier)
+                    - text: ":"
+                    - link "1887.1/item:114875" [ref=f1e2254] [cursor=pointer]:
+                      - /url: https://hdl.handle.net/1887.1%2Fitem%3A114875
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Literature+of+Java%2C+vol.+I&rft.place=Leiden&rft.pages=142&rft.pub=M.+Nijhoff&rft.date=1967&rft_id=info%3Ahdl%2F1887.1%2Fitem%3A114875&rft.aulast=Pigeaud&rft.aufirst=Th.&rft_id=http%3A%2F%2Fhdl.handle.net%2F1887.1%2Fitem%3A114875&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2255]:
+                - link "Jump up" [ref=f1e2257] [cursor=pointer]:
+                  - /url: "#cite_ref-41"
+                  - text: ^
+                - generic [ref=f1e2258]:
+                  - generic [ref=f1e2259]: "Sastropajitno, Warsito (1958). Rekonstruksi Sedjarah Indonesia. Zaman Hindu, Yavadvipa, Srivijaya, Sailendra. Yogyakarta: PT. Pertjetakan Republik Indonesia."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Rekonstruksi+Sedjarah+Indonesia.+Zaman+Hindu%2C+Yavadvipa%2C+Srivijaya%2C+Sailendra&rft.place=Yogyakarta&rft.pub=PT.+Pertjetakan+Republik+Indonesia&rft.date=1958&rft.aulast=Sastropajitno&rft.aufirst=Warsito&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2260]:
+                - link "Jump up" [ref=f1e2262] [cursor=pointer]:
+                  - /url: "#cite_ref-42"
+                  - text: ^
+                - generic [ref=f1e2263]:
+                  - generic [ref=f1e2264]:
+                    - 'link "Archaeology: Indonesian Perspective : R. P. Soejono''s Festschrift" [ref=f1e2265] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=dSFfD0dpdS4C
+                    - text: ". Jakarta : Indonesian Institute of Sciences, : International Center for Prehistoric and Austronesian Studies. 2006. p. 407."
+                    - link "ISBN" [ref=f1e2267] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9792624996" [ref=f1e2268] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9792624996
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Archaeology%3A+Indonesian+Perspective+%3A+R.+P.+Soejono%27s+Festschrift&rft.pages=407&rft.pub=Jakarta+%3A+Indonesian+Institute+of+Sciences%2C+%3A+International+Center+for+Prehistoric+and+Austronesian+Studies&rft.date=2006&rft.isbn=9792624996&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DdSFfD0dpdS4C&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2269]:
+                - link "Jump up" [ref=f1e2271] [cursor=pointer]:
+                  - /url: "#cite_ref-43"
+                  - text: ^
+                - generic [ref=f1e2272]:
+                  - generic [ref=f1e2273]:
+                    - text: Kahler, H. (31 December 1981).
+                    - link "Modern Times" [ref=f1e2274] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=VNgUAAAAIAAJ&pg=PA237
+                    - text: . Brill Archive.
+                    - link "ISBN" [ref=f1e2275] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9004061967" [ref=f1e2276] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9004061967
+                    - text: – via Google Books.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Modern+Times&rft.pub=Brill+Archive&rft.date=1981-12-31&rft.isbn=9004061967&rft.aulast=Kahler&rft.aufirst=H.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DVNgUAAAAIAAJ%26pg%3DPA237&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2277]:
+                - link "Jump up" [ref=f1e2279] [cursor=pointer]:
+                  - /url: "#cite_ref-44"
+                  - text: ^
+                - generic [ref=f1e2280]:
+                  - generic [ref=f1e2281]:
+                    - link "\"Dictionary of Greek and Roman Geography/Iabadius - Wikisource, the free online library\"" [ref=f1e2282] [cursor=pointer]:
+                      - /url: https://en.wikisource.org/wiki/Dictionary_of_Greek_and_Roman_Geography/Iabadius
+                    - text: . en.wikisource.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=en.wikisource.org&rft.atitle=Dictionary+of+Greek+and+Roman+Geography%2FIabadius+-+Wikisource%2C+the+free+online+library&rft_id=https%3A%2F%2Fen.wikisource.org%2Fwiki%2FDictionary_of_Greek_and_Roman_Geography%2FIabadius&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2283]:
+                - link "Jump up" [ref=f1e2285] [cursor=pointer]:
+                  - /url: "#cite_ref-45"
+                  - text: ^
+                - generic [ref=f1e2286]:
+                  - generic [ref=f1e2287]:
+                    - link "\"The Tamils Eighteen Hundred Years Ago/Chapter 2 - Wikisource, the free online library\"" [ref=f1e2288] [cursor=pointer]:
+                      - /url: https://en.wikisource.org/wiki/The_Tamils_Eighteen_Hundred_Years_Ago/Chapter_2
+                    - text: . en.wikisource.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=en.wikisource.org&rft.atitle=The+Tamils+Eighteen+Hundred+Years+Ago%2FChapter+2+-+Wikisource%2C+the+free+online+library&rft_id=https%3A%2F%2Fen.wikisource.org%2Fwiki%2FThe_Tamils_Eighteen_Hundred_Years_Ago%2FChapter_2&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2289]:
+                - link "Jump up" [ref=f1e2291] [cursor=pointer]:
+                  - /url: "#cite_ref-46"
+                  - text: ^
+                - generic [ref=f1e2292]:
+                  - text: Groeneveldt, Willem Pieter (1876). "
+                  - link "Notes on the Malay Archipelago and Malacca, Compiled from Chinese Sources" [ref=f1e2293] [cursor=pointer]:
+                    - /url: https://archive.org/details/notes-on-the-malay-archipelago/page/n7/mode/2up?q=
+                  - text: "\". Batavia: W. Bruining."
+              - listitem [ref=f1e2294]:
+                - generic [ref=f1e2295]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2296] [cursor=pointer]:
+                    - /url: "#cite_ref-miksic-goh_47-0"
+                  - link [ref=f1e2298] [cursor=pointer]:
+                    - /url: "#cite_ref-miksic-goh_47-1"
+                - generic [ref=f1e2299]:
+                  - generic [ref=f1e2300]: "Miksic, John; Goh, Geok Yian (2017). Ancient Southeast Asia. New York: Routledge."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Ancient+Southeast+Asia&rft.place=New+York&rft.pub=Routledge&rft.date=2017&rft.aulast=Miksic&rft.aufirst=John&rft.au=Goh%2C+Geok+Yian&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2301]:
+                - generic [ref=f1e2302]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2303] [cursor=pointer]:
+                    - /url: "#cite_ref-Coedes_48-0"
+                  - link [ref=f1e2305] [cursor=pointer]:
+                    - /url: "#cite_ref-Coedes_48-1"
+                  - link [ref=f1e2306] [cursor=pointer]:
+                    - /url: "#cite_ref-Coedes_48-2"
+                  - link [ref=f1e2307] [cursor=pointer]:
+                    - /url: "#cite_ref-Coedes_48-3"
+                  - link [ref=f1e2308] [cursor=pointer]:
+                    - /url: "#cite_ref-Coedes_48-4"
+                - generic [ref=f1e2309]:
+                  - generic [ref=f1e2310]:
+                    - link "Coedès, George" [ref=f1e2311] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/George_Coedès
+                    - text: (1968). Walter F. Vella (ed.). The Indianized States of Southeast Asia. trans.Susan Brown Cowing. University of Hawaii Press.
+                    - link "ISBN" [ref=f1e2312] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8248-0368-1" [ref=f1e2313] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8248-0368-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Indianized+States+of+Southeast+Asia&rft.pub=University+of+Hawaii+Press&rft.date=1968&rft.isbn=978-0-8248-0368-1&rft.aulast=Coed%C3%A8s&rft.aufirst=George&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2314]:
+                - link "Jump up" [ref=f1e2316] [cursor=pointer]:
+                  - /url: "#cite_ref-Casparis1975_49-0"
+                  - text: ^
+                - generic [ref=f1e2317]:
+                  - text: The dating of the Taruma kingdom is based on the palaeography of its inscriptions, which scholars agree date to the second half of the 5th century or slightly later.
+                  - generic [ref=f1e2318]: "de Casparis, J.G. (1975). Indonesian Palaeography: A History of Writing in Indonesia from the Beginnings to c. A.D.1500. E.J. Brill."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Indonesian+Palaeography%3A+A+History+of+Writing+in+Indonesia+from+the+Beginnings+to+c.+A.D.1500&rft.pub=E.J.+Brill&rft.date=1975&rft.aulast=de+Casparis&rft.aufirst=J.G.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2319]:
+                - generic [ref=f1e2320]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2321] [cursor=pointer]:
+                    - /url: "#cite_ref-wisseman-christie_50-0"
+                  - link [ref=f1e2323] [cursor=pointer]:
+                    - /url: "#cite_ref-wisseman-christie_50-1"
+                - generic [ref=f1e2324]:
+                  - generic [ref=f1e2325]: "Wisseman Christie, Jan (2001). \"Revisiting early Mataram\". In Klokke, Marijke J.; van Kooij, Karel R. (eds.). Fruits of Inspiration: Studies in Honour of Prof. J.G. de Casparis. Groningen. pp. 25–55."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Revisiting+early+Mataram&rft.btitle=Fruits+of+Inspiration%3A+Studies+in+Honour+of+Prof.+J.G.+de+Casparis&rft.place=Groningen&rft.pages=25-55&rft.date=2001&rft.aulast=Wisseman+Christie&rft.aufirst=Jan&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2326]:
+                - link "Jump up" [ref=f1e2328] [cursor=pointer]:
+                  - /url: "#cite_ref-griffiths-sastrawan-bastiawan_51-0"
+                  - text: ^
+                - generic [ref=f1e2329]:
+                  - generic [ref=f1e2330]:
+                    - text: "Griffiths, Arlo; Sastrawan, Wayan Jarrah; Bastiawan, Ekp (2024). \"Restoring a Javanese Inscription to its Proper Place: The Minto Stone (Sangguran Charter) Seen in New Light\". Bijdragen tot de Taal-, Land- en Volkenkunde. 180 (2–3): 133-211."
+                    - link "doi" [ref=f1e2331] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1163/22134379-bja10060" [ref=f1e2332] [cursor=pointer]:
+                      - /url: https://doi.org/10.1163%2F22134379-bja10060
+                    - text: (inactive 16 August 2026).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Bijdragen+tot+de+Taal-%2C+Land-+en+Volkenkunde&rft.atitle=Restoring+a+Javanese+Inscription+to+its+Proper+Place%3A+The+Minto+Stone+%28Sangguran+Charter%29+Seen+in+New+Light&rft.volume=180&rft.issue=%3Cspan+class%3D%22nowrap%22%3E2%E2%80%93%3C%2Fspan%3E3&rft.pages=133-211&rft.date=2024&rft_id=info%3Adoi%2F10.1163%2F22134379-bja10060&rft.aulast=Griffiths&rft.aufirst=Arlo&rft.au=Sastrawan%2C+Wayan+Jarrah&rft.au=Bastiawan%2C+Ekp&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2333]:
+                - link "Jump up" [ref=f1e2335] [cursor=pointer]:
+                  - /url: "#cite_ref-nooduyn_52-0"
+                  - text: ^
+                - generic [ref=f1e2336]:
+                  - generic [ref=f1e2337]:
+                    - text: "Noorduyn, J. (1978). \"Majapahit in the Fifteenth Century\". Bijdragen tot de Taal-, Land- en Volkenkunde. 134 (2–3): 207–274."
+                    - link "doi" [ref=f1e2338] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1163/22134379-90002587" [ref=f1e2339] [cursor=pointer]:
+                      - /url: https://doi.org/10.1163%2F22134379-90002587
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Bijdragen+tot+de+Taal-%2C+Land-+en+Volkenkunde&rft.atitle=Majapahit+in+the+Fifteenth+Century&rft.volume=134&rft.issue=%3Cspan+class%3D%22nowrap%22%3E2%E2%80%93%3C%2Fspan%3E3&rft.pages=207-274&rft.date=1978&rft_id=info%3Adoi%2F10.1163%2F22134379-90002587&rft.aulast=Noorduyn&rft.aufirst=J.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2340]:
+                - generic [ref=f1e2341]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2342] [cursor=pointer]:
+                    - /url: "#cite_ref-ricklefs_54-0"
+                  - link [ref=f1e2344] [cursor=pointer]:
+                    - /url: "#cite_ref-ricklefs_54-1"
+                - generic [ref=f1e2345]:
+                  - generic [ref=f1e2346]: "Ricklefs, M.C. (2006). Mystic Synthesis in Java: A History of Islamization from the Fourteenth to the Early Nineteenth Centuries. Norwalk, Connecticut: Signature Books."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Mystic+Synthesis+in+Java%3A+A+History+of+Islamization+from+the+Fourteenth+to+the+Early+Nineteenth+Centuries&rft.place=Norwalk%2C+Connecticut&rft.pub=Signature+Books&rft.date=2006&rft.aulast=Ricklefs&rft.aufirst=M.C.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2347]:
+                - generic [ref=f1e2348]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2349] [cursor=pointer]:
+                    - /url: "#cite_ref-degraaf-pigeaud_55-0"
+                  - link [ref=f1e2351] [cursor=pointer]:
+                    - /url: "#cite_ref-degraaf-pigeaud_55-1"
+                  - link [ref=f1e2352] [cursor=pointer]:
+                    - /url: "#cite_ref-degraaf-pigeaud_55-2"
+                - generic [ref=f1e2353]:
+                  - generic [ref=f1e2354]:
+                    - text: de Graaf, H.J.; Pigeaud, Th. (1985).
+                    - 'link "Kerajaan-Kerajaan Islam Di Jawa: Peralihan dari Majapahit ke Mataram" [ref=f1e2355] [cursor=pointer]':
+                      - /url: https://archive.org/details/kerajaanislamdijawa_201909
+                    - text: ". Jakarta: Grafiti Press."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Kerajaan-Kerajaan+Islam+Di+Jawa%3A+Peralihan+dari+Majapahit+ke+Mataram&rft.place=Jakarta&rft.pub=Grafiti+Press&rft.date=1985&rft.aulast=de+Graaf&rft.aufirst=H.J.&rft.au=Pigeaud%2C+Th.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fkerajaanislamdijawa_201909&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2356]:
+                - link "Jump up" [ref=f1e2358] [cursor=pointer]:
+                  - /url: "#cite_ref-56"
+                  - text: ^
+                - generic [ref=f1e2359]:
+                  - generic [ref=f1e2360]: "Ames, Glenn J. (2008). The Globe Encompassed: The Age of European Discovery, 1500–1700. p. 99."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Globe+Encompassed%3A+The+Age+of+European+Discovery%2C+1500%E2%80%931700&rft.pages=99&rft.date=2008&rft.au=Ames%2C+Glenn+J.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2361]:
+                - link "Jump up" [ref=f1e2363] [cursor=pointer]:
+                  - /url: "#cite_ref-57"
+                  - text: ^
+                - generic [ref=f1e2364]:
+                  - generic [ref=f1e2365]:
+                    - text: St. John, Horace Stebbing Roscoe (1853).
+                    - 'link "The Indian Archipelago: its history and present state, Volume 1" [ref=f1e2366] [cursor=pointer]':
+                      - /url: https://archive.org/details/indianarchipela02johngoog
+                    - text: . Longman, Brown, Green, and Longmans. p.
+                    - link "137" [ref=f1e2367] [cursor=pointer]:
+                      - /url: https://archive.org/details/indianarchipela02johngoog/page/n183
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Indian+Archipelago%3A+its+history+and+present+state%2C+Volume+1&rft.pages=137&rft.pub=Longman%2C+Brown%2C+Green%2C+and+Longmans&rft.date=1853&rft.aulast=St.+John&rft.aufirst=Horace+Stebbing+Roscoe&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Findianarchipela02johngoog&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2368]:
+                - link "Jump up" [ref=f1e2370] [cursor=pointer]:
+                  - /url: "#cite_ref-58"
+                  - text: ^
+                - generic [ref=f1e2371]:
+                  - generic [ref=f1e2372]:
+                    - text: Ekspedisi Anjer-Panaroekan, Laporan Jurnalistik Kompas. Pnerbit Buku Kompas, PT Kompas Media Nusantara, Jakarta Indonesia. November 2008. pp. 1–2.
+                    - link "ISBN" [ref=f1e2373] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-979-709-391-4" [ref=f1e2374] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-979-709-391-4
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Ekspedisi+Anjer-Panaroekan%2C+Laporan+Jurnalistik+Kompas&rft.pages=1-2&rft.pub=Pnerbit+Buku+Kompas%2C+PT+Kompas+Media+Nusantara%2C+Jakarta+Indonesia&rft.date=2008-11&rft.isbn=978-979-709-391-4&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2375]:
+                - link "Jump up" [ref=f1e2377] [cursor=pointer]:
+                  - /url: "#cite_ref-59"
+                  - text: ^
+                - generic [ref=f1e2378]:
+                  - generic [ref=f1e2379]:
+                    - text: Atkins, James (1889).
+                    - link "The Coins And Tokens of the Possessions And Colonies of the British Empire" [ref=f1e2380] [cursor=pointer]:
+                      - /url: https://archive.org/details/coinstokensofpos1889jame
+                    - text: ". London: Bernard Quaritch. p."
+                    - link "213" [ref=f1e2381] [cursor=pointer]:
+                      - /url: https://archive.org/details/coinstokensofpos1889jame/page/213
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Coins+And+Tokens+of+the+Possessions+And+Colonies+of+the+British+Empire&rft.place=London&rft.pages=213&rft.pub=Bernard+Quaritch&rft.date=1889&rft.aulast=Atkins&rft.aufirst=James&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcoinstokensofpos1889jame&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2382]:
+                - link "Jump up" [ref=f1e2384] [cursor=pointer]:
+                  - /url: "#cite_ref-60"
+                  - text: ^
+                - generic [ref=f1e2385]:
+                  - generic [ref=f1e2386]:
+                    - text: "Hannigan, Tim (2012). Raffles and the British invasion of Java (4th ed.). Singapore: Monsoon Books Pte Ltd. p. 229."
+                    - link "ISBN" [ref=f1e2387] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-981-4358-85-9" [ref=f1e2388] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-981-4358-85-9
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Raffles+and+the+British+invasion+of+Java&rft.pages=229&rft.edition=4th&rft.pub=Singapore%3A+Monsoon+Books+Pte+Ltd.&rft.date=2012&rft.isbn=978-981-4358-85-9&rft.aulast=Hannigan&rft.aufirst=Tim&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2389]:
+                - link "Jump up" [ref=f1e2391] [cursor=pointer]:
+                  - /url: "#cite_ref-61"
+                  - text: ^
+                - generic [ref=f1e2392]:
+                  - generic [ref=f1e2393]:
+                    - link "\"Java (island, Indonesia)\"" [ref=f1e2394] [cursor=pointer]:
+                      - /url: https://www.britannica.com/EBchecked/topic/301673/Java
+                    - text: . Encyclopædia Britannica. 31 January 2019.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Java+%28island%2C+Indonesia%29&rft.btitle=Encyclop%C3%A6dia+Britannica&rft.date=2019-01-31&rft_id=https%3A%2F%2Fwww.britannica.com%2FEBchecked%2Ftopic%2F301673%2FJava&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2395]:
+                - link "Jump up" [ref=f1e2397] [cursor=pointer]:
+                  - /url: "#cite_ref-62"
+                  - text: ^
+                - text: Taylor (2003), p. 253.
+              - listitem [ref=f1e2398]:
+                - link "Jump up" [ref=f1e2400] [cursor=pointer]:
+                  - /url: "#cite_ref-63"
+                  - text: ^
+                - text: Taylor (2003), pp. 253–254.
+              - listitem [ref=f1e2401]:
+                - link "Jump up" [ref=f1e2403] [cursor=pointer]:
+                  - /url: "#cite_ref-64"
+                  - text: ^
+                - generic [ref=f1e2404]:
+                  - generic [ref=f1e2405]:
+                    - text: Byrne, Joseph Patrick (2008).
+                    - 'link "Encyclopedia of Pestilence, Pandemics, and Plagues: A-M" [ref=f1e2406] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=5Pvi-ksuKFIC&pg=PA99
+                    - text: . ABC-CLIO. p. 99.
+                    - link "ISBN" [ref=f1e2407] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-313-34102-1" [ref=f1e2408] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-313-34102-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Encyclopedia+of+Pestilence%2C+Pandemics%2C+and+Plagues%3A+A-M&rft.pages=99&rft.pub=ABC-CLIO&rft.date=2008&rft.isbn=978-0-313-34102-1&rft.aulast=Byrne&rft.aufirst=Joseph+Patrick&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D5Pvi-ksuKFIC%26pg%3DPA99&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+                  - superscript [ref=f1e2409]:
+                    - generic [ref=f1e2410]:
+                      - text: "["
+                      - link "permanent dead link" [ref=f1e2412] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Wikipedia:Link_rot
+                      - text: "]"
+              - listitem [ref=f1e2413]:
+                - link "Jump up" [ref=f1e2415] [cursor=pointer]:
+                  - /url: "#cite_ref-Taylor_2003,_p._254_65-0"
+                  - text: ^
+                - text: Taylor (2003), p. 254.
+              - listitem [ref=f1e2416]:
+                - link "Jump up" [ref=f1e2418] [cursor=pointer]:
+                  - /url: "#cite_ref-citypop_66-0"
+                  - text: ^
+                - generic [ref=f1e2419]:
+                  - generic [ref=f1e2420]:
+                    - 'link "\"Indonesia (Urban City Population): Provinces & Cities – Statistics & Maps on City Population\"" [ref=f1e2421] [cursor=pointer]':
+                      - /url: http://www.citypopulation.de/Indonesia-MU.html
+                    - text: . City Population. 1 May 2010
+                    - generic [ref=f1e2422]: . Retrieved 17 July 2013
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Indonesia+%28Urban+City+Population%29%3A+Provinces+%26+Cities+%E2%80%93+Statistics+%26+Maps+on+City+Population&rft.pub=City+Population&rft.date=2010-05-01&rft_id=http%3A%2F%2Fwww.citypopulation.de%2FIndonesia-MU.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2423]:
+                - link "Jump up" [ref=f1e2425] [cursor=pointer]:
+                  - /url: "#cite_ref-67"
+                  - text: ^
+                - text: Biro Pusat Statistik, Jakarta, 2011.
+              - listitem [ref=f1e2426]:
+                - link "Jump up" [ref=f1e2428] [cursor=pointer]:
+                  - /url: "#cite_ref-68"
+                  - text: ^
+                - text: Badan Pusat Statistik, Jakarta, 2021.
+              - listitem [ref=f1e2429]:
+                - link "Jump up" [ref=f1e2431] [cursor=pointer]:
+                  - /url: "#cite_ref-69"
+                  - text: ^
+                - text: Badan Pusat Statistik, Jakarta, 2026.
+              - listitem [ref=f1e2432]:
+                - link "Jump up" [ref=f1e2434] [cursor=pointer]:
+                  - /url: "#cite_ref-70"
+                  - text: ^
+                - generic [ref=f1e2435]:
+                  - text: President
+                  - link "Prabowo Subianto" [ref=f1e2436] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Prabowo_Subianto
+                  - text: signed Law No. 151/2024 on 30 November 2024, officially removing "capital" from the name of the Jakarta Special Region (
+                  - generic [ref=f1e2437]:
+                    - text: Kamil, Irfan; Kuwado, Fabian Januarius (7 December 2024).
+                    - link "\"Presiden Prabowo Teken UU Perubahan Nomenklatur Gubernur dan Anggota Dewan Daerah Khusus Jakarta\"" [ref=f1e2438] [cursor=pointer]:
+                      - /url: https://nasional.kompas.com/read/2024/12/07/17581581/presiden-prabowo-teken-uu-perubahan-nomenklatur-gubernur-dan-anggota-dewan
+                    - text: . KOMPAS.com (in Indonesian)
+                    - generic [ref=f1e2439]: . Retrieved 10 December 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=KOMPAS.com&rft.atitle=Presiden+Prabowo+Teken+UU+Perubahan+Nomenklatur+Gubernur+dan+Anggota+Dewan+Daerah+Khusus+Jakarta&rft.date=2024-12-07&rft.aulast=Kamil&rft.aufirst=Irfan&rft.au=Kuwado%2C+Fabian+Januarius&rft_id=https%3A%2F%2Fnasional.kompas.com%2Fread%2F2024%2F12%2F07%2F17581581%2Fpresiden-prabowo-teken-uu-perubahan-nomenklatur-gubernur-dan-anggota-dewan&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2440]:
+                - link "Jump up" [ref=f1e2442] [cursor=pointer]:
+                  - /url: "#cite_ref-71"
+                  - text: ^
+                - text: Badan Pusat Statistik, Jakarta, 27 February 2026 (and earlier editions)
+              - listitem [ref=f1e2443]:
+                - link "Jump up" [ref=f1e2445] [cursor=pointer]:
+                  - /url: "#cite_ref-72"
+                  - text: ^
+                - generic [ref=f1e2446]:
+                  - 'link "Usia Kawin Pertama Rata-Rata Wanita Menurut Provinsi: Sensus Penduduk Tahun 1990, 2000 dan 2010" [ref=f1e2447] [cursor=pointer]':
+                    - /url: http://www.bkkbn.go.id/kependudukan/Pages/DataSensus/Sensus_Penduduk/Pola_Perkawinan/Rata_Usia_Kawin_Pertama/Nasional.aspx
+                  - link "Archived" [ref=f1e2448] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20150629055719/http://www.bkkbn.go.id/kependudukan/Pages/DataSensus/Sensus_Penduduk/Pola_Perkawinan/Rata_Usia_Kawin_Pertama/Nasional.aspx
+                  - text: 29 June 2015 at the
+                  - link "Wayback Machine" [ref=f1e2449] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wayback_Machine
+                  - text: . Retrieved 16 August 2015.
+              - listitem [ref=f1e2450]:
+                - link "Jump up" [ref=f1e2452] [cursor=pointer]:
+                  - /url: "#cite_ref-73"
+                  - text: ^
+                - generic [ref=f1e2453]:
+                  - generic [ref=f1e2454]:
+                    - text: Agus Maryono (30 March 2009).
+                    - link "\"Central Java strives to alleviate poverty\"" [ref=f1e2455] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150908234750/http://www.thejakartapost.com/news/2009/03/30/central-java-strives-alleviate-poverty.html
+                    - text: . The Jakarta Post. Archived from
+                    - link "the original" [ref=f1e2456] [cursor=pointer]:
+                      - /url: https://www.thejakartapost.com/news/2009/03/30/central-java-strives-alleviate-poverty.html
+                    - text: on 8 September 2015
+                    - generic [ref=f1e2457]: . Retrieved 16 August 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Jakarta+Post&rft.atitle=Central+Java+strives+to+alleviate+poverty&rft.date=2009-03-30&rft.au=Agus+Maryono&rft_id=http%3A%2F%2Fwww.thejakartapost.com%2Fnews%2F2009%2F03%2F30%2Fcentral-java-strives-alleviate-poverty.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2458]:
+                - link "Jump up" [ref=f1e2460] [cursor=pointer]:
+                  - /url: "#cite_ref-bpsgoid_74-0"
+                  - text: ^
+                - generic [ref=f1e2461]:
+                  - generic [ref=f1e2462]:
+                    - link "\"Hasil Sensus Penduduk 2020\"" [ref=f1e2463] [cursor=pointer]:
+                      - /url: https://www.bps.go.id/website/materi_ind/materiBrsInd-20210121151046.pdf
+                    - text: (PDF) (in Indonesian).
+                    - link "Statistics Indonesia" [ref=f1e2464] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Statistics_Indonesia
+                    - text: . 21 January 2021. p. 9
+                    - generic [ref=f1e2465]: . Retrieved 21 January 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Hasil+Sensus+Penduduk+2020&rft.pages=9&rft.pub=Statistics+Indonesia&rft.date=2021-01-21&rft_id=https%3A%2F%2Fwww.bps.go.id%2Fwebsite%2Fmateri_ind%2FmateriBrsInd-20210121151046.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2466]:
+                - link "Jump up" [ref=f1e2468] [cursor=pointer]:
+                  - /url: "#cite_ref-75"
+                  - text: ^
+                - generic [ref=f1e2469]:
+                  - link "Indonesia" [ref=f1e2470] [cursor=pointer]:
+                    - /url: https://www.cia.gov/the-world-factbook/countries/indonesia/
+                  - link "Archived" [ref=f1e2471] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20210413004319/https://www.cia.gov/the-world-factbook/countries/indonesia
+                  - text: 13 April 2021 at the
+                  - link "Wayback Machine" [ref=f1e2472] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wayback_Machine
+                  - text: .
+                  - link "The World Factbook" [ref=f1e2474] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_World_Factbook
+                  - text: .
+                  - link "Central Intelligence Agency" [ref=f1e2475] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Central_Intelligence_Agency
+                  - text: .
+              - listitem [ref=f1e2476]:
+                - link "Jump up" [ref=f1e2478] [cursor=pointer]:
+                  - /url: "#cite_ref-JKTPOS_76-0"
+                  - text: ^
+                - generic [ref=f1e2479]:
+                  - generic [ref=f1e2480]:
+                    - link "\"Population growth 'good for Papua'\"" [ref=f1e2481] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100824053746/http://www.thejakartapost.com/news/2010/08/23/population-growth-%E2%80%98good-papua%E2%80%99.html
+                    - text: .
+                    - link "The Jakarta Post" [ref=f1e2484] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Jakarta_Post
+                    - text: . 23 August 2010. Archived from
+                    - link "the original" [ref=f1e2485] [cursor=pointer]:
+                      - /url: https://www.thejakartapost.com/news/2010/08/23/population-growth-%E2%80%98good-papua%E2%80%99.html
+                    - text: on 24 August 2010
+                    - generic [ref=f1e2486]: . Retrieved 30 August 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Jakarta+Post&rft.atitle=Population+growth+%27good+for+Papua%27&rft.date=2010-08-23&rft_id=http%3A%2F%2Fwww.thejakartapost.com%2Fnews%2F2010%2F08%2F23%2Fpopulation-growth-%25E2%2580%2598good-papua%25E2%2580%2599.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2487]:
+                - generic [ref=f1e2488]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2489] [cursor=pointer]:
+                    - /url: "#cite_ref-Periplus58_77-0"
+                  - link [ref=f1e2491] [cursor=pointer]:
+                    - /url: "#cite_ref-Periplus58_77-1"
+                  - link [ref=f1e2492] [cursor=pointer]:
+                    - /url: "#cite_ref-Periplus58_77-2"
+                  - link [ref=f1e2493] [cursor=pointer]:
+                    - /url: "#cite_ref-Periplus58_77-3"
+                  - link [ref=f1e2494] [cursor=pointer]:
+                    - /url: "#cite_ref-Periplus58_77-4"
+                - generic [ref=f1e2495]:
+                  - generic [ref=f1e2496]:
+                    - text: "Hefner, Robert (1997). Java. Singapore: Periplus Editions. p. 58."
+                    - link "ISBN" [ref=f1e2497] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-962-593-244-6" [ref=f1e2498] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-962-593-244-6
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Java&rft.place=Singapore&rft.pages=58&rft.pub=Periplus+Editions&rft.date=1997&rft.isbn=978-962-593-244-6&rft.aulast=Hefner&rft.aufirst=Robert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2499]:
+                - link "Jump up" [ref=f1e2501] [cursor=pointer]:
+                  - /url: "#cite_ref-78"
+                  - text: ^
+                - generic [ref=f1e2502]:
+                  - generic [ref=f1e2503]:
+                    - link "\"Theatre and dance\"" [ref=f1e2504] [cursor=pointer]:
+                      - /url: https://www.britannica.com/place/Indonesia/Theatre-and-dance
+                    - text: .
+                    - link "Britannica" [ref=f1e2505] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Britannica
+                    - generic [ref=f1e2506]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Theatre+and+dance&rft.pub=Britannica&rft_id=https%3A%2F%2Fwww.britannica.com%2Fplace%2FIndonesia%2FTheatre-and-dance&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2507]:
+                - link "Jump up" [ref=f1e2509] [cursor=pointer]:
+                  - /url: "#cite_ref-79"
+                  - text: ^
+                - generic [ref=f1e2510]:
+                  - text: See Wallace Stevens's poem "
+                  - link "Tea" [ref=f1e2511] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Tea_(poem)
+                  - text: "\" for an appreciative allusion to Javanese culture."
+              - listitem [ref=f1e2512]:
+                - link "Jump up" [ref=f1e2514] [cursor=pointer]:
+                  - /url: "#cite_ref-80"
+                  - text: ^
+                - generic [ref=f1e2515]:
+                  - link "Languages of Java and Bali" [ref=f1e2516] [cursor=pointer]:
+                    - /url: http://www.cityandsuburbancleaners.com.au/Languages-of-Indonesia.pdf
+                  - link "Archived" [ref=f1e2517] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20170216214336/http://www.cityandsuburbancleaners.com.au/Languages-of-Indonesia.pdf
+                  - text: 16 February 2017 at the
+                  - link "Wayback Machine" [ref=f1e2518] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wayback_Machine
+                  - text: . Other sources may list some of these as dialects rather than languages.
+              - listitem [ref=f1e2519]:
+                - link "Jump up" [ref=f1e2521] [cursor=pointer]:
+                  - /url: "#cite_ref-81"
+                  - text: ^
+                - generic [ref=f1e2522]:
+                  - generic [ref=f1e2523]:
+                    - link "\"Ethnic groups\"" [ref=f1e2524] [cursor=pointer]:
+                      - /url: https://www.britannica.com/place/Indonesia/Ethnic-groups
+                    - text: .
+                    - link "Britannica" [ref=f1e2525] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Britannica
+                    - generic [ref=f1e2526]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Ethnic+groups&rft.pub=Britannica&rft_id=https%3A%2F%2Fwww.britannica.com%2Fplace%2FIndonesia%2FEthnic-groups&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2527]:
+                - generic [ref=f1e2528]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2529] [cursor=pointer]:
+                    - /url: "#cite_ref-RELIGION_82-0"
+                  - link [ref=f1e2531] [cursor=pointer]:
+                    - /url: "#cite_ref-RELIGION_82-1"
+                - generic [ref=f1e2532]:
+                  - generic [ref=f1e2533]:
+                    - link "\"Visualisasi Data Kependudukan\"" [ref=f1e2534] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20220705211227/http://gis.dukcapil.kemendagri.go.id/peta/
+                    - text: (in Indonesian).
+                    - link "Ministry of Home Affairs" [ref=f1e2535] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ministry_of_Religious_Affairs_(Indonesia)
+                    - text: . 31 December 2023. Archived from
+                    - link "the original" [ref=f1e2536] [cursor=pointer]:
+                      - /url: https://gis.dukcapil.kemendagri.go.id/peta/
+                    - text: on 5 July 2022
+                    - generic [ref=f1e2537]: . Retrieved 11 March 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Visualisasi+Data+Kependudukan&rft.pub=Ministry+of+Home+Affairs&rft.date=2023-12-31&rft_id=https%3A%2F%2Fgis.dukcapil.kemendagri.go.id%2Fpeta%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2538]:
+                - link "Jump up" [ref=f1e2540] [cursor=pointer]:
+                  - /url: "#cite_ref-83"
+                  - text: ^
+                - generic [ref=f1e2541]:
+                  - generic [ref=f1e2542]:
+                    - link "\"Java Religion\"" [ref=f1e2543] [cursor=pointer]:
+                      - /url: https://www.hinduamerican.org/blog/hinduism-beyond-india-java
+                    - text: . Hinduism in Java. 28 June 2021
+                    - generic [ref=f1e2544]: . Retrieved 3 September 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Hinduism+in+Java&rft.atitle=Java+Religion&rft.date=2021-06-28&rft_id=https%3A%2F%2Fwww.hinduamerican.org%2Fblog%2Fhinduism-beyond-india-java&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2545]:
+                - generic [ref=f1e2546]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2547] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-0"
+                  - link [ref=f1e2549] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-1"
+                  - link [ref=f1e2550] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-2"
+                  - link [ref=f1e2551] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-3"
+                  - link [ref=f1e2552] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-4"
+                  - link [ref=f1e2553] [cursor=pointer]:
+                    - /url: "#cite_ref-kroef1961_84-5"
+                - generic [ref=f1e2554]:
+                  - generic [ref=f1e2555]:
+                    - text: "van der Kroef, Justus M. (1961). \"New Religious Sects in Java\". Far Eastern Survey. 30 (2): 18–25."
+                    - link "doi" [ref=f1e2556] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.2307/3024260" [ref=f1e2557] [cursor=pointer]:
+                      - /url: https://doi.org/10.2307%2F3024260
+                    - text: .
+                    - link "JSTOR" [ref=f1e2558] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "3024260" [ref=f1e2559] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/3024260
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Far+Eastern+Survey&rft.atitle=New+Religious+Sects+in+Java&rft.volume=30&rft.issue=2&rft.pages=18-25&rft.date=1961&rft_id=info%3Adoi%2F10.2307%2F3024260&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F3024260%23id-name%3DJSTOR&rft.aulast=van+der+Kroef&rft.aufirst=Justus+M.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2560]:
+                - link "Jump up" [ref=f1e2562] [cursor=pointer]:
+                  - /url: "#cite_ref-Beatty_85-0"
+                  - text: ^
+                - generic [ref=f1e2563]:
+                  - text: "Beatty, Andrew, Varieties of Javanese Religion: An Anthropological Account, Cambridge University Press 1999,"
+                  - link "ISBN" [ref=f1e2564] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "0-521-62473-8" [ref=f1e2565] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/0-521-62473-8
+              - listitem [ref=f1e2566]:
+                - link "Jump up" [ref=f1e2568] [cursor=pointer]:
+                  - /url: "#cite_ref-86"
+                  - text: ^
+                - generic [ref=f1e2569]:
+                  - generic [ref=f1e2570]:
+                    - 'link "Tempo: Indonesia''s Weekly News Magazine" [ref=f1e2571] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=2dcTAQAAMAAJ&q=sunda+wiwitan+religion
+                    - text: . Arsa Raya Perdana. 2006.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Tempo%3A+Indonesia%27s+Weekly+News+Magazine&rft.pub=Arsa+Raya+Perdana&rft.date=2006&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D2dcTAQAAMAAJ%26q%3Dsunda%2Bwiwitan%2Breligion&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2572]:
+                - link "Jump up" [ref=f1e2574] [cursor=pointer]:
+                  - /url: "#cite_ref-87"
+                  - text: ^
+                - generic [ref=f1e2575]:
+                  - generic [ref=f1e2576]:
+                    - link "\"Growth and impact of the Dutch East India Company\"" [ref=f1e2577] [cursor=pointer]:
+                      - /url: https://www.britannica.com/place/Indonesia/Growth-and-impact-of-the-Dutch-East-India-Company
+                    - text: .
+                    - link "Britannica" [ref=f1e2578] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Britannica
+                    - generic [ref=f1e2579]: . Retrieved 27 June 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Growth+and+impact+of+the+Dutch+East+India+Company&rft.pub=Britannica&rft_id=https%3A%2F%2Fwww.britannica.com%2Fplace%2FIndonesia%2FGrowth-and-impact-of-the-Dutch-East-India-Company&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2580]:
+                - link "Jump up" [ref=f1e2582] [cursor=pointer]:
+                  - /url: "#cite_ref-88"
+                  - text: ^
+                - generic [ref=f1e2583]:
+                  - generic [ref=f1e2584]:
+                    - link "\"Why Is Coffee Called \"A Cup of Joe\"?\"" [ref=f1e2585] [cursor=pointer]:
+                      - /url: https://wonderopolis.org/wonder/why-is-coffee-called-a-cup-of-joe#:~:text=When+it+comes+to+the,to+be+known+as+java
+                    - text: . Wonderopolis. 16 January 2018.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Wonderopolis&rft.atitle=Why+Is+Coffee+Called+%22A+Cup+of+Joe%22%3F&rft.date=2018-01-16&rft_id=https%3A%2F%2Fwonderopolis.org%2Fwonder%2Fwhy-is-coffee-called-a-cup-of-joe%23%3A~%3Atext%3DWhen%2Bit%2Bcomes%2Bto%2Bthe%2Cto%2Bbe%2Bknown%2Bas%2Bjava&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2586]:
+                - link "Jump up" [ref=f1e2588] [cursor=pointer]:
+                  - /url: "#cite_ref-89"
+                  - text: ^
+                - generic [ref=f1e2589]:
+                  - generic [ref=f1e2590]:
+                    - text: Demri (12 December 2017).
+                    - link "\"Why is Coffee Called Java? Colloquial Coffee Synonyms\"" [ref=f1e2591] [cursor=pointer]:
+                      - /url: https://www.littlecoffeeplace.com/why-is-coffee-called-java
+                    - text: . www.littlecoffeeplace.com.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=www.littlecoffeeplace.com&rft.atitle=Why+is+Coffee+Called+Java%3F+Colloquial+Coffee+Synonyms&rft.date=2017-12-12&rft.au=Demri&rft_id=https%3A%2F%2Fwww.littlecoffeeplace.com%2Fwhy-is-coffee-called-java&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2592]:
+                - link "Jump up" [ref=f1e2594] [cursor=pointer]:
+                  - /url: "#cite_ref-90"
+                  - text: ^
+                - generic [ref=f1e2595]:
+                  - generic [ref=f1e2596]:
+                    - link "\"Why is Coffee Called Java? | Coffee Facts & History\"" [ref=f1e2597] [cursor=pointer]:
+                      - /url: https://coffeechronicler.com/why-is-coffee-called-java/
+                    - text: . The Coffee Chronicler. 30 July 2021.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Coffee+Chronicler&rft.atitle=Why+is+Coffee+Called+Java%3F+%26%23124%3B+Coffee+Facts+%26+History&rft.date=2021-07-30&rft_id=https%3A%2F%2Fcoffeechronicler.com%2Fwhy-is-coffee-called-java%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2598]:
+                - link "Jump up" [ref=f1e2600] [cursor=pointer]:
+                  - /url: "#cite_ref-91"
+                  - text: ^
+                - generic [ref=f1e2601]:
+                  - generic [ref=f1e2602]:
+                    - link "\"Why is Coffee Called Java?\"" [ref=f1e2603] [cursor=pointer]:
+                      - /url: https://driftaway.coffee/coffee-called-java/
+                    - text: . 12 April 2016.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Why+is+Coffee+Called+Java%3F&rft.date=2016-04-12&rft_id=https%3A%2F%2Fdriftaway.coffee%2Fcoffee-called-java%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2604]:
+                - link "Jump up" [ref=f1e2606] [cursor=pointer]:
+                  - /url: "#cite_ref-bps_92-0"
+                  - text: ^
+                - generic [ref=f1e2607]:
+                  - generic [ref=f1e2608]:
+                    - link "Badan Pusat Statistik" [ref=f1e2609] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Statistics_Indonesia
+                    - text: (2022).
+                    - link "PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran (Juta Rupiah), 2021" [ref=f1e2610] [cursor=pointer]:
+                      - /url: https://www.bps.go.id/indicator/171/534/1/-seri-2010-1-pdrb-atas-dasar-harga-berlaku-menurut-pengeluaran.html
+                    - text: ". Jakarta: Badan Pusat Statistik."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=PDRB+Atas+Dasar+Harga+Berlaku+Menurut+Pengeluaran+%28Juta+Rupiah%29%2C+2021&rft.place=Jakarta&rft.pub=Badan+Pusat+Statistik&rft.date=2022&rft.au=Badan+Pusat+Statistik&rft_id=https%3A%2F%2Fwww.bps.go.id%2Findicator%2F171%2F534%2F1%2F-seri-2010-1-pdrb-atas-dasar-harga-berlaku-menurut-pengeluaran.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+          - region [ref=f1e2611]:
+            - generic [ref=f1e2612]:
+              - heading "Bibliography" [level=2] [ref=f1e2613]
+              - generic [ref=f1e2614]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=22
+            - list [ref=f1e2615]:
+              - listitem [ref=f1e2616]:
+                - generic [ref=f1e2617]:
+                  - text: Taylor, Jean Gelman (2003).
+                  - generic "Free registration required" [ref=f1e2618]:
+                    - 'link "Indonesia: Peoples and Histories" [ref=f1e2619] [cursor=pointer]':
+                      - /url: https://archive.org/details/indonesia00jean
+                  - text: ". New Haven and London: Yale University Press."
+                  - link "ISBN" [ref=f1e2620] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-300-10518-6" [ref=f1e2621] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-300-10518-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Indonesia%3A+Peoples+and+Histories&rft.place=New+Haven+and+London&rft.pub=Yale+University+Press&rft.date=2003&rft.isbn=978-0-300-10518-6&rft.aulast=Taylor&rft.aufirst=Jean+Gelman&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Findonesia00jean&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+          - region [ref=f1e2622]:
+            - generic [ref=f1e2623]:
+              - heading "Further reading" [level=2] [ref=f1e2624]
+              - generic [ref=f1e2625]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=23
+            - list [ref=f1e2626]:
+              - listitem [ref=f1e2627]:
+                - generic [ref=f1e2628]:
+                  - text: Cribb, Robert (2000).
+                  - generic "Free registration required" [ref=f1e2629]:
+                    - link "Historical Atlas of Indonesia" [ref=f1e2630] [cursor=pointer]:
+                      - /url: https://archive.org/details/historicalatlaso0000crib
+                  - text: ". London and Honolulu: RoutledgeCurzon Press, University of Hawaii Press."
+                  - link "ISBN" [ref=f1e2631] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-8248-2111-1" [ref=f1e2632] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8248-2111-1
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Historical+Atlas+of+Indonesia&rft.place=London+and+Honolulu&rft.pub=RoutledgeCurzon+Press%2C+University+of+Hawaii+Press&rft.date=2000&rft.isbn=978-0-8248-2111-1&rft.aulast=Cribb&rft.aufirst=Robert&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fhistoricalatlaso0000crib&rfr_id=info%3Asid%2Fen.wikipedia.org%3AJava"
+              - listitem [ref=f1e2633]:
+                - text: Padmo, Soegijanto (2000).
+                - link "Java and The Making of The Nation." [ref=f1e2635] [cursor=pointer]:
+                  - /url: https://media.neliti.com/media/publications/11597-java-and-the-making-op-the-nation-2d30d285.pdf
+                - text: Humaniora Journal, Gadjah Mada University.
+          - region [ref=f1e2636]:
+            - generic [ref=f1e2637]:
+              - heading "External links" [level=2] [ref=f1e2638]
+              - generic [ref=f1e2639]:
+                - link "edit":
+                  - /url: /w/index.php?title=Java&action=edit&section=24
+            - list [ref=f1e2640]:
+              - listitem [ref=f1e2641]:
+                - link [ref=f1e2643] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Wikivoyage-Logo-v3-icon.svg
+                  - img "Wikivoyage logo" [ref=f1e2644]
+                - link "Java" [ref=f1e2645] [cursor=pointer]:
+                  - /url: https://en.wikivoyage.org/wiki/Java#Q3757
+                - text: travel guide from Wikivoyage
+            - navigation [ref=f1e2646]:
+              - table [ref=f1e2647]:
+                - rowgroup [ref=f1e2648]:
+                  - row [ref=f1e2649]:
+                    - columnheader [ref=f1e2650]:
+                      - button "[show]" [ref=f1e2651] [cursor=pointer]
+                      - list [ref=f1e2653]:
+                        - listitem [ref=f1e2654]:
+                          - link "v" [ref=f1e2655] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:Provinces_of_Indonesia
+                          - text: ·
+                        - listitem [ref=f1e2656]:
+                          - link "t" [ref=f1e2657] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:Provinces_of_Indonesia
+                          - text: ·
+                        - listitem [ref=f1e2658]:
+                          - link "e" [ref=f1e2659] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Provinces_of_Indonesia
+                      - link "Provinces of Indonesia" [ref=f1e2661] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Provinces_of_Indonesia
+                  - row
+                  - row: · · · · · · · · ·
+                  - row: · · · · ·
+                  - row: · ·
+                  - row: · · · ·
+                  - row: · · · · ·
+                  - row: ·
+                  - row: · · · · ·
+                  - row: · · · · · · ·
+                  - row: · · · · · ·
+            - navigation [ref=f1e2662]:
+              - table [ref=f1e2663]:
+                - rowgroup [ref=f1e2664]:
+                  - row [ref=f1e2665]:
+                    - columnheader [ref=f1e2666]:
+                      - button "[show]" [ref=f1e2667] [cursor=pointer]
+                      - list [ref=f1e2669]:
+                        - listitem [ref=f1e2670]:
+                          - link "v" [ref=f1e2671] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:World's_largest_islands
+                          - text: ·
+                        - listitem [ref=f1e2672]:
+                          - link "t" [ref=f1e2673] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:World's_largest_islands
+                          - text: ·
+                        - listitem [ref=f1e2674]:
+                          - link "e" [ref=f1e2675] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:World's_largest_islands
+                      - link "World's largest islands" [ref=f1e2677] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_islands_by_area
+                  - row: · · · · · · · · · · · · · · · · ·
+                  - row: · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+            - navigation [ref=f1e2678]:
+              - table [ref=f1e2679]:
+                - rowgroup [ref=f1e2680]:
+                  - row [ref=f1e2681]:
+                    - columnheader [ref=f1e2682]:
+                      - button "[show]" [ref=f1e2683] [cursor=pointer]
+                      - generic [ref=f1e2684]:
+                        - link "Authority control databases" [ref=f1e2685] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Help:Authority_control
+                        - link [ref=f1e2687] [cursor=pointer]:
+                          - /url: https://www.wikidata.org/wiki/Q3757#identifiers
+                          - img "Edit this at Wikidata" [ref=f1e2688]
+                  - row: · · ·
+                  - row: · · · · · · ·
+                  - row: · ·
+        - generic [ref=f1e2690]:
+          - link "Categories" [ref=f1e2691] [cursor=pointer]:
+            - /url: /wiki/Help:Category
+          - text: ":"
+          - list [ref=f1e2692]:
+            - listitem [ref=f1e2693]:
+              - link "Java" [ref=f1e2694] [cursor=pointer]:
+                - /url: /wiki/Category:Java
+            - listitem [ref=f1e2695]:
+              - link "Greater Sunda Islands" [ref=f1e2696] [cursor=pointer]:
+                - /url: /wiki/Category:Greater_Sunda_Islands
+            - listitem [ref=f1e2697]:
+              - link "Islands of Indonesia" [ref=f1e2698] [cursor=pointer]:
+                - /url: /wiki/Category:Islands_of_Indonesia
+            - listitem [ref=f1e2699]:
+              - link "Islands of the Indian Ocean" [ref=f1e2700] [cursor=pointer]:
+                - /url: /wiki/Category:Islands_of_the_Indian_Ocean
+            - listitem [ref=f1e2701]:
+              - link "Maritime Southeast Asia" [ref=f1e2702] [cursor=pointer]:
+                - /url: /wiki/Category:Maritime_Southeast_Asia
+            - listitem [ref=f1e2703]:
+              - link "Populated places in Indonesia" [ref=f1e2704] [cursor=pointer]:
+                - /url: /wiki/Category:Populated_places_in_Indonesia
+    - contentinfo [ref=f1e2706]:
+      - list [ref=f1e2707]:
+        - listitem [ref=f1e2708]: This page was last edited on 26 September 2026, at 04:48 (UTC).
+        - listitem [ref=f1e2709]:
+          - text: Page was rendered with
+          - link "Parsoid" [ref=f1e2710] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid
+          - text: .
+        - listitem [ref=f1e2711]:
+          - text: Text is available under the
+          - link "Creative Commons Attribution-ShareAlike 4.0 License" [ref=f1e2712] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=f1e2713] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and
+          - link "Privacy Policy" [ref=f1e2714] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: . Wikipedia® is a registered trademark of the
+          - link "Wikimedia Foundation, Inc." [ref=f1e2715] [cursor=pointer]:
+            - /url: https://wikimediafoundation.org/
+          - text: ", a non-profit organization."
+      - list:
+        - listitem [ref=f1e2716]:
+          - link "Privacy policy" [ref=f1e2717] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=f1e2718]:
+          - link "About Wikipedia" [ref=f1e2719] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=f1e2720]:
+          - link "Disclaimers" [ref=f1e2721] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=f1e2722]:
+          - link "Contact Wikipedia" [ref=f1e2723] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=f1e2724]:
+          - link "Legal & safety contacts" [ref=f1e2725] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=f1e2726]:
+          - link "Code of Conduct" [ref=f1e2727] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=f1e2728]:
+          - link "Developers" [ref=f1e2729] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=f1e2730]:
+          - link "Statistics" [ref=f1e2731] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=f1e2732]:
+          - link "Cookie statement" [ref=f1e2733] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=f1e2734]:
+          - link "Mobile view" [ref=f1e2735] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=Java&mobileaction=toggle_view_mobile
+      - list [ref=f1e2736]:
+        - listitem [ref=f1e2737]:
+          - link [ref=f1e2738] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=f1e2740]
+        - listitem [ref=f1e2741]:
+          - link [ref=f1e2742] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=f1e2744]
+  - generic [ref=f1e2745]:
+    - list
+```
+
+# Test source
+
+```ts
+  1  | // Import playwright module
+  2  | import { test, expect } from '@playwright/test';
+  3  | 
+  4  | import { parse } from 'csv-parse/sync';
+  5  | import fs from 'fs';
+  6  | import path from 'path';
+  7  | 
+  8  | type TestRecords = {
+  9  |     Skill1: string,
+  10 |     Skill2: string
+  11 | }
+  12 | 
+  13 | const records = parse(
+  14 |     fs.readFileSync(path.join(__dirname, '../../test-data/QA/testdata.csv')),
+  15 |     {
+  16 |         columns: true,
+  17 |         skipEmptyLines: true
+  18 |     }
+  19 | ) as TestRecords[];
+  20 | 
+  21 | /**
+  22 |  * Author Testers Talk
+  23 |  */
+  24 | for (const record of records) {
+  25 | 
+  26 |     test(`Data Driven Testing Using CSV file in playwright : ${record.Skill1}`, { tag: ['@DataDrivenTesting'] }, async ({ page }) => {
+  27 | 
+  28 |         console.log(`CSV file row data`);
+  29 |         console.log(`Skill 1 : ${record.Skill1}`);
+  30 |         console.log(`Skill 2 : ${record.Skill2}`);
+  31 | 
+  32 |         // Go to URL
+  33 |         await page.goto('https://www.wikipedia.org/');
+  34 | 
+  35 |         // Search with keywords
+  36 |         await page.getByRole('searchbox', { name: 'Search Wikipedia' }).fill(record.Skill1);
+  37 |         await page.getByRole('searchbox', { name: 'Search Wikipedia' }).press('Enter');
+  38 | 
+> 39 |         await page.getByRole('link', { name: 'Playwright' }).first().click();
+     |                                                                      ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  40 | 
+  41 |   // validate page title
+  42 |   await expect(page).toHaveTitle(/Playwright/);
+  43 |     });
+  44 | }
+```

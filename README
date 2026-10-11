@@ -1,0 +1,22 @@
+How to pass request body values at run time?
+ We can achieve by using faker plugin
+ npm install @faker-js/faker
+
+What is type safety in api testing?
+it ensure that the data sent to and received from an API matches the exact data type expected (like a number, text, or a date etc.,,). 
+It acts as a safety net that catches data errors automatically before they can break our application.
+Advantages:
+----------------
+• Prevents Silly Mistakes: If a developer accidentally changes an API field from a number (100) to text ("100"), a type-safe test will instantly flag it.
+• Auto-Complete Support: Because the testing tool knows exactly what data types to expect, it can suggest field names to you while you write your tests.
+• Early Warnings: It catches bugs while you are writing the code, rather than waiting for the API to run and crash.
+
+we can achive type safety by creating an interface of our request body values.
+
+GITHUB:
+How to create GITHUB repo and Push code in GITHUB Repo?
+First we need to create an acount in GITHUB then by clicking on + icon we can create a Repository/we can select Public/private and click on Create Repository.
+How to download and setup jenkins?
+
+
+

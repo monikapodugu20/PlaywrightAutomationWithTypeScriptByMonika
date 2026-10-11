@@ -1,0 +1,38 @@
+POST API Response : {
+  "bookingid": 3314,
+  "booking": {
+    "firstname": "Tania",
+    "lastname": "Mayert",
+    "totalprice": 7992,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 3314
+GET API Response : {
+  "firstname": "Tania",
+  "lastname": "Mayert",
+  "totalprice": 7992,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}
+Token : 33e8defc77abe31
+PUT API Response : {
+  "firstname": "cypress by testers talk",
+  "lastname": "javascript by testers talk",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-15",
+    "checkout": "2025-01-17"
+  },
+  "additionalneeds": "breakfast"
+}

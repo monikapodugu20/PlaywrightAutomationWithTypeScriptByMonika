@@ -1,0 +1,39 @@
+POST API Response : {
+  "bookingid": 4902,
+  "booking": {
+    "firstname": "Freida",
+    "lastname": "Bayer",
+    "totalprice": 4365,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 4902
+GET API Response : {
+  "firstname": "Freida",
+  "lastname": "Bayer",
+  "totalprice": 4365,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}
+Token : 4377a8a08c94757
+PUT API Response : {
+  "firstname": "Testers Talk",
+  "lastname": "Bayer",
+  "totalprice": 4365,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}
+DELETE API Response : Created

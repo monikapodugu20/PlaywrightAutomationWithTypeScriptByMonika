@@ -1,0 +1,29 @@
+POST API Response : {
+  "bookingid": 2043,
+  "booking": {
+    "firstname": "Laron",
+    "lastname": "Koepp",
+    "totalprice": 8192,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 2043
+GET API Response : {
+  "firstname": "Laron",
+  "lastname": "Koepp",
+  "totalprice": 8192,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-25",
+    "checkout": "2025-01-27"
+  },
+  "additionalneeds": "breakfast"
+}
+Token API Response : {
+  "token": "cf95ebd9f700c00"
+}

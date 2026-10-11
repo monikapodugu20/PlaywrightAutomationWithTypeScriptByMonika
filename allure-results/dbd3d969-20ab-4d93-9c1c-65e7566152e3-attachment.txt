@@ -1,0 +1,20 @@
+POST API Response : {
+  "bookingid": 3535,
+  "booking": {
+    "firstname": "Houston",
+    "lastname": "Wehner",
+    "totalprice": 9778,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking ID : 3535
+GET API Response : [
+  {
+    "bookingid": 3535
+  }
+]

@@ -1,0 +1,20 @@
+POST API Response : {
+  "bookingid": 57,
+  "booking": {
+    "firstname": "Trey",
+    "lastname": "Waters-Collins",
+    "totalprice": 5241,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-25",
+      "checkout": "2025-01-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+GET API Response : [
+  {
+    "bookingid": 57
+  }
+]
+Booking ID : 57
