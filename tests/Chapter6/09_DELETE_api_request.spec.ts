@@ -9,7 +9,7 @@ test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test('Create and Get Patch Delete api request in playwright & typescript', async ({ request }) => {
+test('Create and Get Patch Delete api request in playwright & typescript',{ tag: ['@PlaywrightWithJenkins'] }, async ({ request }) => {
 
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
