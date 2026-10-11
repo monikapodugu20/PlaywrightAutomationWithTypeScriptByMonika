@@ -76,5 +76,12 @@ Got to Build now and Run then build will strat
 Add Reports in Jenkins as Artifacts:
 Open jenkins->our folder->Configure->PostBuildActions->Add Post build Actions->Add Archiceve artifacts->Add path of Reports folder(playwright-report/**)
 
+How to add JUnit report in jenkins?
 
+open jenkins->your folder->onfigure->Post bui Actions->Ad post buil action->Add publish Junit report->add this (from playwright config file) Junit-test-report.xml-->Apply and Save.
+once build copleted,we can see Tests option at left panel when we click build-->click and see report.
+
+How to add Allure Reports in Jenkins?
+open jenkins->your folder->onfigure->Post bui Actions->Ad post buil action->Add allure report->once we select we can see new section created at top with Allure->pas allure-results-->Apply and Save.
+we can see report after clicking on build.
 
